@@ -1,0 +1,2896 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red6\green0\blue135;\red158\green0\blue3;\red0\green0\blue0;
+\red181\green118\blue12;\red11\green66\blue19;\red62\green62\blue62;}
+{\*\expandedcolortbl;;\cssrgb\c2500\c8500\c60000;\cssrgb\c69000\c7500\c0;\cssrgb\c0\c0\c0;
+\cssrgb\c76500\c53500\c3500;\cssrgb\c2000\c32000\c9500;\cssrgb\c31200\c30900\c30900;}
+\margl1440\margr1440\vieww11760\viewh15380\viewkind0
+\pard\tx528\tx1056\tx1584\tx2112\tx2640\tx3168\tx3696\tx4224\tx4752\tx5280\tx5808\tx6337\tx6865\tx7393\tx7921\tx8449\tx8977\tx9505\tx10033\tx10561\tx11089\tx11617\tx12145\tx12674\tx13202\tx13730\tx14258\tx14786\tx15314\tx15842\tx16370\tx16898\tx17426\tx17954\tx18483\tx19011\tx19539\tx20067\tx20595\tx21123\tx21651\tx22179\tx22707\tx23235\tx23763\tx24291\tx24820\tx25348\tx25876\tx26404\tx26932\tx27460\tx27988\tx28516\tx29044\tx29572\tx30100\tx30628\tx31157\tx31685\tx32213\tx32741\tx33269\tx33797\li80\fi-80\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 install.packages(\cf3 "swirl"\cf2 )\
+library(\cf4 swirl\cf2 )\
+> install.packages(\cf3 "swirl"\cf2 )\
+--- \cf4 Please\cf2  \cf4 select\cf2  \cf4 a\cf2  \cf4 CRAN\cf2  \cf4 mirror\cf2  \cf4 for\cf2  \cf4 use\cf2  \cf5 in\cf2  \cf4 this\cf2  \cf4 session\cf2  ---\
+\cf4 trying\cf2  \cf4 URL\cf2  \cf3 'http://lib.stat.cmu.edu/R/CRAN/bin/macosx/contrib/4.0/swirl_2.4.5.tgz'\cf2 \
+\cf4 Content\cf2  \cf4 type\cf2  \cf3 'application/x-gzip'\cf2  \cf4 length\cf2  \cf6 347939\cf2  bytes (\cf6 339\cf2  \cf4 KB\cf2 )\
+==================================================\
+\cf4 downloaded\cf2  \cf6 339\cf2  \cf4 KB\cf2 \
+\
+\
+\cf4 The\cf2  \cf4 downloaded\cf2  \cf4 binary\cf2  \cf4 packages\cf2  \cf4 are\cf2  \cf5 in\cf2 \
+	/\cf4 var\cf2 /\cf4 folders\cf2 /\cf4 j7\cf2 /1zsxhnhd0mdf7p8hnjrlkt_40000gn/\cf4 T\cf2 //\cf4 RtmpdCtFKx\cf2 /\cf4 downloaded_packages\cf2 \
+> library(\cf4 swirl\cf2 )\
+\
+| \cf4 Hi\cf2 ! \cf4 Type\cf2  swirl() \cf4 when\cf2  \cf4 you\cf2  \cf4 are\cf2  \cf4 ready\cf2  \cf4 to\cf2  \cf4 begin.\cf2 \
+\
+> swirl()\
+\
+| \cf4 Welcome\cf2  \cf4 to\cf2  \cf4 swirl\cf2 ! \cf4 Please\cf2  \cf4 sign\cf2  \cf4 in.\cf2  \cf4 If\cf2  \cf4 you\cf3 've been here before, use the same\
+| name as you did then. If you are new, call yourself something unique.\
+\
+What shall I call you? Jae\
+\
+| Thanks, Jae. Let'\cf4 s\cf3  \cf4 cover\cf3  \cf4 a\cf3  \cf4 couple\cf3  \cf4 of\cf3  \cf4 quick\cf3  \cf4 housekeeping\cf3  \cf4 items\cf3  \cf4 before\cf3  \cf4 we\cf3 \
+\cf2 |\cf3  \cf4 begin\cf3  \cf4 our\cf3  \cf4 first\cf3  \cf4 lesson.\cf3  \cf4 First\cf3  \cf4 of\cf3  \cf4 all\cf2 ,\cf3  \cf4 you\cf3  \cf4 should\cf3  \cf4 know\cf3  \cf4 that\cf3  \cf4 when\cf3  \cf4 you\cf3  \cf4 see\cf3 \
+\cf2 |\cf3  '...'\cf2 ,\cf3  \cf4 that\cf3  \cf4 means\cf3  \cf4 you\cf3  \cf4 should\cf3  \cf4 press\cf3  \cf4 Enter\cf3  \cf4 when\cf3  \cf4 you\cf3  \cf4 are\cf3  \cf4 done\cf3  \cf4 reading\cf3  \cf4 and\cf3  \cf4 ready\cf3 \
+\cf2 |\cf3  \cf4 to\cf3  \cf4 continue.\cf3 \
+\
+\cf4 ...\cf3   \cf2 <--\cf3  \cf4 That\cf3 's your cue to press Enter to continue\
+| Also, when you see '\cf4 ANSWER\cf2 :\cf3 ', the R prompt (>), or when you are asked to\
+| select from a list, that means it'\cf4 s\cf3  \cf4 your\cf3  \cf4 turn\cf3  \cf4 to\cf3  \cf4 enter\cf3  \cf4 a\cf3  \cf4 response\cf2 ,\cf3  \cf4 then\cf3 \
+\cf2 |\cf3  \cf4 press\cf3  \cf4 Enter\cf3  \cf4 to\cf3  \cf4 continue.\cf3 \
+\
+\cf4 Select\cf3  \cf6 1\cf2 ,\cf3  \cf6 2\cf2 ,\cf3  \cf4 or\cf3  \cf6 3\cf3  \cf4 and\cf3  \cf4 press\cf3  \cf4 Enter\cf3  \
+\
+\cf6 1\cf2 :\cf3  \cf4 Continue.\cf3 \
+\cf6 2\cf2 :\cf3  \cf4 Proceed.\cf3 \
+\cf6 3\cf2 :\cf3  \cf4 Let\cf3 's get going!\
+\
+Selection: 1\
+\
+| You can exit swirl and return to the R prompt (>) at any time by pressing\
+| the Esc key. If you are already at the prompt, type bye() to exit and save\
+| your progress. When you exit properly, you'\cf4 ll\cf3  \cf4 see\cf3  \cf4 a\cf3  \cf4 short\cf3  \cf4 message\cf3  \cf4 letting\cf3 \
+\cf2 |\cf3  \cf4 you\cf3  \cf4 know\cf3  \cf4 you\cf3 've done so.\
+\
+| When you are at the R prompt (>):\
+| -- Typing skip() allows you to skip the current question.\
+| -- Typing play() lets you experiment with R on your own; swirl will ignore\
+| what you do...\
+| -- UNTIL you type nxt() which will regain swirl'\cf4 s\cf3  \cf4 attention.\cf3 \
+\cf2 |\cf3  \cf2 --\cf3  \cf4 Typing\cf3  \cf2 bye()\cf3  \cf4 causes\cf3  \cf4 swirl\cf3  \cf4 to\cf3  \cf4 exit.\cf3  \cf4 Your\cf3  \cf4 progress\cf3  \cf4 will\cf3  \cf4 be\cf3  \cf4 saved.\cf3 \
+\cf2 |\cf3  \cf2 --\cf3  \cf4 Typing\cf3  \cf2 main()\cf3  \cf4 returns\cf3  \cf4 you\cf3  \cf4 to\cf3  \cf4 swirl\cf3 's main menu.\
+| -- Typing info() displays these options again.\
+\
+| Let'\cf4 s\cf3  \cf4 get\cf3  \cf4 started\cf2 !\cf3 \
+\
+\cf4 ...\cf3 \
+\
+\cf2 |\cf3  \cf4 To\cf3  \cf4 begin\cf2 ,\cf3  \cf4 you\cf3  \cf4 must\cf3  \cf4 install\cf3  \cf4 a\cf3  \cf4 course.\cf3  \cf4 I\cf3  \cf4 can\cf3  \cf4 install\cf3  \cf4 a\cf3  \cf4 course\cf3  \cf4 for\cf3  \cf4 you\cf3  \cf4 from\cf3  \cf4 the\cf3 \
+\cf2 |\cf3  \cf4 internet\cf2 ,\cf3  \cf4 or\cf3  \cf4 I\cf3  \cf4 can\cf3  \cf4 send\cf3  \cf4 you\cf3  \cf4 to\cf3  \cf4 a\cf3  \cf4 web\cf3  \cf4 page\cf3 \
+\cf2 |\cf3  \cf2 (\cf4 https\cf2 ://\cf4 github.com\cf2 /\cf4 swirldev\cf2 /\cf4 swirl_courses\cf2 )\cf3  \cf4 which\cf3  \cf4 will\cf3  \cf4 provide\cf3  \cf4 course\cf3 \
+\cf2 |\cf3  \cf4 options\cf3  \cf4 and\cf3  \cf4 directions\cf3  \cf4 for\cf3  \cf4 installing\cf3  \cf4 courses\cf3  \cf2 yourself.\cf3  \cf2 (\cf4 If\cf3  \cf4 you\cf3  \cf4 are\cf3  \cf4 not\cf3 \
+\cf2 |\cf3  \cf4 connected\cf3  \cf4 to\cf3  \cf4 the\cf3  \cf4 internet\cf2 ,\cf3  \cf4 type\cf3  \cf6 0\cf3  \cf4 to\cf3  \cf4 exit.\cf2 )\cf3 \
+\
+\cf6 1\cf2 :\cf3  \cf4 R\cf3  \cf4 Programming\cf2 :\cf3  \cf4 The\cf3  \cf4 basics\cf3  \cf4 of\cf3  \cf4 programming\cf3  \cf5 in\cf3  \cf4 R\cf3 \
+\cf6 2\cf2 :\cf3  \cf4 Regression\cf3  \cf4 Models\cf2 :\cf3  \cf4 The\cf3  \cf4 basics\cf3  \cf4 of\cf3  \cf4 regression\cf3  \cf4 modeling\cf3  \cf5 in\cf3  \cf4 R\cf3 \
+\cf6 3\cf2 :\cf3  \cf4 Statistical\cf3  \cf4 Inference\cf2 :\cf3  \cf4 The\cf3  \cf4 basics\cf3  \cf4 of\cf3  \cf4 statistical\cf3  \cf4 inference\cf3  \cf5 in\cf3  \cf4 R\cf3 \
+\cf6 4\cf2 :\cf3  \cf4 Exploratory\cf3  \cf4 Data\cf3  \cf4 Analysis\cf2 :\cf3  \cf4 The\cf3  \cf4 basics\cf3  \cf4 of\cf3  \cf4 exploring\cf3  \cf4 data\cf3  \cf5 in\cf3  \cf4 R\cf3 \
+\cf6 5\cf2 :\cf3  \cf4 Don\cf3 't install anything for me. I'\cf4 ll\cf3  \cf4 do\cf3  \cf4 it\cf3  \cf4 myself.\cf3 \
+\
+\cf4 Selection\cf2 :\cf3  \cf6 1\cf3 \
+  \cf2 |=====================================================================|\cf3  \cf6 100\cf2 %\cf3 \
+\
+\cf2 |\cf3  \cf4 Course\cf3  \cf4 installed\cf3  \cf4 successfully\cf2 !\cf3 \
+\
+\
+\cf2 |\cf3  \cf4 Please\cf3  \cf4 choose\cf3  \cf4 a\cf3  \cf4 course\cf2 ,\cf3  \cf4 or\cf3  \cf4 type\cf3  \cf6 0\cf3  \cf4 to\cf3  \cf4 exit\cf3  \cf4 swirl.\cf3 \
+\
+\cf6 1\cf2 :\cf3  \cf4 R\cf3  \cf4 Programming\cf3 \
+\cf6 2\cf2 :\cf3  \cf4 Take\cf3  \cf4 me\cf3  \cf4 to\cf3  \cf4 the\cf3  \cf4 swirl\cf3  \cf4 course\cf3  \cf4 repository\cf2 !\cf3 \
+\
+\cf4 Selection\cf2 :\cf3  \cf6 1\cf3 \
+\cf2 |\cf3  \cf4 Please\cf3  \cf4 choose\cf3  \cf4 a\cf3  \cf4 lesson\cf2 ,\cf3  \cf4 or\cf3  \cf4 type\cf3  \cf6 0\cf3  \cf4 to\cf3  \cf4 return\cf3  \cf4 to\cf3  \cf4 course\cf3  \cf4 menu.\cf3 \
+\
+ \cf6 1\cf2 :\cf3  \cf4 Basic\cf3  \cf4 Building\cf3  \cf4 Blocks\cf3       \cf6 2\cf2 :\cf3  \cf4 Workspace\cf3  \cf4 and\cf3  \cf4 Files\cf3      \
+ \cf6 3\cf2 :\cf3  \cf4 Sequences\cf3  \cf4 of\cf3  \cf4 Numbers\cf3        \cf6 4\cf2 :\cf3  \cf4 Vectors\cf3                  \
+ \cf6 5\cf2 :\cf3  \cf4 Missing\cf3  \cf4 Values\cf3              \cf6 6\cf2 :\cf3  \cf4 Subsetting\cf3  \cf4 Vectors\cf3       \
+ \cf6 7\cf2 :\cf3  \cf4 Matrices\cf3  \cf4 and\cf3  \cf4 Data\cf3  \cf4 Frames\cf3    \cf6 8\cf2 :\cf3  \cf4 Logic\cf3                    \
+ \cf6 9\cf2 :\cf3  \cf4 Functions\cf3                  \cf6 10\cf2 :\cf3  \cf4 lapply\cf3  \cf4 and\cf3  \cf4 sapply\cf3        \
+\cf6 11\cf2 :\cf3  \cf4 vapply\cf3  \cf4 and\cf3  \cf4 tapply\cf3          \cf6 12\cf2 :\cf3  \cf4 Looking\cf3  \cf4 at\cf3  \cf4 Data\cf3          \
+\cf6 13\cf2 :\cf3  \cf4 Simulation\cf3                 \cf6 14\cf2 :\cf3  \cf4 Dates\cf3  \cf4 and\cf3  \cf4 Times\cf3          \
+\cf6 15\cf2 :\cf3  \cf4 Base\cf3  \cf4 Graphics\cf3              \
+\
+\cf4 Selection\cf2 :\cf3  \cf6 1\cf3 \
+  \cf2 |\cf3                                                                      \cf2 |\cf3    \cf6 0\cf2 %\cf3 \
+\
+\cf2 |\cf3  \cf4 In\cf3  \cf4 this\cf3  \cf4 lesson\cf2 ,\cf3  \cf4 we\cf3  \cf4 will\cf3  \cf4 explore\cf3  \cf4 some\cf3  \cf4 basic\cf3  \cf4 building\cf3  \cf4 blocks\cf3  \cf4 of\cf3  \cf4 the\cf3  \cf4 R\cf3 \
+\cf2 |\cf3  \cf4 programming\cf3  \cf4 language.\cf3 \
+\
+\cf4 ...\cf3 \
+ \cf2 |==\cf3                                                                    \cf2 |\cf3    \cf6 3\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 If\cf3  \cf4 at\cf3  \cf4 any\cf3  \cf4 point\cf3  \cf4 you\cf3 'd like more information on a particular topic related to\
+| R, you can type help.start() at the prompt, which will open a menu of\
+| resources (either within RStudio or your default web browser, depending on\
+| your setup). Alternatively, a simple web search often yields the answer\
+| you'\cf4 re\cf3  \cf4 looking\cf3  \cf4 for.\cf3 \
+\
+\cf4 ...\cf3 \
+\cf2 |\cf3  \cf4 In\cf3  \cf4 its\cf3  \cf4 simplest\cf3  \cf4 form\cf2 ,\cf3  \cf4 R\cf3  \cf4 can\cf3  \cf4 be\cf3  \cf4 used\cf3  \cf4 as\cf3  \cf4 an\cf3  \cf4 interactive\cf3  \cf4 calculator.\cf3  \cf4 Type\cf3  \cf6 5\cf3  \cf2 +\cf3  \cf6 7\cf3 \
+\cf2 |\cf3  \cf4 and\cf3  \cf4 press\cf3  \cf4 Enter.\cf3 \
+\
+\cf2 >\cf3  \cf6 5\cf3  \cf2 +\cf3  \cf6 7\cf3  \
+\cf2 [\cf6 1\cf2 ]\cf3  \cf6 12\cf3 \
+\
+\cf2 |\cf3  \cf4 All\cf3  \cf4 that\cf3  \cf4 hard\cf3  \cf4 work\cf3  \cf4 is\cf3  \cf4 paying\cf3  \cf4 off\cf2 !\cf3 \
+  \cf2 |=====\cf3                                                                 \cf2 |\cf3    \cf6 8\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 R\cf3  \cf4 simply\cf3  \cf4 prints\cf3  \cf4 the\cf3  \cf4 result\cf3  \cf4 of\cf3  \cf6 12\cf3  \cf4 by\cf3  \cf4 default.\cf3  \cf4 However\cf2 ,\cf3  \cf4 R\cf3  \cf4 is\cf3  \cf4 a\cf3  \cf4 programming\cf3 \
+\cf2 |\cf3  \cf4 language\cf3  \cf4 and\cf3  \cf4 often\cf3  \cf4 the\cf3  \cf4 reason\cf3  \cf4 we\cf3  \cf4 use\cf3  \cf4 a\cf3  \cf4 programming\cf3  \cf4 language\cf3  \cf4 as\cf3  \cf4 opposed\cf3  \cf4 to\cf3  \cf4 a\cf3 \
+\cf2 |\cf3  \cf4 calculator\cf3  \cf4 is\cf3  \cf4 to\cf3  \cf4 automate\cf3  \cf4 some\cf3  \cf4 process\cf3  \cf4 or\cf3  \cf4 avoid\cf3  \cf4 unnecessary\cf3  \cf4 repetition.\cf3 \
+\
+\cf4 ...\cf3 \
+ \cf2 |=======\cf3                                                               \cf2 |\cf3   \cf6 11\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 In\cf3  \cf4 this\cf3  \cf4 case\cf2 ,\cf3  \cf4 we\cf3  \cf4 may\cf3  \cf4 want\cf3  \cf4 to\cf3  \cf4 use\cf3  \cf4 our\cf3  \cf4 result\cf3  \cf4 from\cf3  \cf4 above\cf3  \cf5 in\cf3  \cf4 a\cf3  \cf4 second\cf3 \
+\cf2 |\cf3  \cf4 calculation.\cf3  \cf4 Instead\cf3  \cf4 of\cf3  \cf4 retyping\cf3  \cf6 5\cf3  \cf2 +\cf3  \cf6 7\cf3  \cf4 every\cf3  \cf4 time\cf3  \cf4 we\cf3  \cf4 need\cf3  \cf4 it\cf2 ,\cf3  \cf4 we\cf3  \cf4 can\cf3  \cf4 just\cf3 \
+\cf2 |\cf3  \cf4 create\cf3  \cf4 a\cf3  \cf4 new\cf3  \cf4 variable\cf3  \cf4 that\cf3  \cf4 stores\cf3  \cf4 the\cf3  \cf4 result.\cf3 \
+\
+\cf4 ...\cf3 \
+  \cf2 |=========\cf3                                                             \cf2 |\cf3   \cf6 13\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 The\cf3  \cf4 way\cf3  \cf4 you\cf3  \cf4 assign\cf3  \cf4 a\cf3  \cf4 value\cf3  \cf4 to\cf3  \cf4 a\cf3  \cf4 variable\cf3  \cf5 in\cf3  \cf4 R\cf3  \cf4 is\cf3  \cf4 by\cf3  \cf4 using\cf3  \cf4 the\cf3  \cf4 assignment\cf3 \
+\cf2 |\cf3  \cf4 operator\cf2 ,\cf3  \cf4 which\cf3  \cf4 is\cf3  \cf4 just\cf3  \cf4 a\cf3  'less than' \cf4 symbol\cf3  \cf4 followed\cf3  \cf4 by\cf3  \cf4 a\cf3  'minus' \cf4 sign.\cf3  \cf4 It\cf3 \
+\cf2 |\cf3  \cf4 looks\cf3  \cf4 like\cf3  \cf4 this\cf2 :\cf3  \cf2 <-\cf3 \
+\
+\cf4 ...\cf3 \
+  \cf2 |===========\cf3                                                           \cf2 |\cf3   \cf6 16\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 Think\cf3  \cf4 of\cf3  \cf4 the\cf3  \cf4 assignment\cf3  \cf4 operator\cf3  \cf4 as\cf3  \cf4 an\cf3  \cf4 arrow.\cf3  \cf4 You\cf3  \cf4 are\cf3  \cf4 assigning\cf3  \cf4 the\cf3  \cf4 value\cf3  \cf4 on\cf3 \
+\cf2 |\cf3  \cf4 the\cf3  \cf4 right\cf3  \cf4 side\cf3  \cf4 of\cf3  \cf4 the\cf3  \cf4 arrow\cf3  \cf4 to\cf3  \cf4 the\cf3  \cf4 variable\cf3  \cf4 name\cf3  \cf4 on\cf3  \cf4 the\cf3  \cf4 left\cf3  \cf4 side\cf3  \cf4 of\cf3  \cf4 the\cf3 \
+\cf2 |\cf3  \cf4 arrow.\cf3 \
+\
+\cf4 ...\cf3 \
+  \cf2 |=============\cf3                                                         \cf2 |\cf3   \cf6 18\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 To\cf3  \cf4 assign\cf3  \cf4 the\cf3  \cf4 result\cf3  \cf4 of\cf3  \cf6 5\cf3  \cf2 +\cf3  \cf6 7\cf3  \cf4 to\cf3  \cf4 a\cf3  \cf4 new\cf3  \cf4 variable\cf3  \cf4 called\cf3  \cf4 x\cf2 ,\cf3  \cf4 you\cf3  \cf4 type\cf3  \cf4 x\cf3  \cf2 <-\cf3  \cf6 5\cf3  \cf2 +\cf3 \
+\cf2 |\cf3  \cf6 7.\cf3  \cf4 This\cf3  \cf4 can\cf3  \cf4 be\cf3  \cf4 read\cf3  \cf4 as\cf3  'x gets 5 plus 7'\cf4 .\cf3  \cf4 Give\cf3  \cf4 it\cf3  \cf4 a\cf3  \cf4 try\cf3  \cf4 now.\cf3 \
+\
+\cf2 >\cf3  \cf4 x\cf3  \cf2 <-\cf3  \cf6 5\cf3  \cf2 +\cf3  \cf6 7\cf3  \
+\
+\cf2 |\cf3  \cf4 Keep\cf3  \cf4 working\cf3  \cf4 like\cf3  \cf4 that\cf3  \cf4 and\cf3  \cf4 you\cf3 'll get there!\
+  \cf2 |===============\cf3                                                       \cf2 |\cf3   \cf6 21\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 You\cf3 'll notice that R did not print the result of 12 this time. When you use\
+| the assignment operator, R assumes that you don'\cf4 t\cf3  \cf4 want\cf3  \cf4 to\cf3  \cf4 see\cf3  \cf4 the\cf3  \cf4 result\cf3 \
+\cf2 |\cf3  \cf4 immediately\cf2 ,\cf3  \cf4 but\cf3  \cf4 rather\cf3  \cf4 that\cf3  \cf4 you\cf3  \cf4 intend\cf3  \cf4 to\cf3  \cf4 use\cf3  \cf4 the\cf3  \cf4 result\cf3  \cf4 for\cf3  \cf4 something\cf3  \cf5 else\cf3 \
+\cf2 |\cf3  \cf4 later\cf3  \cf4 on.\cf3 \
+\
+\cf4 ...\cf3 \
+ \cf2 |================\cf3                                                      \cf2 |\cf3   \cf6 24\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 To\cf3  \cf4 view\cf3  \cf4 the\cf3  \cf4 contents\cf3  \cf4 of\cf3  \cf4 the\cf3  \cf4 variable\cf3  \cf4 x\cf2 ,\cf3  \cf4 just\cf3  \cf4 type\cf3  \cf4 x\cf3  \cf4 and\cf3  \cf4 press\cf3  \cf4 Enter.\cf3  \cf4 Try\cf3  \cf4 it\cf3 \
+\cf2 |\cf3  \cf4 now.\cf3 \
+\
+\cf2 >\cf3  \cf4 x\cf3 \
+\cf2 [\cf6 1\cf2 ]\cf3  \cf6 12\cf3 \
+\
+\cf2 |\cf3  \cf4 You\cf3 're the best!\
+  |==================                                                   |  26%\
+| Now, store the result of x - 3 in a new variable called y.\
+\
+> > y <- x - 3\
+\
+| You are amazing!\
+  |====================                                                 |  29%\
+| What is the value of y? Type y to find out.\
+\
+> y\
+| That'\cf4 s\cf3  \cf4 correct\cf2 !\cf3 \
+  \cf2 |======================\cf3                                                \cf2 |\cf3   \cf6 32\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 Now\cf2 ,\cf3  \cf4 let\cf3 's create a small collection of numbers called a vector. Any object\
+| that contains data is called a data structure and numeric vectors are the\
+| simplest type of data structure in R. In fact, even a single number is\
+\cf2 |\cf3  \cf4 considered\cf3  \cf4 a\cf3  \cf4 vector\cf3  \cf4 of\cf3  \cf4 length\cf3  \cf4 one.\cf3 \
+\
+\cf4 ...\cf3 \
+ \cf2 |========================\cf3                                              \cf2 |\cf3   \cf6 34\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 The\cf3  \cf4 easiest\cf3  \cf4 way\cf3  \cf4 to\cf3  \cf4 create\cf3  \cf4 a\cf3  \cf4 vector\cf3  \cf4 is\cf3  \cf4 with\cf3  \cf4 the\cf3  \cf2 c()\cf3  \cf4 function\cf2 ,\cf3  \cf4 which\cf3  \cf4 stands\cf3 \
+\cf2 |\cf3  \cf4 for\cf3  'concatenate' \cf4 or\cf3  'combine'\cf4 .\cf3  \cf4 To\cf3  \cf4 create\cf3  \cf4 a\cf3  \cf4 vector\cf3  \cf4 containing\cf3  \cf4 the\cf3  \cf4 numbers\cf3 \
+\cf2 |\cf3  \cf6 1.1\cf2 ,\cf3  \cf6 9\cf2 ,\cf3  \cf4 and\cf3  \cf6 3.14\cf2 ,\cf3  \cf4 type\cf3  \cf2 c(\cf6 1.1\cf2 ,\cf3  \cf6 9\cf2 ,\cf3  \cf6 3.14\cf2 )\cf4 .\cf3  \cf4 Try\cf3  \cf4 it\cf3  \cf4 now\cf3  \cf4 and\cf3  \cf4 store\cf3  \cf4 the\cf3  \cf4 result\cf3  \cf5 in\cf3  \cf4 a\cf3 \
+\cf2 |\cf3  \cf4 variable\cf3  \cf4 called\cf3  \cf4 z.\cf3 \
+\
+\cf2 >\cf3  \cf4 z\cf3  \cf2 <-\cf3  \cf2 c(\cf6 1.1\cf2 ,\cf3  \cf6 9\cf2 ,\cf3  \cf6 3.14\cf2 )\cf3 \
+\
+\cf2 |\cf3  \cf4 That\cf3 's the answer I was looking for.\
+  |=========================                                            |  37%\
+\cf2 |\cf3  \cf4 Anytime\cf3  \cf4 you\cf3  \cf4 have\cf3  \cf4 questions\cf3  \cf4 about\cf3  \cf4 a\cf3  \cf4 particular\cf3  \cf4 function\cf2 ,\cf3  \cf4 you\cf3  \cf4 can\cf3  \cf4 access\cf3  \cf4 R\cf3 's\
+| built-in help files via the `?` command. For example, if you want more\
+| information on the c() function, type ?c without the parentheses that\
+| normally follow a function name. Give it a try.\
+\
+> ?c\
+starting httpd help server ... done\
+\
+| Great job!\
+  |===========================                                          |  39%\
+\cf2 |\cf3  \cf4 Type\cf3  \cf4 z\cf3  \cf4 to\cf3  \cf4 view\cf3  \cf4 its\cf3  \cf4 contents.\cf3  \cf4 Notice\cf3  \cf4 that\cf3  \cf4 there\cf3  \cf4 are\cf3  \cf4 no\cf3  \cf4 commas\cf3  \cf4 separating\cf3  \cf4 the\cf3 \
+\cf2 |\cf3  \cf4 values\cf3  \cf5 in\cf3  \cf4 the\cf3  \cf4 output.\cf3 \
+\
+\cf2 >\cf3  \cf4 z\cf3 \
+\cf2 [\cf6 1\cf2 ]\cf3  \cf6 1.10\cf3  \cf6 9.00\cf3  \cf6 3.14\cf3 \
+\
+\cf2 |\cf3  \cf4 Your\cf3  \cf4 dedication\cf3  \cf4 is\cf3  \cf4 inspiring\cf2 !\cf3 \
+  \cf2 |=============================\cf3                                         \cf2 |\cf3   \cf6 42\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 You\cf3  \cf4 can\cf3  \cf4 combine\cf3  \cf4 vectors\cf3  \cf4 to\cf3  \cf4 make\cf3  \cf4 a\cf3  \cf4 new\cf3  \cf4 vector.\cf3  \cf4 Create\cf3  \cf4 a\cf3  \cf4 new\cf3  \cf4 vector\cf3  \cf4 that\cf3 \
+\cf2 |\cf3  \cf4 contains\cf3  \cf4 z\cf2 ,\cf3  \cf6 555\cf2 ,\cf3  \cf4 then\cf3  \cf4 z\cf3  \cf4 again\cf3  \cf5 in\cf3  \cf4 that\cf3  \cf4 order.\cf3  \cf4 Don\cf3 't assign this vector to a\
+| new variable, so that we can just see the result immediately.\
+\
+> c(z, 555, z)\
+[1]   1.10   9.00   3.14 555.00   1.10   9.00   3.14\
+\
+| Excellent job!\
+  |===============================                                      |  45%\
+| Numeric vectors can be used in arithmetic expressions. Type the following to\
+| see what happens: z * 2 + 100.\
+\
+> z * 2 + 100\
+[1] 102.20 118.00 106.28\
+\
+| You are amazing!\
+  \cf2 |\cf3 =================================                                    |  47%\
+| First, R multiplied each of the three elements in z by 2. Then it added 100\
+| to each element to get the result you see above.\
+\
+...\
+  |==================================                                   |  50%\
+| Other common arithmetic operators are `+`, `-`, `/`, and `^` (where x^2\
+| means '\cf4 x\cf3  \cf4 squared\cf3 '). To take the square root, use the sqrt() function and to\
+| take the absolute value, use the abs() function.\
+\
+...\
+  |====================================                                 |  53%\
+| Take the square root of z - 1 and assign it to a new variable called\
+| my_sqrt.\
+\
+>  my_sqrt <- sqrt(z-1)\
+\
+| Great job!\
+  |======================================                               |  55%\
+| Before we view the contents of the my_sqrt variable, what do you think it\
+| contains?\
+\
+1: a vector of length 0 (i.e. an empty vector)\
+2: a vector of length 3\
+\cf6 3\cf2 :\cf3  \cf4 a\cf3  \cf4 single\cf3  \cf2 number\cf3  \cf2 (\cf4 i.e\cf3  \cf4 a\cf3  \cf4 vector\cf3  \cf4 of\cf3  \cf4 length\cf3  \cf6 1\cf2 )\cf3 \
+\
+\cf4 Selection\cf2 :\cf3  \cf6 2\cf3 \
+\
+\cf2 |\cf3  \cf4 You\cf3  \cf4 are\cf3  \cf4 amazing\cf2 !\cf3 \
+  \cf2 |========================================\cf3                              \cf2 |\cf3   \cf6 58\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 Print\cf3  \cf4 the\cf3  \cf4 contents\cf3  \cf4 of\cf3  \cf4 my_sqrt.\cf3 \
+\
+\cf2 >\cf3  \cf4 my_sqrt\cf3 \
+\cf2 [\cf6 1\cf2 ]\cf3  \cf6 0.3162278\cf3  \cf6 2.8284271\cf3  \cf6 1.4628739\cf3 \
+\
+\cf2 |\cf3  \cf4 You\cf3  \cf4 nailed\cf3  \cf4 it\cf2 !\cf3  \cf4 Good\cf3  \cf4 job\cf2 !\cf3 \
+  \cf2 |==========================================\cf3                            \cf2 |\cf3   \cf6 61\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 As\cf3  \cf4 you\cf3  \cf4 may\cf3  \cf4 have\cf3  \cf4 guessed\cf2 ,\cf3  \cf4 R\cf3  \cf4 first\cf3  \cf4 subtracted\cf3  \cf6 1\cf3  \cf4 from\cf3  \cf4 each\cf3  \cf4 element\cf3  \cf4 of\cf3  \cf4 z\cf2 ,\cf3  \cf4 then\cf3 \
+\cf2 |\cf3  \cf4 took\cf3  \cf4 the\cf3  \cf4 square\cf3  \cf4 root\cf3  \cf4 of\cf3  \cf4 each\cf3  \cf4 element.\cf3  \cf4 This\cf3  \cf4 leaves\cf3  \cf4 you\cf3  \cf4 with\cf3  \cf4 a\cf3  \cf4 vector\cf3  \cf4 of\cf3  \cf4 the\cf3 \
+\cf2 |\cf3  \cf4 same\cf3  \cf4 length\cf3  \cf4 as\cf3  \cf4 the\cf3  \cf4 original\cf3  \cf4 vector\cf3  \cf4 z.\cf3 \
+\
+\cf4 ...\cf3 \
+ \cf2 |============================================\cf3                          \cf2 |\cf3   \cf6 63\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 Now\cf2 ,\cf3  \cf4 create\cf3  \cf4 a\cf3  \cf4 new\cf3  \cf4 variable\cf3  \cf4 called\cf3  \cf4 my_div\cf3  \cf4 that\cf3  \cf4 gets\cf3  \cf4 the\cf3  \cf4 value\cf3  \cf4 of\cf3  \cf4 z\cf3  \cf4 divided\cf3  \cf4 by\cf3 \
+\cf2 |\cf3  \cf4 my_sqrt.\cf3 \
+\
+\cf2 >\cf3  \cf4 my_div\cf3  \cf2 <-\cf3  \cf4 z\cf2 /\cf4 my_sqrt\cf3 \
+\
+\cf2 |\cf3  \cf4 Your\cf3  \cf4 dedication\cf3  \cf4 is\cf3  \cf4 inspiring\cf2 !\cf3 \
+  \cf2 |=============================================\cf3                         \cf2 |\cf3   \cf6 66\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 Which\cf3  \cf4 statement\cf3  \cf4 do\cf3  \cf4 you\cf3  \cf4 think\cf3  \cf4 is\cf3  \cf4 true\cf2 ?\cf3 \
+\
+\cf6 1\cf2 :\cf3  \cf4 my_div\cf3  \cf4 is\cf3  \cf4 undefined\cf3 \
+\cf6 2\cf2 :\cf3  \cf4 The\cf3  \cf4 first\cf3  \cf4 element\cf3  \cf4 of\cf3  \cf4 my_div\cf3  \cf4 is\cf3  \cf4 equal\cf3  \cf4 to\cf3  \cf4 the\cf3  \cf4 first\cf3  \cf4 element\cf3  \cf4 of\cf3  \cf4 z\cf3  \cf4 divided\cf3  \cf4 by\cf3  \cf4 the\cf3  \cf4 first\cf3  \cf4 element\cf3  \cf4 of\cf3  \cf4 my_sqrt\cf2 ,\cf3  \cf4 and\cf3  \cf4 so\cf3  \cf4 on...\cf3 \
+\cf6 3\cf2 :\cf3  \cf4 my_div\cf3  \cf4 is\cf3  \cf4 a\cf3  \cf4 single\cf3  \cf2 number\cf3  \cf2 (\cf4 i.e\cf3  \cf4 a\cf3  \cf4 vector\cf3  \cf4 of\cf3  \cf4 length\cf3  \cf6 1\cf2 )\cf3 \
+\
+\cf4 Selection\cf2 :\cf3  \cf6 2\cf3 \
+\cf2 |\cf3  \cf4 Nice\cf3  \cf4 work\cf2 !\cf3 \
+  \cf2 |===============================================\cf3                       \cf2 |\cf3   \cf6 68\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 Go\cf3  \cf4 ahead\cf3  \cf4 and\cf3  \cf4 print\cf3  \cf4 the\cf3  \cf4 contents\cf3  \cf4 of\cf3  \cf4 my_div.\cf3 \
+\
+\cf2 >\cf3  \cf4 my_div\cf3 \
+\cf2 [\cf6 1\cf2 ]\cf3  \cf6 3.478505\cf3  \cf6 3.181981\cf3  \cf6 2.146460\cf3 \
+\
+\cf2 |\cf3  \cf4 All\cf3  \cf4 that\cf3  \cf4 practice\cf3  \cf4 is\cf3  \cf4 paying\cf3  \cf4 off\cf2 !\cf3 \
+  \cf2 |=================================================\cf3                     \cf2 |\cf3   \cf6 71\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 When\cf3  \cf4 given\cf3  \cf4 two\cf3  \cf4 vectors\cf3  \cf4 of\cf3  \cf4 the\cf3  \cf4 same\cf3  \cf4 length\cf2 ,\cf3  \cf4 R\cf3  \cf4 simply\cf3  \cf4 performs\cf3  \cf4 the\cf3  \cf4 specified\cf3 \
+\cf2 |\cf3  \cf4 arithmetic\cf3  \cf2 operation\cf3  \cf2 (\cf3 `+`\cf2 ,\cf3  `-`\cf2 ,\cf3  `*`\cf2 ,\cf3  \cf4 etc.\cf2 )\cf3  \cf4 element\cf2 -\cf4 by\cf2 -\cf4 element.\cf3  \cf4 If\cf3  \cf4 the\cf3 \
+\cf2 |\cf3  \cf4 vectors\cf3  \cf4 are\cf3  \cf4 of\cf3  \cf4 different\cf3  \cf4 lengths\cf2 ,\cf3  \cf4 R\cf3  'recycles' \cf4 the\cf3  \cf4 shorter\cf3  \cf4 vector\cf3  \cf4 until\cf3  \cf4 it\cf3 \
+\cf2 |\cf3  \cf4 is\cf3  \cf4 the\cf3  \cf4 same\cf3  \cf4 length\cf3  \cf4 as\cf3  \cf4 the\cf3  \cf4 longer\cf3  \cf4 vector.\cf3 \
+\
+\cf4 ...\cf3 \
+  \cf2 |===================================================\cf3                   \cf2 |\cf3   \cf6 74\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 When\cf3  \cf4 we\cf3  \cf4 did\cf3  \cf4 z\cf3  \cf2 *\cf3  \cf6 2\cf3  \cf2 +\cf3  \cf6 100\cf3  \cf5 in\cf3  \cf4 our\cf3  \cf4 earlier\cf3  \cf4 example\cf2 ,\cf3  \cf4 z\cf3  \cf4 was\cf3  \cf4 a\cf3  \cf4 vector\cf3  \cf4 of\cf3  \cf4 length\cf3  \cf6 3\cf2 ,\cf3 \
+\cf2 |\cf3  \cf4 but\cf3  \cf4 technically\cf3  \cf6 2\cf3  \cf4 and\cf3  \cf6 100\cf3  \cf4 are\cf3  \cf4 each\cf3  \cf4 vectors\cf3  \cf4 of\cf3  \cf4 length\cf3  \cf6 1.\cf3 \
+\
+\cf4 ...\cf3 \
+  \cf2 |=====================================================\cf3                 \cf2 |\cf3   \cf6 76\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 Behind\cf3  \cf4 the\cf3  \cf4 scenes\cf2 ,\cf3  \cf4 R\cf3  \cf4 is\cf3  'recycling' \cf4 the\cf3  \cf6 2\cf3  \cf4 to\cf3  \cf4 make\cf3  \cf4 a\cf3  \cf4 vector\cf3  \cf4 of\cf3  \cf2 2\cf4 s\cf3  \cf4 and\cf3  \cf4 the\cf3  \cf6 100\cf3 \
+\cf2 |\cf3  \cf4 to\cf3  \cf4 make\cf3  \cf4 a\cf3  \cf4 vector\cf3  \cf4 of\cf3  \cf2 100s.\cf3  \cf4 In\cf3  \cf4 other\cf3  \cf4 words\cf2 ,\cf3  \cf4 when\cf3  \cf4 you\cf3  \cf4 ask\cf3  \cf4 R\cf3  \cf4 to\cf3  \cf4 compute\cf3  \cf4 z\cf3  \cf2 *\cf3  \cf6 2\cf3  \cf2 +\cf3 \
+\cf2 |\cf3  \cf6 100\cf2 ,\cf3  \cf4 what\cf3  \cf4 it\cf3  \cf4 really\cf3  \cf4 computes\cf3  \cf4 is\cf3  \cf4 this\cf2 :\cf3  \cf4 z\cf3  \cf2 *\cf3  \cf2 c(\cf6 2\cf2 ,\cf3  \cf6 2\cf2 ,\cf3  \cf6 2\cf2 )\cf3  \cf2 +\cf3  \cf2 c(\cf6 100\cf2 ,\cf3  \cf6 100\cf2 ,\cf3  \cf6 100\cf2 )\cf4 .\cf3 \
+\
+\cf4 ...\cf3 \
+  \cf2 |======================================================\cf3                \cf2 |\cf3   \cf6 79\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 To\cf3  \cf4 see\cf3  \cf4 another\cf3  \cf4 example\cf3  \cf4 of\cf3  \cf4 how\cf3  \cf4 this\cf3  \cf4 vector\cf3  'recycling' \cf4 works\cf2 ,\cf3  \cf4 try\cf3  \cf4 adding\cf3  \cf2 c(\cf6 1\cf2 ,\cf3 \
+\cf2 |\cf3  \cf6 2\cf2 ,\cf3  \cf6 3\cf2 ,\cf3  \cf6 4\cf2 )\cf3  \cf4 and\cf3  \cf2 c(\cf6 0\cf2 ,\cf3  \cf6 10\cf2 )\cf4 .\cf3  \cf4 Don\cf3 't worry about saving the result in a new\
+\
+| variable.\
+\
+> c(1, 2, 3, 4) + c(0, 10)\
+[1]  1 12  3 14\
+\
+| All that hard work is paying off!\
+  |========================================================             |  82%\
+| If the length of the shorter vector does not divide evenly into the length\
+| of the longer vector, R will still apply the '\cf4 recycling\cf3 ' method, but will\
+| throw a warning to let you know something fishy might be going on.\
+\
+...\
+  |==========================================================           |  84%\
+| Try c(1, 2, 3, 4) + c(0, 10, 100) for an example.\
+\
+> c(1, 2, 3, 4) + c(0, 10, 100)\
+[1]   1  12 103   4\
+Warning message:\
+In c(1, 2, 3, 4) + c(0, 10, 100) :\
+  longer object length is not a multiple of shorter object length\
+\
+| You'\cf4 re\cf3  \cf4 the\cf3  \cf4 best\cf2 !\cf3 \
+  \cf2 |============================================================\cf3          \cf2 |\cf3   \cf6 87\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 Before\cf3  \cf4 concluding\cf3  \cf4 this\cf3  \cf4 lesson\cf2 ,\cf3  \cf4 I\cf3 'd like to show you a couple of time-saving\
+| tricks.\
+\
+...\
+|==============================================================       |  89%\
+| Earlier in the lesson, you computed z * 2 + 100. Let'\cf4 s\cf3  \cf4 pretend\cf3  \cf4 that\cf3  \cf4 you\cf3  \cf4 made\cf3 \
+\cf2 |\cf3  \cf4 a\cf3  \cf4 mistake\cf3  \cf4 and\cf3  \cf4 that\cf3  \cf4 you\cf3  \cf4 meant\cf3  \cf4 to\cf3  \cf4 add\cf3  \cf6 1000\cf3  \cf4 instead\cf3  \cf4 of\cf3  \cf6 100.\cf3  \cf4 You\cf3  \cf4 could\cf3  \cf4 either\cf3 \
+\cf2 |\cf3  \cf4 re\cf2 -\cf4 type\cf3  \cf4 the\cf3  \cf4 expression\cf2 ,\cf3  \cf4 or...\cf3 \
+\
+\cf4 ...\cf3 \
+  \cf2 |================================================================\cf3      \cf2 |\cf3   \cf6 92\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 In\cf3  \cf4 many\cf3  \cf4 programming\cf3  \cf4 environments\cf2 ,\cf3  \cf4 the\cf3  \cf4 up\cf3  \cf4 arrow\cf3  \cf4 will\cf3  \cf4 cycle\cf3  \cf4 through\cf3  \cf4 previous\cf3 \
+\cf2 |\cf3  \cf4 commands.\cf3  \cf4 Try\cf3  \cf4 hitting\cf3  \cf4 the\cf3  \cf4 up\cf3  \cf4 arrow\cf3  \cf4 on\cf3  \cf4 your\cf3  \cf4 keyboard\cf3  \cf4 until\cf3  \cf4 you\cf3  \cf4 get\cf3  \cf4 to\cf3  \cf4 this\cf3 \
+\cf2 |\cf3  \cf2 command\cf3  \cf2 (\cf4 z\cf3  \cf2 *\cf3  \cf6 2\cf3  \cf2 +\cf3  \cf6 100\cf2 ),\cf3  \cf4 then\cf3  \cf4 change\cf3  \cf6 100\cf3  \cf4 to\cf3  \cf6 1000\cf3  \cf4 and\cf3  \cf4 hit\cf3  \cf4 Enter.\cf3  \cf4 If\cf3  \cf4 the\cf3  \cf4 up\cf3 \
+\cf2 |\cf3  \cf4 arrow\cf3  \cf4 doesn\cf3 't work for you, just type the corrected command.\
+\
+> z * 2 + 1000\
+[1] 1002.20 1018.00 1006.28\
+\
+| Nice work!\
+  |=================================================================    |  95%\
+| Finally, let'\cf4 s\cf3  \cf4 pretend\cf3  \cf4 you\cf3 'd like to view the contents of a variable that\
+| you created earlier, but you can'\cf4 t\cf3  \cf4 seem\cf3  \cf4 to\cf3  \cf4 remember\cf3  \cf4 if\cf3  \cf4 you\cf3  \cf4 named\cf3  \cf4 it\cf3  \cf4 my_div\cf3 \
+\cf2 |\cf3  \cf4 or\cf3  \cf4 myDiv.\cf3  \cf4 You\cf3  \cf4 could\cf3  \cf4 try\cf3  \cf4 both\cf3  \cf4 and\cf3  \cf4 see\cf3  \cf4 what\cf3  \cf4 works\cf2 ,\cf3  \cf4 or...\cf3 \
+\
+\cf4 ...\cf3 \
+  \cf2 |===================================================================\cf3   \cf2 |\cf3   \cf6 97\cf2 %\cf3 \
+\cf2 |\cf3  \cf4 You\cf3  \cf4 can\cf3  \cf4 type\cf3  \cf4 the\cf3  \cf4 first\cf3  \cf4 two\cf3  \cf4 letters\cf3  \cf4 of\cf3  \cf4 the\cf3  \cf4 variable\cf3  \cf4 name\cf2 ,\cf3  \cf4 then\cf3  \cf4 hit\cf3  \cf4 the\cf3  \cf4 Tab\cf3 \
+\cf2 |\cf3  \cf2 key\cf3  \cf2 (\cf4 possibly\cf3  \cf4 more\cf3  \cf4 than\cf3  \cf4 once\cf2 )\cf4 .\cf3  \cf4 Most\cf3  \cf4 programming\cf3  \cf4 environments\cf3  \cf4 will\cf3  \cf4 provide\cf3  \cf4 a\cf3 \
+\cf2 |\cf3  \cf4 list\cf3  \cf4 of\cf3  \cf4 variables\cf3  \cf4 that\cf3  \cf4 you\cf3 've created that begin with '\cf4 my\cf3 '. This is called\
+| auto-completion and can be quite handy when you have many variables in your\
+| workspace. Give it a try. (If auto-completion doesn'\cf4 t\cf3  \cf4 work\cf3  \cf4 for\cf3  \cf4 you\cf2 ,\cf3  \cf4 just\cf3 \
+\cf2 |\cf3  \cf4 type\cf3  \cf4 my_div\cf3  \cf4 and\cf3  \cf4 press\cf3  \cf4 Enter.\cf2 )\cf3 \
+\
+\cf2 >\cf3  \cf4 my_div\cf3 \
+\cf2 [\cf6 1\cf2 ]\cf3  \cf6 3.478505\cf3  \cf6 3.181981\cf3  \cf6 2.146460\cf3 \
+\
+\cf2 |\cf3  \cf4 All\cf3  \cf4 that\cf3  \cf4 hard\cf3  \cf4 work\cf3  \cf4 is\cf3  \cf4 paying\cf3  \cf4 off\cf2 !\cf3 \
+  \cf2 |=====================================================================|\cf3  \cf6 100\cf2 %\
+library(swirl) \
+swirl()\
+| Welcome to swirl! Please sign in. If you've been here before, use the same\
+| name as you did then. If you are new, call yourself something unique.\
+\
+What shall I call you? Jae\
+| Would you like to continue with one of these lessons?\
+\
+1: R Programming Basic Building Blocks\
+2: No. Let me start something new.\
+\
+Selection: 1\
+| Please choose a lesson, or type 0 to return to course menu.\
+\
+ 1: Basic Building Blocks      2: Workspace and Files     \
+ 3: Sequences of Numbers       4: Vectors                 \
+ 5: Missing Values             6: Subsetting Vectors      \
+ 7: Matrices and Data Frames   8: Logic                   \
+ 9: Functions                 10: lapply and sapply       \
+11: vapply and tapply         12: Looking at Data         \
+13: Simulation                14: Dates and Times         \
+15: Base Graphics             \
+\
+Selection: 2\
+  |                                                                     |   0%\
+\
+| In this lesson, you'll learn how to examine your local workspace in R and\
+| begin to explore the relationship between your workspace and the file system\
+| of your machine.\
+\
+...\
+  |==                                                                   |   3%\
+| Because different operating systems have different conventions with regards\
+| to things like file paths, the outputs of these commands may vary across\
+| machines.\
+\
+...\
+  |====                                                                 |   5%\
+| However it's important to note that R provides a common API (a common set of\
+| commands) for interacting with files, that way your code will work across\
+| different kinds of computers.\
+\
+...\
+  |=====                                                                |   8%\
+| Let's jump right in so you can get a feel for how these special functions\
+| work!\
+\
+...\
+  |=======                                                              |  10%\
+| Determine which directory your R session is using as its current working\
+| directory using getwd().\
+\
+> getwd()\
+[1] "/Users/jaelynnparks/Desktop/Evolution/Tasks/Task_01"\
+\
+| That's correct!\
+  |=========                                                            |  13%\
+| List all the objects in your local workspace using ls().\
+\
+> ls()\
+> ls()\
+[1] "my_div"  "my_sqrt" "x"       "y"       "z"      \
+\
+| You are really on a roll!\
+  |===========                                                          |  15%\
+| Some R commands are the same as their equivalents commands on Linux or on a Mac. Both\
+| Linux and Mac operating systems are based on an operating system called Unix. It's\
+| always a good idea to learn more about Unix!\
+\
+...\
+ |============                                                         |  18%\
+| Assign 9 to x using x <- 9.\
+\
+> x <- 9\
+| Great job!\
+  |==============                                                       |  21%\
+| Now take a look at objects that are in your workspace using ls().\
+\
+ls()\
+[1] "my_div"  "my_sqrt" "x"       "y"       "z"      \
+\
+| That's correct!\
+  |================                                                     |  23%\
+| List all the files in your working directory using list.files() or dir().\
+\
+\cf3 list.files () \
+> list.files () \
+[1] "task01.R"\
+\
+| Nice work!\
+  |==================                                                   |  26%\
+| As we go through this lesson, you should be examining the help page for each new\
+| function. Check out the help page for list.files with the command ?list.files.\
+\
+?list.files\
+\
+> ?list.files\
+starting httpd help server ... done\
+\
+| Perseverance, that's the answer.\
+  |===================                                                  |  28%\
+| One of the most helpful parts of any R help file is the See Also section. Read that\
+| section for list.files. Some of these functions may be used in later portions of this\
+| lesson.\
+\
+...\
+|=====================                                                |  31%\
+| Using the args() function on a function name is also a handy way to see what arguments\
+| a function can take.\
+\
+...\
+  |=======================                                              |  33%\
+| Use the args() function to determine the arguments to list.files().\
+\
+args(list.files)\
+function (path = ".", pattern = NULL, all.files = FALSE, full.names = FALSE, \
+    recursive = FALSE, ignore.case = FALSE, include.dirs = FALSE, \
+    no.. = FALSE) \
+NULL\
+\
+| You are really on a roll!\
+  |=========================                                            |  36%\
+| Assign the value of the current working directory to a variable called "old.dir".\
+> old.dir <- getwd()\
+\
+| All that practice is paying off!\
+  |===========================                                          |  38%\
+| We will use old.dir at the end of this lesson to move back to the place that we\
+| started. A lot of query functions like getwd() have the useful property that they\
+| return the answer to the question as a result of the function.\
+\
+...\
+...\
+  |============================                                         |  41%\
+| Use dir.create() to create a directory in the current working directory called\
+| "testdir".\
+\
+dir.create(\'91testdir)\
+| You got it!\
+  |==============================                                       |  44%\
+| We will do all our work in this new directory and then delete it after we are done.\
+| This is the R analog to "Take only pictures, leave only footprints."\
+\
+...\
+ |================================                                     |  46%\
+| Set your working directory to "testdir" with the setwd() command.\
+\
+> setwd('testdir')\
+\
+| Perseverance, that's the answer.\
+  |==================================                                   |  49%\
+| In general, you will want your working directory to be someplace sensible, perhaps\
+| created for the specific project that you are working on. In fact, organizing your\
+| work in R packages using RStudio is an excellent option. Check out RStudio at\
+| http://www.rstudio.com/\
+\
+...\
+ |===================================                                  |  51%\
+| Create a file in your working directory called "mytest.R" using the file.create()\
+| function.\
+\
+file.create(\'91mytest.R\'92)\
+[1] TRUE\
+\
+| Great job!\
+  |=====================================                                |  54%\
+| This should be the only file in this newly created directory. Let's check this by\
+| listing all the files in the current directory.\
+\
+> list.files()\
+[1] "mytest.R"\
+\
+| Great job!\
+  |=======================================                              |  56%\
+| Check to see if "mytest.R" exists in the working directory using the file.exists()\
+| function.\
+\
+file.exists(\'91mytest.R\'92)\
+\
+[1] TRUE\
+\
+| That's the answer I was looking for.\
+  |=========================================                            |  59%\
+| These sorts of functions are excessive for interactive use. But, if you are running a\
+| program that loops through a series of files and does some processing on each one, you\
+| will want to check to see that each exists before you try to process it.\
+\
+...\
+|==========================================                           |  62%\
+| Access information about the file "mytest.R" by using file.info().\
+\
+file.info(\'91mytest.R\'92)\
+size isdir mode               mtime               ctime               atime uid\
+mytest.R    0 FALSE  644 2021-01-24 20:42:50 2021-01-24 20:42:50 2021-01-24 20:42:50 501\
+         gid        uname grname\
+mytest.R  20 jaelynnparks  staff\
+\
+| You got it!\
+  |============================================                         |  64%\
+| You can use the $ operator --- e.g., file.info("mytest.R")$mode --- to grab specific\
+| items.\
+\
+...\
+...\
+  |==============================================                       |  67%\
+| Change the name of the file "mytest.R" to "mytest2.R" by using file.rename().\
+\
+> file.rename("mytest.R", "mytest2.R")\
+[1] TRUE\
+\
+| You are really on a roll!\
+  |================================================                     |  69%\
+| Your operating system will provide simpler tools for these sorts of tasks, but having\
+| the ability to manipulate files programatically is useful. You might now try to delete\
+| mytest.R using file.remove('mytest.R'), but that won't work since mytest.R no longer\
+| exists. You have already renamed it.\
+\
+...\
+ |==================================================                   |  72%\
+| Make a copy of "mytest2.R" called "mytest3.R" using file.copy().\
+\
+> file.copy('mytest2.R', 'mytest3.R')\
+[1] TRUE\
+\
+| Keep up the great work!\
+  |===================================================                  |  74%\
+| You now have two files in the current directory. That may not seem very interesting.\
+| But what if you were working with dozens, or millions, of individual files? In that\
+| case, being able to programatically act on many files would be absolutely necessary.\
+| Don't forget that you can, temporarily, leave the lesson by typing play() and then\
+| return by typing nxt().\
+\
+...\
+ |=====================================================                |  77%\
+| Provide the relative path to the file "mytest3.R" by using file.path().\
+\
+> file.path('mytest3.R')\
+[1] "mytest3.R"\
+\
+| You're the best!\
+  |=======================================================              |  79%\
+| You can use file.path to construct file and directory paths that are independent of\
+| the operating system your R code is running on. Pass 'folder1' and 'folder2' as\
+| arguments to file.path to make a platform-independent pathname.\
+\
+> file.path("folder1", "folder2")\
+[1] "folder1/folder2"\
+\
+| Keep up the great work!\
+  |=========================================================            |  82%\
+| Take a look at the documentation for dir.create by entering ?dir.create . Notice the\
+| 'recursive' argument. In order to create nested directories, 'recursive' must be set\
+| to TRUE.\
+\
+> ?dir.create\
+\
+| That's the answer I was looking for.\
+  |==========================================================           |  85%\
+| Create a directory in the current working directory called "testdir2" and a\
+| subdirectory for it called "testdir3", all in one command by using dir.create() and\
+| file.path().\
+> dir.create(file.path('testdir2', 'testdir3'), recursive = TRUE)\
+\
+| Great job!\
+  |============================================================         |  87%\
+| Go back to your original working directory using setwd(). (Recall that we created the\
+| variable old.dir with the full path for the orginal working directory at the start of\
+| these questions.)\
+\
+> > setwd(old.dir)\
+\
+| Your dedication is inspiring!\
+  |==============================================================       |  90%\
+| It is often helpful to save the settings that you had before you began an analysis and\
+| then go back to them at the end. This trick is often used within functions; you save,\
+| say, the par() settings that you started with, mess around a bunch, and then set them\
+| back to the original values at the end. This isn't the same as what we have done here,\
+| but it seems similar enough to mention.\
+\
+...\
+|================================================================     |  92%\
+| After you finish this lesson delete the 'testdir' directory that you just left (and\
+| everything in it)\
+\
+...\
+...\
+  |=================================================================    |  95%\
+| Take nothing but results. Leave nothing but assumptions. That sounds like 'Take\
+| nothing but pictures. Leave nothing but footprints.' But it makes no sense! Surely our\
+| readers can come up with a better motto . . .\
+\
+...\
+  |===================================================================  |  97%\
+| In this lesson, you learned how to examine your R workspace and work with the file\
+| system of your machine from within R. Thanks for playing!\
+\
+...\
+  |=====================================================================| 100%\
+| Would you like to receive credit for completing this course on Coursera.org?\
+\
+1: No\
+2: Yes\
+\
+Selection: 1\
+\
+| You are really on a roll!\
+\
+| You've reached the end of this lesson! Returning to the main menu...\
+\
+| Please choose a course, or type 0 to exit swirl.\
+\
+1: R Programming\
+2: Take me to the swirl course repository!\
+\
+Selection: 1\
+| Please choose a lesson, or type 0 to return to course menu.\
+\
+ 1: Basic Building Blocks      2: Workspace and Files     \
+ 3: Sequences of Numbers       4: Vectors                 \
+ 5: Missing Values             6: Subsetting Vectors      \
+ 7: Matrices and Data Frames   8: Logic                   \
+ 9: Functions                 10: lapply and sapply       \
+11: vapply and tapply         12: Looking at Data         \
+13: Simulation                14: Dates and Times         \
+15: Base Graphics             \
+\
+Selection: 3\
+  |                                                                               |   0%\
+\
+| In this lesson, you'll learn how to create sequences of numbers in R.\
+\
+...\
+  |===                                                                            |   4%\
+| The simplest way to create a sequence of numbers in R is by using the `:` operator.\
+| Type 1:20 to see how it works.\
+\
+> 1:20\
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20\
+\
+| You are amazing!\
+  |=======                                                                        |   9%\
+| That gave us every integer between (and including) 1 and 20. We could also use it to\
+| create a sequence of real numbers. For example, try pi:10.\
+\
+>  pi:10\
+[1] 3.141593 4.141593 5.141593 6.141593 7.141593 8.141593 9.141593\
+\
+| You are doing so well!\
+  |==========                                                                     |  13%\
+| The result is a vector of real numbers starting with pi (3.142...) and increasing in\
+| increments of 1. The upper limit of 10 is never reached, since the next number in our\
+| sequence would be greater than 10.\
+\
+...\
+  |==============                                                                 |  17%\
+| What happens if we do 15:1? Give it a try to find out.\
+\
+> 15:1\
+[1] 15 14 13 12 11 10  9  8  7  6  5  4  3  2  1\
+\
+| Keep up the great work!\
+  |=================                                                              |  22%\
+| It counted backwards in increments of 1! It's unlikely we'd want this behavior, but\
+| nonetheless it's good to know how it could happen.\
+\
+...\
+  |=====================                                                          |  26%\
+| Remember that if you have questions about a particular R function, you can access its\
+| documentation with a question mark followed by the function name: ?function_name_here.\
+| However, in the case of an operator like the colon used above, you must enclose the\
+| symbol in backticks like this: ?`:`. (NOTE: The backtick (`) key is generally located\
+| in the top left corner of a keyboard, above the Tab key. If you don't have a backtick\
+| key, you can use regular quotes.)\
+\
+...\
+  |========================                                                       |  30%\
+| Pull up the documentation for `:` now.\
+\
+> ?`:`\
+\
+| All that practice is paying off!\
+  |===========================                                                    |  35%\
+| Often, we'll desire more control over a sequence we're creating than what the `:`\
+| operator gives us. The seq() function serves this purpose.\
+\
+...\
+ |===============================                                                |  39%\
+| The most basic use of seq() does exactly the same thing as the `:` operator. Try\
+| seq(1, 20) to see this.\
+\
+seq(1, 20)\
+[1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20\
+\
+| You nailed it! Good job!\
+  |==================================                                             |  43%\
+| This gives us the same output as 1:20. However, let's say that instead we want a\
+| vector of numbers ranging from 0 to 10, incremented by 0.5. seq(0, 10, by=0.5) does\
+| just that. Try it out.\
+\
+>> seq(0, 10, by=0.5)\
+ [1]  0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5  4.0  4.5  5.0  5.5  6.0  6.5  7.0  7.5  8.0\
+[18]  8.5  9.0  9.5 10.0\
+\
+| You are quite good my friend!\
+  |======================================                                         |  48%\
+| Or maybe we don't care what the increment is and we just want a sequence of 30 numbers\
+| between 5 and 10. seq(5, 10, length=30) does the trick. Give it a shot now and store\
+| the result in a new variable called my_seq.\
+\
+>  my_seq <- seq(5, 10, length=30)\
+\
+| All that hard work is paying off!\
+  |=========================================                                      |  52%\
+| To confirm that my_seq has length 30, we can use the length() function. Try it now.\
+\
+>  length(my_seq)\
+[1] 30\
+\
+| You are really on a roll!\
+  |=============================================                                  |  57%\
+| Let's pretend we don't know the length of my_seq, but we want to generate a sequence\
+| of integers from 1 to N, where N represents the length of the my_seq vector. In other\
+| words, we want a new vector (1, 2, 3, ...) that is the same length as my_seq.\
+\
+...\
+  |================================================                               |  61%\
+| There are several ways we could do this. One possibility is to combine the `:`\
+| operator and the length() function like this: 1:length(my_seq). Give that a try.\
+> 1:length(my_seq)\
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28\
+[29] 29 30\
+\
+| Excellent job!\
+  |====================================================                           |  65%\
+| Another option is to use seq(along.with = my_seq). Give that a try.\
+\
+> seq(along.with = my_seq)\
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28\
+[29] 29 30\
+\
+| You got it right!\
+  |=======================================================                        |  70%\
+| However, as is the case with many common tasks, R has a separate built-in function for\
+| this purpose called seq_along(). Type seq_along(my_seq) to see it in action.\
+\
+> seq_along(my_seq)\
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28\
+[29] 29 30\
+\
+| You're the best!\
+  |==========================================================                     |  74%\
+| There are often several approaches to solving the same problem, particularly in R.\
+| Simple approaches that involve less typing are generally best. It's also important for\
+| your code to be readable, so that you and others can figure out what's going on\
+| without too much hassle.\
+\
+...\
+|==============================================================                 |  78%\
+| If R has a built-in function for a particular task, it's likely that function is\
+| highly optimized for that purpose and is your best option. As you become a more\
+| advanced R programmer, you'll design your own functions to perform tasks when there\
+| are no better options. We'll explore writing your own functions in future lessons.\
+\
+...\
+  |=================================================================              |  83%\
+| One more function related to creating sequences of numbers is rep(), which stands for\
+| 'replicate'. Let's look at a few uses.\
+\
+...\
+  |=====================================================================          |  87%\
+| If we're interested in creating a vector that contains 40 zeros, we can use rep(0,\
+| times = 40). Try it out.\
+> rep(0, times=40)\
+ [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\
+\
+| Perseverance, that's the answer.\
+  |========================================================================       |  91%\
+| If instead we want our vector to contain 10 repetitions of the vector (0, 1, 2), we\
+| can do rep(c(0, 1, 2), times = 10). Go ahead.\
+\
+> rep(c(0, 1, 2), times = 10)\
+ [1] 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2 0 1 2\
+\
+| Nice work!\
+  |============================================================================   |  96%\
+| Finally, let's say that rather than repeating the vector (0, 1, 2) over and over\
+| again, we want our vector to contain 10 zeros, then 10 ones, then 10 twos. We can do\
+| this with the `each` argument. Try rep(c(0, 1, 2), each = 10).\
+\
+> rep(c(0, 1, 2), each=10)\
+ [1] 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2\
+\
+| Excellent work!\
+  |===============================================================================| 100%\
+| Would you like to receive credit for completing this course on Coursera.org?\
+\
+1: No\
+2: Yes\
+\
+Selection: 1\
+\
+| You are really on a roll!\
+\
+| You've reached the end of this lesson! Returning to the main menu...\
+\
+| Please choose a course, or type 0 to exit swirl.\
+\
+1: R Programming\
+2: Take me to the swirl course repository!\
+\
+Selection: 1\
+| Please choose a lesson, or type 0 to return to course menu.\
+\
+ 1: Basic Building Blocks      2: Workspace and Files     \
+ 3: Sequences of Numbers       4: Vectors                 \
+ 5: Missing Values             6: Subsetting Vectors      \
+ 7: Matrices and Data Frames   8: Logic                   \
+ 9: Functions                 10: lapply and sapply       \
+11: vapply and tapply         12: Looking at Data         \
+13: Simulation                14: Dates and Times         \
+15: Base Graphics             \
+\
+Selection: 5\
+  |                                                                               |   0%\
+\
+| Missing values play an important role in statistics and data analysis. Often, missing\
+| values must not be ignored, but rather they should be carefully studied to see if\
+| there's an underlying pattern or cause for their missingness.\
+\
+...\
+...\
+  |====                                                                           |   5%\
+| In R, NA is used to represent any value that is 'not available' or 'missing' (in the\
+| statistical sense). In this lesson, we'll explore missing values further.\
+\
+...\
+  |========                                                                       |  10%\
+| Any operation involving NA generally yields NA as the result. To illustrate, let's\
+| create a vector c(44, NA, 5, NA) and assign it to a variable x.\
+\
+| Assign the vector c(44, NA, 5, NA) to a variable x. The NA must uppercase.\
+\
+> x <- c(44, NA, 5, NA)\
+\
+| Keep working like that and you'll get there!\
+  |============                                                                   |  15%\
+| Now, let's multiply x by 3.\
+\
+> x * 3\
+[1] 132  NA  15  NA\
+\
+| That's a job well done!\
+  |================                                                               |  20%\
+| Notice that the elements of the resulting vector that correspond with the NA values in\
+| x are also NA.\
+\
+...\
+ |====================                                                           |  25%\
+| To make things a little more interesting, lets create a vector containing 1000 draws\
+| from a standard normal distribution with y <- rnorm(1000).\
+\
+> y <- rnorm(1000)\
+\
+| All that practice is paying off!\
+  |========================                                                       |  30%\
+| Next, let's create a vector containing 1000 NAs with z <- rep(NA, 1000).\
+\
+>  z <- rep(NA, 1000)\
+\
+| Excellent work!\
+  |============================                                                   |  35%\
+| Finally, let's select 100 elements at random from these 2000 values (combining y and\
+| z) such that we don't know how many NAs we'll wind up with or what positions they'll\
+| occupy in our final vector -- my_data <- sample(c(y, z), 100).\
+\
+>  my_data <- sample(c(y, z), 100)\
+\
+| That's the answer I was looking for.\
+  |================================                                               |  40%\
+| Let's first ask the question of where our NAs are located in our data. The is.na()\
+| function tells us whether each element of a vector is NA. Call is.na() on my_data and\
+| assign the result to my_na.\
+\
+>  my_na <- is.na(my_data)\
+\
+| All that practice is paying off!\
+  |====================================                                           |  45%\
+| Now, print my_na to see what you came up with.\
+\
+ my_na\
+  [1]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE\
+ [15] FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE\
+ [29]  TRUE  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE  TRUE\
+ [43]  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE\
+ [57]  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE\
+ [71] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE\
+ [85] FALSE  TRUE FALSE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE FALSE\
+ [99] FALSE FALSE\
+\
+| Excellent work!\
+  |========================================                                       |  50%\
+| Everywhere you see a TRUE, you know the corresponding element of my_data is NA.\
+| Likewise, everywhere you see a FALSE, you know the corresponding element of my_data is\
+| one of our random draws from the standard normal distribution.\
+\
+...\
+  |===========================================                                    |  55%\
+| In our previous discussion of logical operators, we introduced the `==` operator as a\
+| method of testing for equality between two objects. So, you might think the expression\
+| my_data == NA yields the same results as is.na(). Give it a try.\
+\
+> my_data == NA\
+  [1] NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA\
+ [29] NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA\
+ [57] NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA\
+ [85] NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA NA\
+\
+| You are doing so well!\
+  |===============================================                                |  60%\
+| The reason you got a vector of all NAs is that NA is not really a value, but just a\
+| placeholder for a quantity that is not available. Therefore the logical expression is\
+| incomplete and R has no choice but to return a vector of the same length as my_data\
+| that contains all NAs.\
+\
+...\
+  |===================================================                            |  65%\
+| Don't worry if that's a little confusing. The key takeaway is to be cautious when\
+| using logical expressions anytime NAs might creep in, since a single NA value can\
+| derail the entire thing.\
+\
+...\
+  |=======================================================                        |  70%\
+| So, back to the task at hand. Now that we have a vector, my_na, that has a TRUE for\
+| every NA and FALSE for every numeric value, we can compute the total number of NAs in\
+| our data.\
+\
+...\
+  |===========================================================                    |  75%\
+| The trick is to recognize that underneath the surface, R represents TRUE as the number\
+| 1 and FALSE as the number 0. Therefore, if we take the sum of a bunch of TRUEs and\
+| FALSEs, we get the total number of TRUEs.\
+\
+...\
+  |===============================================================                |  80%\
+| Let's give that a try here. Call the sum() function on my_na to count the total number\
+| of TRUEs in my_na, and thus the total number of NAs in my_data. Don't assign the\
+| result to a new variable.\
+\
+> sum(my_na)\
+[1] 45\
+\
+| All that practice is paying off!\
+  |===================================================================            |  85%\
+| Pretty cool, huh? Finally, let's take a look at the data to convince ourselves that\
+| everything 'adds up'. Print my_data to the console.\
+\
+> my_data\
+  [1]         NA         NA         NA         NA         NA         NA         NA\
+  [8]         NA         NA -0.6671897         NA -0.4089751         NA -0.5805336\
+ [15] -0.6798112 -1.4865785         NA -0.8515430  0.6917198 -0.9156266         NA\
+ [22]         NA -0.5781323         NA         NA  0.6683447         NA         NA\
+ [29]         NA         NA         NA         NA -0.7887826         NA  0.2320479\
+ [36] -0.7682406  0.4409956         NA         NA -1.0844483 -0.9094427         NA\
+ [43]         NA         NA  1.2676090 -0.5582072 -0.4194424  0.6931227 -0.9678164\
+ [50] -0.3057311  0.3475255 -1.2814690  0.5896407         NA         NA         NA\
+ [57]         NA -1.8372331         NA  0.4513914         NA -1.0761224 -2.3995517\
+ [64]  0.9066883         NA -1.3702720  0.8054034  0.1482931         NA -0.5358633\
+ [71] -0.2085516 -1.8358312         NA  0.5760599  0.4345683 -0.6512350  0.2261167\
+ [78] -0.4335105         NA -1.3130046 -0.5700467  1.0565007         NA  0.1201383\
+ [85]  0.2039961         NA -0.1562879         NA         NA         NA  0.7013629\
+ [92]  1.6471011  1.9147070  0.1831852         NA  0.2928568         NA -0.7921271\
+ [99] -1.2051968 -0.3104049\
+\
+| Your dedication is inspiring!\
+  |=======================================================================        |  90%\
+| Now that we've got NAs down pat, let's look at a second type of missing value -- NaN,\
+| which stands for 'not a number'. To generate NaN, try dividing (using a forward slash)\
+| 0 by 0 now.\
+| Your dedication is inspiring!\
+  |=======================================================================        |  90%\
+| Now that we've got NAs down pat, let's look at a second type of missing value -- NaN,\
+| which stands for 'not a number'. To generate NaN, try dividing (using a forward slash)\
+| 0 by 0 now.\
+\
+> 0/0\
+[1] NaN\
+\
+| Excellent work!\
+  |===========================================================================    |  95%\
+| Let's do one more, just for fun. In R, Inf stands for infinity. What happens if you\
+| subtract Inf from Inf?\
+\
+> Inf - Inf\
+[1] NaN\
+\
+| All that practice is paying off!\
+  |===============================================================================| 100%\
+| Would you like to receive credit for completing this course on Coursera.org?\
+\
+1: No\
+2: Yes\
+\
+Selection: 1\
+\
+| You are amazing!\
+\
+| You've reached the end of this lesson! Returning to the main menu...\
+\
+| Please choose a course, or type 0 to exit swirl.\
+\
+1: R Programming\
+2: Take me to the swirl course repository!\
+\
+Selection: 1\
+| Please choose a lesson, or type 0 to return to course menu.\
+\
+ 1: Basic Building Blocks      2: Workspace and Files     \
+ 3: Sequences of Numbers       4: Vectors                 \
+ 5: Missing Values             6: Subsetting Vectors      \
+ 7: Matrices and Data Frames   8: Logic                   \
+ 9: Functions                 10: lapply and sapply       \
+11: vapply and tapply         12: Looking at Data         \
+13: Simulation                14: Dates and Times         \
+15: Base Graphics             \
+\
+Selection: 6\
+  |                                                                               |   0%\
+\
+| In this lesson, we'll see how to extract elements from a vector based on some\
+| conditions that we specify.\
+\
+...\
+  |==                                                                             |   3%\
+| For example, we may only be interested in the first 20 elements of a vector, or only\
+| the elements that are not NA, or only those that are positive or correspond to a\
+| specific variable of interest. By the end of this lesson, you'll know how to handle\
+| each of these scenarios.\
+\
+...\
+  |====                                                                           |   5%\
+| I've created for you a vector called x that contains a random ordering of 20 numbers\
+| (from a standard normal distribution) and 20 NAs. Type x now to see what it looks\
+| like.\
+\
+> x\
+ [1]          NA  1.28991812  1.29380715          NA          NA          NA          NA\
+ [8] -1.28522942          NA -1.09192998  0.55879071          NA          NA          NA\
+[15]          NA -2.86304413  0.50717413  0.48993811          NA  0.57649308  1.03069623\
+[22]  0.44022035 -0.09371549 -0.60260185          NA          NA          NA          NA\
+[29] -0.54642547  0.14378868          NA  1.04777739          NA          NA -1.50058071\
+[36] -0.15285534          NA          NA  0.05194223  0.65106312\
+\
+| Your dedication is inspiring!\
+  |======                                                                         |   8%\
+| The way you tell R that you want to select some particular elements (i.e. a 'subset')\
+| from a vector is by placing an 'index vector' in square brackets immediately following\
+| the name of the vector.\
+\
+...\
+  |========                                                                       |  10%\
+| For a simple example, try x[1:10] to view the first ten elements of x.\
+\
+> x[1:10]\
+ [1]        NA  1.289918  1.293807        NA        NA        NA        NA -1.285229\
+ [9]        NA -1.091930\
+\
+| Perseverance, that's the answer.\
+  |==========                                                                     |  13%\
+| Index vectors come in four different flavors -- logical vectors, vectors of positive\
+| integers, vectors of negative integers, and vectors of character strings -- each of\
+| which we'll cover in this lesson.\
+|============                                                                   |  15%\
+| Let's start by indexing with logical vectors. One common scenario when working with\
+| real-world data is that we want to extract all elements of a vector that are not NA\
+| (i.e. missing data). Recall that is.na(x) yields a vector of logical values the same\
+| length as x, with TRUEs corresponding to NA values in x and FALSEs corresponding to\
+| non-NA values in x.\
+\
+...\
+  |==============                                                                 |  18%\
+| What do you think x[is.na(x)] will give you?\
+\
+1: A vector of TRUEs and FALSEs\
+2: A vector with no NAs\
+3: A vector of all NAs\
+4: A vector of length 0\
+\
+Selection: 4\
+| You are amazing!\
+  |================                                                               |  21%\
+| Prove it to yourself by typing x[is.na(x)].\
+\
+> x[is.na(x)]\
+| Keep working like that and you'll get there!\
+  |==================                                                             |  23%\
+| Recall that `!` gives us the negation of a logical expression, so !is.na(x) can be\
+| read as 'is not NA'. Therefore, if we want to create a vector called y that contains\
+| all of the non-NA values from x, we can use y <- x[!is.na(x)]. Give it a try.\
+\
+> y <- x[!is.na(x)]\
+\
+| Your dedication is inspiring!\
+  |====================                                                           |  26%\
+| Print y to the console.\
+\
+> y\
+ [1]  1.28991812  1.29380715 -1.28522942 -1.09192998  0.55879071 -2.86304413  0.50717413\
+ [8]  0.48993811  0.57649308  1.03069623  0.44022035 -0.09371549 -0.60260185 -0.54642547\
+[15]  0.14378868  1.04777739 -1.50058071 -0.15285534  0.05194223  0.65106312\
+\
+| Keep up the great work!\
+  |======================                                                         |  28%\
+| Now that we've isolated the non-missing values of x and put them in y, we can subset y\
+| as we please.\
+\
+...\
+...\
+  |========================                                                       |  31%\
+| Recall that the expression y > 0 will give us a vector of logical values the same\
+| length as y, with TRUEs corresponding to values of y that are greater than zero and\
+| FALSEs corresponding to values of y that are less than or equal to zero. What do you\
+| think y[y > 0] will give you?\
+\
+1: A vector of all the positive elements of y\
+2: A vector of all NAs\
+3: A vector of TRUEs and FALSEs\
+4: A vector of all the negative elements of y\
+5: A vector of length 0\
+\
+Selection: 1\
+\
+| You are doing so well!\
+  |==========================                                                     |  33%\
+| Type y[y > 0] to see that we get all of the positive elements of y, which are also the\
+| positive elements of our original vector x.\
+\
+> y[y > 0]\
+ [1] 1.28991812 1.29380715 0.55879071 0.50717413 0.48993811 0.57649308 1.03069623\
+ [8] 0.44022035 0.14378868 1.04777739 0.05194223 0.65106312\
+\
+| You are really on a roll!\
+  |============================                                                   |  36%\
+| You might wonder why we didn't just start with x[x > 0] to isolate the positive\
+| elements of x. Try that now to see why.\
+\
+> x[x > 0]\
+ [1]         NA 1.28991812 1.29380715         NA         NA         NA         NA\
+ [8]         NA 0.55879071         NA         NA         NA         NA 0.50717413\
+[15] 0.48993811         NA 0.57649308 1.03069623 0.44022035         NA         NA\
+[22]         NA         NA 0.14378868         NA 1.04777739         NA         NA\
+[29]         NA         NA 0.05194223 0.65106312\
+\
+| You are really on a roll!\
+  |==============================                                                 |  38%\
+| Since NA is not a value, but rather a placeholder for an unknown quantity, the\
+| expression NA > 0 evaluates to NA. Hence we get a bunch of NAs mixed in with our\
+| positive numbers when we do this.\
+\
+...\
+...\
+  |================================                                               |  41%\
+| Combining our knowledge of logical operators with our new knowledge of subsetting, we\
+| could do this -- x[!is.na(x) & x > 0]. Try it out.\
+\
+> x[!is.na(x) & x > 0]\
+ [1] 1.28991812 1.29380715 0.55879071 0.50717413 0.48993811 0.57649308 1.03069623\
+ [8] 0.44022035 0.14378868 1.04777739 0.05194223 0.65106312\
+\
+| You are doing so well!\
+  |==================================                                             |  44%\
+| In this case, we request only values of x that are both non-missing AND greater than\
+| zero.\
+\
+...\
+...\
+  |====================================                                           |  46%\
+| I've already shown you how to subset just the first ten values of x using x[1:10]. In\
+| this case, we're providing a vector of positive integers inside of the square\
+| brackets, which tells R to return only the elements of x numbered 1 through 10.\
+\
+...\
+  |======================================                                         |  49%\
+| Many programming languages use what's called 'zero-based indexing', which means that\
+| the first element of a vector is considered element 0. R uses 'one-based indexing',\
+| which (you guessed it!) means the first element of a vector is considered element 1.\
+\
+...\
+  |=========================================                                      |  51%\
+| Can you figure out how we'd subset the 3rd, 5th, and 7th elements of x? Hint -- Use\
+| the c() function to specify the element numbers as a numeric vector.\
+\
+> > x[c(3, 5, 7)]\
+[1] 1.293807       NA       NA\
+\
+| All that hard work is paying off!\
+  |===========================================                                    |  54%\
+| It's important that when using integer vectors to subset our vector x, we stick with\
+| the set of indexes \{1, 2, ..., 40\} since x only has 40 elements. What happens if we\
+| ask for the zeroth element of x (i.e. x[0])? Give it a try.\
+\
+> x[0]\
+numeric(0)\
+\
+| All that hard work is paying off!\
+  |=============================================                                  |  56%\
+| As you might expect, we get nothing useful. Unfortunately, R doesn't prevent us from\
+| doing this. What if we ask for the 3000th element of x? Try it out.\
+\
+> x[3000]\
+[1] NA\
+\
+| Nice work!\
+  |===============================================                                |  59%\
+| Again, nothing useful, but R doesn't prevent us from asking for it. This should be a\
+| cautionary tale. You should always make sure that what you are asking for is within\
+| the bounds of the vector you're working with.\
+\
+...\
+|=================================================                              |  62%\
+| What if we're interested in all elements of x EXCEPT the 2nd and 10th? It would be\
+| pretty tedious to construct a vector containing all numbers 1 through 40 EXCEPT 2 and\
+| 10.\
+\
+...\
+  |===================================================                            |  64%\
+| Luckily, R accepts negative integer indexes. Whereas x[c(2, 10)] gives us ONLY the 2nd\
+| and 10th elements of x, x[c(-2, -10)] gives us all elements of x EXCEPT for the 2nd\
+| and 10 elements.  Try x[c(-2, -10)] now to see this.\
+\
+> x[c(-2, -10)]\
+ [1]          NA  1.29380715          NA          NA          NA          NA -1.28522942\
+ [8]          NA  0.55879071          NA          NA          NA          NA -2.86304413\
+[15]  0.50717413  0.48993811          NA  0.57649308  1.03069623  0.44022035 -0.09371549\
+[22] -0.60260185          NA          NA          NA          NA -0.54642547  0.14378868\
+[29]          NA  1.04777739          NA          NA -1.50058071 -0.15285534          NA\
+[36]          NA  0.05194223  0.65106312\
+\
+| Excellent job!\
+  |=====================================================                          |  67%\
+| A shorthand way of specifying multiple negative numbers is to put the negative sign\
+| out in front of the vector of positive numbers. Type x[-c(2, 10)] to get the exact\
+| same result.\
+\
+>  x[-c(2, 10)]\
+ [1]          NA  1.29380715          NA          NA          NA          NA -1.28522942\
+ [8]          NA  0.55879071          NA          NA          NA          NA -2.86304413\
+[15]  0.50717413  0.48993811          NA  0.57649308  1.03069623  0.44022035 -0.09371549\
+[22] -0.60260185          NA          NA          NA          NA -0.54642547  0.14378868\
+[29]          NA  1.04777739          NA          NA -1.50058071 -0.15285534          NA\
+[36]          NA  0.05194223  0.65106312\
+\
+| You are amazing!\
+  |=======================================================                        |  69%\
+| So far, we've covered three types of index vectors -- logical, positive integer, and\
+| negative integer. The only remaining type requires us to introduce the concept of\
+| 'named' elements.\
+\
+...\
+ |=========================================================                      |  72%\
+| Create a numeric vector with three named elements using vect <- c(foo = 11, bar = 2,\
+| norf = NA).\
+\
+> vect <- c(foo = 11, bar = 2 , norf = NA)\
+\
+| You got it!\
+  |===========================================================                    |  74%\
+| When we print vect to the console, you'll see that each element has a name. Try it\
+| out.\
+\
+> vect\
+ foo  bar norf \
+  11    2   NA \
+\
+| Excellent work!\
+  |=============================================================                  |  77%\
+| We can also get the names of vect by passing vect as an argument to the names()\
+| function. Give that a try.\
+\
+> names(vect)\
+[1] "foo"  "bar"  "norf"\
+\
+| Excellent job!\
+  |===============================================================                |  79%\
+| Alternatively, we can create an unnamed vector vect2 with c(11, 2, NA). Do that now.\
+\
+> vect2 <- c(11, 2, NA)\
+\
+| That's a job well done!\
+  |=================================================================              |  82%\
+| Then, we can add the `names` attribute to vect2 after the fact with names(vect2) <-\
+| c("foo", "bar", "norf"). Go ahead.\
+\
+> names(vect2) <- c('foo', 'bar', 'norf')\
+\
+| Nice work!\
+  |===================================================================            |  85%\
+| Now, let's check that vect and vect2 are the same by passing them as arguments to the\
+| identical() function.\
+\
+> > identical(vect, vect2)\
+[1] TRUE\
+\
+| Nice work!\
+  |=====================================================================          |  87%\
+| Indeed, vect and vect2 are identical named vectors.\
+\
+...\
+ |=======================================================================        |  90%\
+| Now, back to the matter of subsetting a vector by named elements. Which of the\
+| following commands do you think would give us the second element of vect?\
+\
+1: vect["2"]\
+2: vect[bar]\
+3: vect["bar"]\
+\
+Selection: 3\
+| Excellent work!\
+  |=========================================================================      |  92%\
+| Now, try it out.\
+\
+> vect["bar"]\
+bar \
+  2 \
+\
+| You got it right!\
+  |===========================================================================    |  95%\
+| Likewise, we can specify a vector of names with vect[c("foo", "bar")]. Try it out.\
+\
+>  vect[c('foo', 'bar')]\
+foo bar \
+ 11   2 \
+\
+| You got it!\
+  |=============================================================================  |  97%\
+| Now you know all four methods of subsetting data from vectors. Different approaches\
+| are best in different scenarios and when in doubt, try it out!\
+\
+...\
+  |===============================================================================| 100%\
+| Would you like to receive credit for completing this course on Coursera.org?\
+\
+1: Yes\
+2: No\
+\
+Selection: 2\
+\
+| Great job!\
+\
+| You've reached the end of this lesson! Returning to the main menu...\
+\
+| Please choose a course, or type 0 to exit swirl.\
+\
+1: R Programming\
+2: Take me to the swirl course repository!\
+\
+Selection: 1\
+| Please choose a lesson, or type 0 to return to course menu.\
+\
+ 1: Basic Building Blocks      2: Workspace and Files     \
+ 3: Sequences of Numbers       4: Vectors                 \
+ 5: Missing Values             6: Subsetting Vectors      \
+ 7: Matrices and Data Frames   8: Logic                   \
+ 9: Functions                 10: lapply and sapply       \
+11: vapply and tapply         12: Looking at Data         \
+13: Simulation                14: Dates and Times         \
+15: Base Graphics             \
+\
+Selection: 7\
+  |                                                                               |   0%\
+\
+| In this lesson, we'll cover matrices and data frames. Both represent 'rectangular'\
+| data types, meaning that they are used to store tabular data, with rows and columns.\
+\
+...\
+|==                                                                             |   3%\
+| The main difference, as you'll see, is that matrices can only contain a single class\
+| of data, while data frames can consist of many different classes of data.\
+\
+...\
+  |====                                                                           |   6%\
+| Let's create a vector containing the numbers 1 through 20 using the `:` operator.\
+| Store the result in a variable called my_vector.\
+\
+> my_vector\
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20\
+\
+| That's a job well done!\
+  |=========                                                                      |  11%\
+| The dim() function tells us the 'dimensions' of an object. What happens if we do\
+| dim(my_vector)? Give it a try.\
+\
+>  dim(my_vector)\
+NULL\
+\
+| That's the answer I was looking for.\
+  |===========                                                                    |  14%\
+| Clearly, that's not very helpful! Since my_vector is a vector, it doesn't have a `dim`\
+| attribute (so it's just NULL), but we can find its length using the length() function.\
+| Try that now.\
+\
+> length(my_vector)\
+[1] 20\
+\
+| You are quite good my friend!\
+  |=============                                                                  |  17%\
+| Ah! That's what we wanted. But, what happens if we give my_vector a `dim` attribute?\
+| Let's give it a try. Type dim(my_vector) <- c(4, 5).\
+\
+> dim(my_vector) <- c(4, 5)\
+\
+| You got it!\
+  |===============                                                                |  19%\
+| It's okay if that last command seemed a little strange to you. It should! The dim()\
+| function allows you to get OR set the `dim` attribute for an R object. In this case,\
+| we assigned the value c(4, 5) to the `dim` attribute of my_vector.\
+\
+...\
+|==================                                                             |  22%\
+| Use dim(my_vector) to confirm that we've set the `dim` attribute correctly.\
+\
+> dim(my_vector)\
+[1] 4 5\
+\
+| Excellent job!\
+  |====================                                                           |  25%\
+| Another way to see this is by calling the attributes() function on my_vector. Try it\
+| now.\
+\
+> attributes(my_vector)\
+$dim\
+[1] 4 5\
+\
+\
+| You got it right!\
+  |======================                                                         |  28%\
+| Just like in math class, when dealing with a 2-dimensional object (think rectangular\
+| table), the first number is the number of rows and the second is the number of\
+| columns. Therefore, we just gave my_vector 4 rows and 5 columns.\
+\
+...\
+> my_vector\
+     [,1] [,2] [,3] [,4] [,5]\
+[1,]    1    5    9   13   17\
+[2,]    2    6   10   14   18\
+[3,]    3    7   11   15   19\
+[4,]    4    8   12   16   20\
+\
+| That's correct!\
+  |==========================                                                     |  33%\
+| Now, let's confirm it's actually a matrix by using the class() function. Type\
+| class(my_vector) to see what I mean.\
+\
+> > class(my_vector)\
+[1] "matrix" "array" \
+\
+| Perseverance, that's the answer.\
+  |=============================                                                  |  36%\
+| Sure enough, my_vector is now a matrix. We should store it in a new variable that\
+| helps us remember what it is. Store the value of my_vector in a new variable called\
+| my_matrix.\
+\
+> my_matrix <- my_vector\
+\
+| You got it!\
+  |===============================                                                |  39%\
+| The example that we've used so far was meant to illustrate the point that a matrix is\
+| simply an atomic vector with a dimension attribute. A more direct method of creating\
+| the same matrix uses the matrix() function.\
+\
+...\
+|=================================                                              |  42%\
+| Bring up the help file for the matrix() function now using the `?` function.\
+\
+| That's a job well done!\
+  |===================================                                            |  44%\
+| Now, look at the documentation for the matrix function and see if you can figure out\
+| how to create a matrix containing the same numbers (1-20) and dimensions (4 rows, 5\
+| columns) by calling the matrix() function. Store the result in a variable called\
+| my_matrix2.\
+\
+> > my_matrix2 <- matrix(data = 1:20, nrow = 4, ncol = 5)\
+\
+| Nice work!\
+  |=====================================                                          |  47%\
+| Finally, let's confirm that my_matrix and my_matrix2 are actually identical. The\
+| identical() function will tell us if its first two arguments are the same. Try it out.\
+\
+ > identical(my_matrix, my_matrix2)\
+[1] TRUE\
+\
+| You are amazing!\
+  |========================================                                       |  50%\
+| Now, imagine that the numbers in our table represent some measurements from a clinical\
+| experiment, where each row represents one patient and each column represents one\
+| variable for which measurements were taken.\
+\
+...\
+  |==========================================                                     |  53%\
+| We may want to label the rows, so that we know which numbers belong to each patient in\
+| the experiment. One way to do this is to add a column to the matrix, which contains\
+| the names of all four people.\
+\
+...\
+  |============================================                                   |  56%\
+| Let's start by creating a character vector containing the names of our patients --\
+| Bill, Gina, Kelly, and Sean. Remember that double quotes tell R that something is a\
+| character string. Store the result in a variable called patients.\
+\
+> > patients <- c('Bill', 'Gina', 'Kelly', 'Sean')\
+\
+| You are doing so well!\
+  |==============================================                                 |  58%\
+| Now we'll use the cbind() function to 'combine columns'. Don't worry about storing the\
+| result in a new variable. Just call cbind() with two arguments -- the patients vector\
+| and my_matrix.\
+\
+> cbind(patients, my_matrix)\
+     patients                       \
+[1,] "Bill"   "1" "5" "9"  "13" "17"\
+[2,] "Gina"   "2" "6" "10" "14" "18"\
+[3,] "Kelly"  "3" "7" "11" "15" "19"\
+[4,] "Sean"   "4" "8" "12" "16" "20"\
+\
+| All that hard work is paying off!\
+  |================================================                               |  61%\
+| Something is fishy about our result! It appears that combining the character vector\
+| with our matrix of numbers caused everything to be enclosed in double quotes. This\
+| means we're left with a matrix of character strings, which is no good.\
+\
+...\
+...\
+  |==================================================                             |  64%\
+| If you remember back to the beginning of this lesson, I told you that matrices can\
+| only contain ONE class of data. Therefore, when we tried to combine a character vector\
+| with a numeric matrix, R was forced to 'coerce' the numbers to characters, hence the\
+| double quotes.\
+\
+...\
+  |=====================================================                          |  67%\
+| This is called 'implicit coercion', because we didn't ask for it. It just happened.\
+| But why didn't R just convert the names of our patients to numbers? I'll let you\
+| ponder that question on your own.\
+\
+...\
+  |=======================================================                        |  69%\
+| So, we're still left with the question of how to include the names of our patients in\
+| the table without destroying the integrity of our numeric data. Try the following --\
+| my_data <- data.frame(patients, my_matrix)\
+\
+> my_data <- data.frame(patients, my_matrix)\
+\
+| You're the best!\
+  |=========================================================                      |  72%\
+| Now view the contents of my_data to see what we've come up with.\
+\
+> my_data\
+  patients X1 X2 X3 X4 X5\
+1     Bill  1  5  9 13 17\
+2     Gina  2  6 10 14 18\
+3    Kelly  3  7 11 15 19\
+4     Sean  4  8 12 16 20\
+\
+| Excellent job!\
+  |===========================================================                    |  75%\
+| It looks like the data.frame() function allowed us to store our character vector of\
+| names right alongside our matrix of numbers. That's exactly what we were hoping for!\
+\
+...\
+  |=============================================================                  |  78%\
+| Behind the scenes, the data.frame() function takes any number of arguments and returns\
+| a single object of class `data.frame` that is composed of the original objects.\
+\
+...\
+  |================================================================               |  81%\
+| Let's confirm this by calling the class() function on our newly created data frame.\
+> class(my_data)\
+[1] "data.frame"\
+\
+| All that hard work is paying off!\
+  |==================================================================             |  83%\
+| It's also possible to assign names to the individual rows and columns of a data frame,\
+| which presents another possible way of determining which row of values in our table\
+| belongs to each patient.\
+\
+...\
+|====================================================================           |  86%\
+| However, since we've already solved that problem, let's solve a different problem by\
+| assigning names to the columns of our data frame so that we know what type of\
+| measurement each column represents.\
+\
+...\
+ |======================================================================         |  89%\
+| Since we have six columns (including patient names), we'll need to first create a\
+| vector containing one element for each column. Create a character vector called cnames\
+| that contains the following values (in order) -- "patient", "age", "weight", "bp",\
+| "rating", "test".\
+\
+> cnames <- c('patient', 'age', 'weight', 'bp', 'rating', 'test')\
+\
+| Perseverance, that's the answer.\
+  |========================================================================       |  92%\
+| Now, use the colnames() function to set the `colnames` attribute for our data frame.\
+| This is similar to the way we used the dim() function earlier in this lesson.\
+\
+> colnames(my_data) <- cnames\
+\
+| Nice work!\
+  |===========================================================================    |  94%\
+| Let's see if that got the job done. Print the contents of my_data.\
+\
+> my_data\
+  patient age weight bp rating test\
+1    Bill   1      5  9     13   17\
+2    Gina   2      6 10     14   18\
+3   Kelly   3      7 11     15   19\
+4    Sean   4      8 12     16   20\
+\
+| You are quite good my friend!\
+  |=============================================================================  |  97%\
+| In this lesson, you learned the basics of working with two very important and common\
+| data structures -- matrices and data frames. There's much more to learn and we'll be\
+| covering more advanced topics, particularly with respect to data frames, in future\
+| lessons.\
+\
+...\
+  |===============================================================================| 100%\
+| Would you like to receive credit for completing this course on Coursera.org?\
+\
+1: No\
+2: Yes\
+\
+Selection: 1\
+\
+| Perseverance, that's the answer.\
+\
+| You've reached the end of this lesson! Returning to the main menu...\
+\
+| Please choose a course, or type 0 to exit swirl.\
+\
+1: R Programming\
+2: Take me to the swirl course repository!\
+\
+Selection: 1\
+| Please choose a lesson, or type 0 to return to course menu.\
+\
+ 1: Basic Building Blocks      2: Workspace and Files     \
+ 3: Sequences of Numbers       4: Vectors                 \
+ 5: Missing Values             6: Subsetting Vectors      \
+ 7: Matrices and Data Frames   8: Logic                   \
+ 9: Functions                 10: lapply and sapply       \
+11: vapply and tapply         12: Looking at Data         \
+13: Simulation                14: Dates and Times         \
+15: Base Graphics             \
+\
+Selection: 8\
+  |                                                                               |   0%\
+\
+| This lesson is meant to be a short introduction to logical operations in R.\
+\
+...\
+ |==                                                                             |   2%\
+| There are two logical values in R, also called boolean values. They are TRUE and\
+| FALSE. In R you can construct logical expressions which will evaluate to either TRUE\
+| or FALSE.\
+\
+...\
+  |===                                                                            |   4%\
+| Many of the questions in this lesson will involve evaluating logical expressions. It\
+| may be useful to open up a second R terminal where you can experiment with some of\
+| these expressions.\
+\
+...\
+  |=====                                                                          |   6%\
+| Creating logical expressions requires logical operators. You're probably familiar with\
+| arithmetic operators like `+`, `-`, `*`, and `/`. The first logical operator we are\
+| going to discuss is the equality operator, represented by two equals signs `==`. Use\
+| the equality operator below to find out if TRUE is equal to TRUE.\
+\
+> TRUE == TRUE\
+[1] TRUE\
+\
+| Perseverance, that's the answer.\
+  |======                                                                         |   8%\
+| Just like arithmetic, logical expressions can be grouped by parenthesis so that the\
+| entire expression (TRUE == TRUE) == TRUE evaluates to TRUE.\
+\
+...\
+ |========                                                                       |  10%\
+| To test out this property, try evaluating (FALSE == TRUE) == FALSE .\
+\
+> (FALSE == TRUE) == FALSE\
+[1] TRUE\
+\
+| Excellent work!\
+  |=========                                                                      |  12%\
+| The equality operator can also be used to compare numbers. Use `==` to see if 6 is\
+| equal to 7.\
+\
+> 6 == 7\
+[1] FALSE\
+\
+| You got it!\
+  |===========                                                                    |  13%\
+| The previous expression evaluates to FALSE because 6 is less than 7. Thankfully, there\
+| are inequality operators that allow us to test if a value is less than or greater than\
+| another value.\
+\
+...\
+...\
+  |============                                                                   |  15%\
+| The less than operator `<` tests whether the number on the left side of the operator\
+| (called the left operand) is less than the number on the right side of the operator\
+| (called the right operand). Write an expression to test whether 6 is less than 7.\
+\
+> 6 < 7\
+[1] TRUE\
+\
+| All that practice is paying off!\
+  |==============                                                                 |  17%\
+| There is also a less-than-or-equal-to operator `<=` which tests whether the left\
+| operand is less than or equal to the right operand. Write an expression to test\
+| whether 10 is less than or equal to 10.\
+\
+> 10 <= 10\
+[1] TRUE\
+\
+| You nailed it! Good job!\
+  |===============                                                                |  19%\
+| Keep in mind that there are the corresponding greater than `>` and\
+| greater-than-or-equal-to `>=` operators.\
+\
+...\
+|=================                                                              |  21%\
+| Which of the following evaluates to FALSE?\
+\
+1: 6 < 8\
+2: 9 >= 10\
+3: 0 > -36\
+4: 7 == 7\
+\
+Selection: 2\
+\
+| Keep working like that and you'll get there!\
+  |==================                                                             |  23%\
+| Which of the following evaluates to TRUE?\
+\
+1: -6 > -7\
+2: 9 >= 10\
+3: 57 < 8\
+4: 7 == 9\
+\
+Selection: 1\
+\
+| That's correct!\
+  |====================                                                           |  25%\
+| The next operator we will discuss is the 'not equals' operator represented by `!=`.\
+| Not equals tests whether two values are unequal, so TRUE != FALSE evaluates to TRUE.\
+| Like the equality operator, `!=` can also be used with numbers. Try writing an\
+| expression to see if 5 is not equal to 7.\
+\
+> 5 != 7\
+[1] TRUE\
+\
+| You are amazing!\
+  |=====================                                                          |  27%\
+| In order to negate boolean expressions you can use the NOT operator. An exclamation\
+| point `!` will cause !TRUE (say: not true) to evaluate to FALSE and !FALSE (say: not\
+| false) to evaluate to TRUE. Try using the NOT operator and the equals operator to find\
+| the opposite of whether 5 is equal to 7.\
+\
+> !5== 7 \
+[1] TRUE\
+\
+| That's the answer I was looking for.\
+  |=======================                                                        |  29%\
+| Let's take a moment to review. The equals operator `==` tests whether two boolean\
+| values or numbers are equal, the not equals operator `!=` tests whether two boolean\
+| values or numbers are unequal, and the NOT operator `!` negates logical expressions so\
+| that TRUE expressions become FALSE and FALSE expressions become TRUE.\
+\
+... \
+ |========================                                                       |  31%\
+| Which of the following evaluates to FALSE?\
+\
+1: 7 != 8\
+2: 9 < 10\
+3: !(0 >= -1)\
+4: !FALSE\
+\
+Selection: 3\
+\
+| Excellent work!\
+  |==========================                                                     |  33%\
+| What do you think the following expression will evaluate to?: (TRUE != FALSE) == !(6\
+| == 7)\
+\
+1: Can there be objective truth when programming?\
+2: FALSE\
+3: %>%\
+4: TRUE\
+\
+Selection:  4\
+\
+| All that practice is paying off!\
+  |===========================                                                    |  35%\
+| At some point you may need to examine relationships between multiple logical\
+| expressions. This is where the AND operator and the OR operator come in.\
+\
+...\
+ |=============================                                                  |  37%\
+| Let's look at how the AND operator works. There are two AND operators in R, `&` and\
+| `&&`. Both operators work similarly, if the right and left operands of AND are both\
+| TRUE the entire expression is TRUE, otherwise it is FALSE. For example, TRUE & TRUE\
+| evaluates to TRUE. Try typing FALSE & FALSE to how it is evaluated.\
+\
+> FALSE & FALSE\
+[1] FALSE\
+\
+| Keep up the great work!\
+  |==============================                                                 |  38%\
+| You can use the `&` operator to evaluate AND across a vector. The `&&` version of AND\
+| only evaluates the first member of a vector. Let's test both for practice. Type the\
+| expression TRUE & c(TRUE, FALSE, FALSE).\
+\
+> TRUE & c(TRUE, FALSE, FALSE)\
+[1]  TRUE FALSE FALSE\
+\
+| You're the best!\
+  |================================                                               |  40%\
+| What happens in this case is that the left operand `TRUE` is recycled across every\
+| element in the vector of the right operand. This is the equivalent statement as\
+| c(TRUE, TRUE, TRUE) & c(TRUE, FALSE, FALSE).\
+\
+...\
+|=================================                                              |  42%\
+| Now we'll type the same expression except we'll use the `&&` operator. Type the\
+| expression TRUE && c(TRUE, FALSE, FALSE).\
+\
+> TRUE && c(TRUE, FALSE, FALSE)\
+[1] TRUE\
+\
+| Nice work!\
+  |===================================                                            |  44%\
+| In this case, the left operand is only evaluated with the first member of the right\
+| operand (the vector). The rest of the elements in the vector aren't evaluated at all\
+| in this expression.\
+\
+...\
+ |====================================                                           |  46%\
+| The OR operator follows a similar set of rules. The `|` version of OR evaluates OR\
+| across an entire vector, while the `||` version of OR only evaluates the first member\
+| of a vector.\
+\
+...\
+  |======================================                                         |  48%\
+| An expression using the OR operator will evaluate to TRUE if the left operand or the\
+| right operand is TRUE. If both are TRUE, the expression will evaluate to TRUE, however\
+| if neither are TRUE, then the expression will be FALSE.\
+\
+...\
+  |========================================                                       |  50%\
+| Let's test out the vectorized version of the OR operator. Type the expression TRUE |\
+| c(TRUE, FALSE, FALSE).\
+\
+> TRUE | c(TRUE, FALSE, FALSE)\
+[1] TRUE TRUE TRUE\
+\
+| You got it!\
+  |=========================================                                      |  52%\
+| Now let's try out the non-vectorized version of the OR operator. Type the expression\
+| TRUE || c(TRUE, FALSE, FALSE).\
+\
+> TRUE || c(TRUE, FALSE, FALSE)\
+[1] TRUE\
+\
+| That's the answer I was looking for.\
+  |===========================================                                    |  54%\
+| Logical operators can be chained together just like arithmetic operators. The\
+| expressions: `6 != 10 && FALSE && 1 >= 2` or `TRUE || 5 < 9.3 || FALSE` are perfectly\
+| normal to see.\
+\
+...\
+ |============================================                                   |  56%\
+| As you may recall, arithmetic has an order of operations and so do logical\
+| expressions. All AND operators are evaluated before OR operators. Let's look at an\
+| example of an ambiguous case. Type: 5 > 8 || 6 != 8 && 4 > 3.9\
+\
+> 5 > 8 || 6 != 8 && 4 > 3.9\
+[1] TRUE\
+\
+| You nailed it! Good job!\
+  |==============================================                                 |  58%\
+| Let's walk through the order of operations in the above case. First the left and right\
+| operands of the AND operator are evaluated. 6 is not equal 8, 4 is greater than 3.9,\
+| therefore both operands are TRUE so the resulting expression `TRUE && TRUE` evaluates\
+| to TRUE. Then the left operand of the OR operator is evaluated: 5 is not greater than\
+| 8 so the entire expression is reduced to FALSE || TRUE. Since the right operand of\
+| this expression is TRUE the entire expression evaluates to TRUE.\
+\
+...\
+ |===============================================                                |  60%\
+| Which one of the following expressions evaluates to TRUE?\
+\
+1: FALSE || TRUE && FALSE\
+2: 99.99 > 100 || 45 < 7.3 || 4 != 4.0\
+3: TRUE && FALSE || 9 >= 4 && 3 < 6\
+4: TRUE && 62 < 62 && 44 >= 44\
+\
+Selection: 3\
+\
+| That's the answer I was looking for.\
+  |=================================================                              |  62%\
+| Which one of the following expressions evaluates to FALSE?\
+\
+1: !(8 > 4) ||  5 == 5.0 && 7.8 >= 7.79\
+2: 6 >= -9 && !(6 > 7) && !(!TRUE)\
+3: FALSE || TRUE && 6 != 4 || 9 > 4\
+4: FALSE && 6 >= 6 || 7 >= 8 || 50 <= 49.5\
+\
+Selection: 4\
+\
+| Keep working like that and you'll get there!\
+  |==================================================                             |  63%\
+| Now that you're familiar with R's logical operators you can take advantage of a few\
+| functions that R provides for dealing with logical expressions.\
+\
+...\
+ |====================================================                           |  65%\
+| The function isTRUE() takes one argument. If that argument evaluates to TRUE, the\
+| function will return TRUE. Otherwise, the function will return FALSE. Try using this\
+| function by typing: isTRUE(6 > 4)\
+\
+> isTRUE(6 > 4)\
+[1] TRUE\
+\
+| You are amazing!\
+  |=====================================================                          |  67%\
+| Which of the following evaluates to TRUE?\
+\
+1: !isTRUE(4 < 3)\
+2: isTRUE(3)\
+3: !isTRUE(8 != 5)\
+4: isTRUE(NA)\
+5: isTRUE(!TRUE)\
+\
+Selection: 1\
+\
+| Keep working like that and you'll get there!\
+  |=======================================================                        |  69%\
+| The function identical() will return TRUE if the two R objects passed to it as\
+| arguments are identical. Try out the identical() function by typing:\
+| identical('twins', 'twins')\
+\
+> identical('twins', 'twins')\
+[1] TRUE\
+\
+| Your dedication is inspiring!\
+  |========================================================                       |  71%\
+| Which of the following evaluates to TRUE?\
+\
+1: identical(4, 3.1)\
+2: identical(5 > 4, 3 < 3.1)\
+3: !identical(7, 7)\
+4: identical('hello', 'Hello')\
+\
+Selection: 2\
+\
+| Your dedication is inspiring!\
+  |==========================================================                     |  73%\
+| You should also be aware of the xor() function, which takes two arguments. The xor()\
+| function stands for exclusive OR. If one argument evaluates to TRUE and one argument\
+| evaluates to FALSE, then this function will return TRUE, otherwise it will return\
+| FALSE. Try out the xor() function by typing: xor(5 == 6, !FALSE)\
+\
+> xor(5 == 6, !FALSE)\
+[1] TRUE\
+\
+| You are doing so well!\
+  |===========================================================                    |  75%\
+| 5 == 6 evaluates to FALSE, !FALSE evaluates to TRUE, so xor(FALSE, TRUE) evaluates to\
+| TRUE. On the other hand if the first argument was changed to 5 == 5 and the second\
+| argument was unchanged then both arguments would have been TRUE, so xor(TRUE, TRUE)\
+| would have evaluated to FALSE.\
+\
+...\
+|=============================================================                  |  77%\
+| Which of the following evaluates to FALSE?\
+\
+1: xor(4 >= 9, 8 != 8.0)\
+2: xor(identical(xor, 'xor'), 7 == 7.0)\
+3: xor(!!TRUE, !!FALSE)\
+4: xor(!isTRUE(TRUE), 6 > -1)\
+\
+Selection: 1\
+\
+| You are doing so well!\
+  |==============================================================                 |  79%\
+| For the next few questions, we're going to need to create a vector of integers called\
+| ints. Create this vector by typing: ints <- sample(10)\
+\
+> ints <- sample(10)\
+\
+| Great job!\
+  |================================================================               |  81%\
+| Now simply display the contents of ints.\
+\
+> ints\
+ [1]  3  4  7 10  6  1  8  5  9  2\
+\
+| Excellent job!\
+  |=================================================================              |  83%\
+| The vector `ints` is a random sampling of integers from 1 to 10 without replacement.\
+| Let's say we wanted to ask some logical questions about contents of ints. If we type\
+| ints > 5, we will get a logical vector corresponding to whether each element of ints\
+| is greater than 5. Try typing: ints > 5\
+\
+> ints > 5\
+ [1] FALSE FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE FALSE\
+\
+| You nailed it! Good job!\
+  |===================================================================            |  85%\
+| We can use the resulting logical vector to ask other questions about ints. The which()\
+| function takes a logical vector as an argument and returns the indices of the vector\
+| that are TRUE. For example which(c(TRUE, FALSE, TRUE)) would return the vector c(1,\
+| 3).\
+\
+...\
+|====================================================================           |  87%\
+| Use the which() function to find the indices of ints that are greater than 7.\
+\
+> which(ints > 7)\
+[1] 4 7 9\
+\
+| You got it right!\
+  |======================================================================         |  88%\
+| Which of the following commands would produce the indices of the elements in ints that\
+| are less than or equal to 2?\
+\
+1: which(ints <= 2)\
+2: ints < 2\
+3: ints <= 2\
+4: which(ints < 2)\
+\
+Selection: 1\
+\
+| You are doing so well!\
+  |=======================================================================        |  90%\
+| Like the which() function, the functions any() and all() take logical vectors as their\
+| argument. The any() function will return TRUE if one or more of the elements in the\
+| logical vector is TRUE. The all() function will return TRUE if every element in the\
+| logical vector is TRUE.\
+\
+...\
+|=========================================================================      |  92%\
+| Use the any() function to see if any of the elements of ints are less than zero.\
+\
+> any(ints < 0)\
+[1] FALSE\
+\
+| You are quite good my friend!\
+  |==========================================================================     |  94%\
+| Use the all() function to see if all of the elements of ints are greater than zero.\
+\
+> all(ints > 0)\
+[1] TRUE\
+\
+| You nailed it! Good job!\
+  |============================================================================   |  96%\
+| Which of the following evaluates to TRUE?\
+\
+1: all(c(TRUE, FALSE, TRUE))\
+2: any(ints == 10)\
+3: any(ints == 2.5)\
+4: all(ints == 10)\
+\
+\
+Selection: 2\
+\
+| Your dedication is inspiring!\
+  |=============================================================================  |  98%\
+| That's all for this introduction to logic in R. If you really want to see what you can\
+| do with logic, check out the control flow lesson!\
+\
+...\
+...\
+  |===============================================================================| 100%\
+| Would you like to receive credit for completing this course on Coursera.org?\
+\
+1: No\
+2: Yes\
+\
+Selection: 1\
+\
+| You got it!\
+\
+| You've reached the end of this lesson! Returning to the main menu...\
+\
+| Please choose a course, or type 0 to exit swirl.\
+\
+1: R Programming\
+2: Take me to the swirl course repository!\
+\
+Selection:  1\
+\
+| Please choose a lesson, or type 0 to return to course menu.\
+\
+ 1: Basic Building Blocks      2: Workspace and Files     \
+ 3: Sequences of Numbers       4: Vectors                 \
+ 5: Missing Values             6: Subsetting Vectors      \
+ 7: Matrices and Data Frames   8: Logic                   \
+ 9: Functions                 10: lapply and sapply       \
+11: vapply and tapply         12: Looking at Data         \
+13: Simulation                14: Dates and Times         \
+15: Base Graphics             \
+\
+Selection: 9\
+  |                                                                               |   0%\
+\
+| Functions are one of the fundamental building blocks of the R language. They are small\
+| pieces of reusable code that can be treated like any other R object.\
+\
+...\
+  |==                                                                             |   2%\
+| If you've worked through any other part of this course, you've probably used some\
+| functions already. Functions are usually characterized by the name of the function\
+| followed by parentheses.\
+\
+...\
+  |===                                                                            |   4%\
+| Let's try using a few basic functions just for fun. The Sys.Date() function returns a\
+| string representing today's date. Type Sys.Date() below and see what happens.\
+\
+> Sys.Date()\
+[1] "2021-01-25"\
+\
+| Great job!\
+  |=====                                                                          |   6%\
+| Most functions in R return a value. Functions like Sys.Date() return a value based on\
+| your computer's environment, while other functions manipulate input data in order to\
+| compute a return value.\
+\
+...\
+|======                                                                         |   8%\
+| The mean() function takes a vector of numbers as input, and returns the average of all\
+| of the numbers in the input vector. Inputs to functions are often called arguments.\
+| Providing arguments to a function is also sometimes called passing arguments to that\
+| function. Arguments you want to pass to a function go inside the function's\
+| parentheses. Try passing the argument c(2, 4, 5) to the mean() function.\
+\
+> mean(c(2, 4, 5))\
+[1] 3.666667\
+\
+| That's correct!\
+  |========                                                                       |  10%\
+| Functions usually take arguments which are variables that the function operates on.\
+| For example, the mean() function takes a vector as an argument, like in the case of\
+| mean(c(2,6,8)). The mean() function then adds up all of the numbers in the vector and\
+| divides that sum by the length of the vector.\
+\
+...\
+ |==========                                                                     |  12%\
+| In the following question you will be asked to modify a script that will appear as\
+| soon as you move on from this question. When you have finished modifying the script,\
+| save your changes to the script and type submit() and the script will be evaluated.\
+| There will be some comments in the script that opens up, so be sure to read them!\
+\
+...\
+  |===========                                                                    |  14%\
+| The last R expression to be evaluated in a function will become the return value of\
+| that function. We want this function to take one argument, x, and return x without\
+| modifying it. Delete the pound sign so that x is returned without any modification.\
+| Make sure to save your script before you type submit().\
+\
+> submit()\
+\
+| Sourcing your script...\
+\
+\
+| That's correct!\
+  |=============                                                                  |  16%\
+| Now that you've created your first function let's test it! Type: boring_function('My\
+| first function!'). If your function works, it should just return the string: 'My first\
+| function!'\
+\
+> boring_function('My first function!')\
+[1] "My first function!"\
+\
+| You got it!\
+  |===============                                                                |  18%\
+| Congratulations on writing your first function. By writing functions, you can gain\
+| serious insight into how R works. As John Chambers, the creator of R once said:\
+| \
+| To understand computations in R, two slogans are helpful: 1. Everything that exists is\
+| an object. 2. Everything that happens is a function call.\
+\
+...\
+ |================                                                               |  20%\
+| If you want to see the source code for any function, just type the function name\
+| without any arguments or parentheses. Let's try this out with the function you just\
+| created. Type: boring_function to view its source code.\
+\
+> boring_function\
+function(x) \{\
+  x\
+\}\
+<bytecode: 0x7fc4fce8b620>\
+\
+| You are doing so well!\
+  |==================                                                             |  22%\
+| Time to make a more useful function! We're going to replicate the functionality of the\
+| mean() function by creating a function called: my_mean(). Remember that to calculate\
+| the average of all of the numbers in a vector you find the sum of all the numbers in\
+| the vector, and then divide that sum by the number of numbers in the vector.\
+\
+\cf4 my_mean\cf2  <- \cf5 function\cf2 (\cf4 my_vector\cf2 ) \{\
+  sum(\cf4 my_vector\cf2 ) / length(\cf4 my_vector\cf2 )\cf7 \
+\cf2 \}\
+> submit()\
+| Sourcing your script...\
+\
+\
+| Nice work!\
+  |=====================                                                          |  27%\
+| Now test out your my_mean() function by finding the mean of the vector c(4, 5, 10).\
+\
+> my_mean(c(4, 5, 10))\
+[1] 6.333333\
+\
+| You are really on a roll!\
+  |=======================                                                        |  29%\
+| Next, let's try writing a function with default arguments. You can set\
+| default values for a function's arguments, and this can be useful if you\
+| think someone who uses your function will set a certain argument to the same\
+| value most of the time.\
+\
+...\
+> \cf4 remainder\cf2  <- \cf5 function\cf2 (\cf4 num\cf2 , \cf4 divisor \cf2 =\cf4  \cf6 2\cf2 ) \{\
+  \cf4 num \cf2 %% \cf4 divisor\cf7 \
+\cf2 \}\
+> submit()\
+| Sourcing your script...\
+\
+\
+| Excellent work!\
+  |==========================                                                     |  33%\
+| Let's do some testing of the remainder function. Run remainder(5) and see\
+| what happens.\
+\
+>  remainder(5)\
+[1] 1\
+\
+| Great job!\
+  |===========================                                                    |  35%\
+| Let's take a moment to examine what just happened. You provided one argument\
+| to the function, and R matched that argument to 'num' since 'num' is the\
+| first argument. The default value for 'divisor' is 2, so the function used\
+| the default value you provided.\
+\
+...\
+  |=============================                                                  |  37%\
+| Now let's test the remainder function by providing two arguments. Type:\
+| remainder(11, 5) and let's see what happens.\
+\
+> remainder(11, 5)\
+[1] 1\
+\
+| You nailed it! Good job!\
+  |===============================                                                |  39%\
+| Once again, the arguments have been matched appropriately.\
+\
+...\
+ |================================                                               |  41%\
+| You can also explicitly specify arguments in a function. When you explicitly\
+| designate argument values by name, the ordering of the arguments becomes\
+| unimportant. You can try this out by typing: remainder(divisor = 11, num =\
+| 5).\
+\
+> remainder(divisor = 11, num = 5)\
+[1] 5\
+\
+| Great job!\
+  |==================================                                             |  43%\
+| As you can see, there is a significant difference between remainder(11, 5)\
+| and remainder(divisor = 11, num = 5)!\
+\
+...\
+ |===================================                                            |  45%\
+| R can also partially match arguments. Try typing remainder(4, div = 2) to\
+| see this feature in action.\
+\
+> remainder(4, div = 2)\
+[1] 0\
+\
+| Perseverance, that's the answer.\
+  |=====================================                                          |  47%\
+| A word of warning: in general you want to make your code as easy to\
+| understand as possible. Switching around the orders of arguments by\
+| specifying their names or only using partial argument names can be\
+| confusing, so use these features with caution!\
+\
+...\
+|=======================================                                        |  49%\
+| With all of this talk about arguments, you may be wondering if there is a\
+| way you can see a function's arguments (besides looking at the\
+| documentation). Thankfully, you can use the args() function! Type:\
+| args(remainder) to examine the arguments for the remainder function.\
+\
+> args(remainder)\
+function (num, divisor = 2) \
+NULL\
+\
+| All that hard work is paying off!\
+  |========================================                                       |  51%\
+| You may not realize it but I just tricked you into doing something pretty\
+| interesting! args() is a function, remainder() is a function, yet remainder\
+| was an argument for args(). Yes it's true: you can pass functions as\
+| arguments! This is a very powerful concept. Let's write a script to see how\
+| it works.\
+\
+...\
+|==========================================                                     |  53%\
+| Make sure to save your script before you type submit().\
+\
+\cf4 evaluate\cf2  <- \cf5 function\cf2 (\cf4 func\cf2 , \cf4 dat\cf2 )\{\
+  func(\cf4 dat\cf2 )\cf7 \
+\cf2 \}\
+> submit()\
+\
+| Sourcing your script...\
+\
+\
+| You are really on a roll!\
+  |============================================                                   |  55%\
+| Let's take your new evaluate() function for a spin! Use evaluate to find the\
+| standard deviation of the vector c(1.4, 3.6, 7.9, 8.8).\
+\
+> evaluate(sd, c(1.4, 3.6, 7.9, 8.8))\
+[1] 3.514138\
+\
+| All that hard work is paying off!\
+  |=============================================                                  |  57%\
+| The idea of passing functions as arguments to other functions is an\
+| important and fundamental concept in programming.\
+\
+...\
+...\
+  |===============================================                                |  59%\
+| You may be surprised to learn that you can pass a function as an argument\
+| without first defining the passed function. Functions that are not named are\
+| appropriately known as anonymous functions.\
+\
+...\
+  |================================================                               |  61%\
+| Let's use the evaluate function to explore how anonymous functions work. For\
+| the first argument of the evaluate function we're going to write a tiny\
+| function that fits on one line. In the second argument we'll pass some data\
+| to the tiny anonymous function in the first argument.\
+\
+...\
+  |==================================================                             |  63%\
+| Type the following command and then we'll discuss how it works:\
+| evaluate(function(x)\{x+1\}, 6)\
+\
+> evaluate(function(x)\{x+1\}, 6)\
+[1] 7\
+\
+| You're the best!\
+  |====================================================                           |  65%\
+| The first argument is a tiny anonymous function that takes one argument `x`\
+| and returns `x+1`. We passed the number 6 into this function so the entire\
+| expression evaluates to 7.\
+\
+...\
+|=====================================================                          |  67%\
+| Try using evaluate() along with an anonymous function to return the first\
+| element of the vector c(8, 4, 0). Your anonymous function should only take\
+| one argument which should be a variable `x`.\
+\
+> evaluate(function(x)\{x[1]\}, c(8, 4, 0))\
+[1] 8\
+\
+| All that hard work is paying off!\
+  |=======================================================                        |  69%\
+| Now try using evaluate() along with an anonymous function to return the last\
+| element of the vector c(8, 4, 0). Your anonymous function should only take\
+| one argument which should be a variable `x`.\
+\
+> evaluate(function(x)\{x[length(x)]\}, c(8, 4, 0))\
+[1] 0\
+\
+| Your dedication is inspiring!\
+  |========================================================                       |  71%\
+| For the rest of the course we're going to use the paste() function\
+| frequently. Type ?paste so we can take a look at the documentation for the\
+| paste function.\
+\
+> ?paste\
+\
+| Nice work!\
+  |==========================================================                     |  73%\
+| As you can see the first argument of paste() is `...` which is referred to\
+| as an ellipsis or simply dot-dot-dot. The ellipsis allows an indefinite\
+| number of arguments to be passed into a function. In the case of paste() any\
+| number of strings can be passed as arguments and paste() will return all of\
+| the strings combined into one string.\
+\
+...\
+  |============================================================                   |  76%\
+| Just to see how paste() works, type paste("Programming", "is", "fun!")\
+> paste("Programming", "is", "fun!")\
+[1] "Programming is fun!"\
+\
+| You're the best!\
+  |=============================================================                  |  78%\
+| Time to write our own modified version of paste().\
+\
+...\
+|===============================================================                |  80%\
+| Make sure to save your script before you type submit().\
+> skip()\
+\
+| I just sourced the following script, which demonstrates one possible\
+| solution.\
+\
+\
+\cf4 > telegram\cf2  <- \cf5 function\cf2 (\cf4 ...\cf2 )\{\
+  paste(\cf3 "START"\cf2 , \cf4 ...\cf2 , \cf3 "STOP"\cf2 )\
+\}\
+| You are amazing!\
+  |================================================================               |  82%\
+| Now let's test out your telegram function. Use your new telegram function\
+| passing in whatever arguments you wish!\
+\
+> telegram("START Good morning STOP")\
+[1] "START START Good morning STOP STOP"\
+\
+| You're the best!\
+  |==================================================================             |  84%\
+| Make sure to save your script before you type submit().\
+\
+| Excellent job!\
+  |====================================================================           |  86%\
+| Time to use your mad_libs function. Make sure to name the place, adjective,\
+| and noun arguments in order for your function to work.\
+\cf4 mad_libs\cf2  <- \cf5 function\cf2 (\cf4 ...\cf2 )\{\
+  \cf4 args \cf2 <- list(\cf4 ...\cf2 )\
+  \cf4 place \cf2 <- \cf4 args\cf2 [[\cf3 "Beckley"\cf2 ]]\
+  \cf4 adjective \cf2 <- \cf4 args\cf2 [[\cf3 "ambitious"\cf2 ]]\
+  \cf4 noun \cf2 <- \cf4 args\cf2 [[\cf3 "gym"\cf2 ]]\cf7 \
+	\
+\cf2   paste(\cf3 "News from"\cf2 , \cf4 place\cf2 , \cf3 "today where"\cf2 , \cf4 adjective\cf2 , \cf3 "students took to the streets in protest of the new"\cf2 , \cf4 noun\cf2 , \cf3 "being installed on campus."\cf2 )\
+\}\
+\
+> submit()\
+\
+| Sourcing your script...\
+\
+\
+| Excellent job!\
+  |=====================================================================          |  88%\
+| We're coming to the end of this lesson, but there's still one more idea you\
+| should be made aware of.\
+\
+...\
+  |=======================================================================        |  90%\
+| You're familiar with adding, subtracting, multiplying, and dividing numbers\
+| in R. To do this you use the +, -, *, and / symbols. These symbols are\
+| called binary operators because they take two inputs, an input from the left\
+| and an input from the right.\
+\
+...\
+  |=========================================================================      |  92%\
+| In R you can define your own binary operators. In the next script I'll show\
+| you how.\
+\
+...\
+ |==========================================================================     |  94%\
+| Make sure to save your script before you type submit().\
+\
+\cf3 "%p%"\cf2  <- \cf5 function\cf2 (\cf4 left\cf2 , \cf4 right\cf2 )\{ \cf7 \
+\cf2   paste(\cf4 left\cf2 , \cf4 right\cf2 )\
+\}\
+| All that hard work is paying off!\
+  |============================================================================   |  96%\
+| You made your own binary operator! Let's test it out. Paste together the\
+| strings: 'I', 'love', 'R!' using your new binary operator.\
+\
+> 'I' %p% 'love' %p% 'R!'\
+[1] "I love R!"\
+\
+| You are really on a roll!\
+  |=============================================================================  |  98%\
+| We've come to the end of our lesson! Go out there and write some great\
+| functions!\
+\
+...\
+| Would you like to receive credit for completing this course on Coursera.org?\
+\
+1: Yes\
+2: No\
+\
+Selection: 2\
+\
+| You are really on a roll!\
+\
+| You've reached the end of this lesson! Returning to the main menu...\
+\
+| Please choose a course, or type 0 to exit swirl.\
+\
+1: R Programming\
+2: Take me to the swirl course repository!\
+\
+Selection: 1\
+| Please choose a lesson, or type 0 to return to course menu.\
+\
+ 1: Basic Building Blocks      2: Workspace and Files     \
+ 3: Sequences of Numbers       4: Vectors                 \
+ 5: Missing Values             6: Subsetting Vectors      \
+ 7: Matrices and Data Frames   8: Logic                   \
+ 9: Functions                 10: lapply and sapply       \
+11: vapply and tapply         12: Looking at Data         \
+13: Simulation                14: Dates and Times         \
+15: Base Graphics             \
+\
+Selection: 15\
+|                                                                     |   0%\
+\
+| One of the greatest strengths of R, relative to other programming languages,\
+| is the ease with which we can create publication-quality graphics. In this\
+| lesson, you'll learn about base graphics in R.\
+\
+...\
+ |==                                                                   |   2%\
+| We do not cover the more advanced portions of graphics in R in this lesson.\
+| These include lattice, ggplot2 and ggvis.\
+\
+...\
+  |===                                                                  |   4%\
+| There is a school of thought that this approach is backwards, that we should\
+| teach ggplot2 first. See\
+| http://varianceexplained.org/r/teach_ggplot2_to_beginners/ for an outline of\
+| this view.\
+\
+...\
+  |====                                                                 |   7%\
+| Load the included data frame cars with data(cars).\
+\
+> data(cars)\
+\
+| You got it right!\
+  |======                                                               |   9%\
+| To fix ideas, we will work with simple data frames. Our main goal is to\
+| introduce various plotting functions and their arguments. All the output\
+| would look more interesting with larger, more complex data sets.\
+\
+...\
+  |========                                                             |  11%\
+| Pull up the help page for cars.\
+\
+> help(cars)\
+\
+| Your dedication is inspiring!\
+  |=========                                                            |  13%\
+| As you can see in the help page, the cars data set has only two variables:\
+| speed and stopping distance. Note that the data is from the 1920s.\
+\
+...\
+ |==========                                                           |  15%\
+| Run head() on the cars data.\
+\
+> head(cars)\
+  speed dist\
+1     4    2\
+2     4   10\
+3     7    4\
+4     7   22\
+5     8   16\
+6     9   10\
+\
+| Excellent job!\
+  |============                                                         |  17%\
+| Before plotting, it is always a good idea to get a sense of the data. Key R\
+| commands for doing so include, dim(), names(), head(), tail() and summary().\
+\
+...\
+|=============                                                        |  20%\
+| Run the plot() command on the cars data frame.\
+\
+> plot(cars)\
+\
+| Excellent work!\
+  |===============                                                      |  22%\
+| As always, R tries very hard to give you something sensible given the\
+| information that you have provided to it. First, R notes that the data frame\
+| you have given it has just two columns, so it assumes that you want to plot\
+| one column versus the other.\
+\
+...\
+|====================                                                 |  28%\
+| Look up the help page for plot().\
+\
+> help(plot)\
+\
+| You got it!\
+  |=====================                                                |  30%\
+| The help page for plot() highlights the different arguments that the\
+| function can take. The two most important are x and y, the variables that\
+| will be plotted. For the next set of questions, include the argument names\
+| in your answers. That is, do not type plot(cars$speed, cars$dist), although\
+| that will work. Instead, use plot(x = cars$speed, y = cars$dist).\
+\
+...\
+ |======================                                               |  33%\
+| Use plot() command to show speed on the x-axis and dist on the y-axis from\
+| the cars data frame. Use the form of the plot command in which vectors are\
+| explicitly passed in as arguments for x and y.\
+\
+> plot(x = cars$speed, y = cars$dist)\
+\
+| Excellent work!\
+  |========================                                             |  35%\
+| Note that this produces a slightly different answer than plot(cars). In this\
+| case, R is not sure what you want to use as the labels on the axes, so it\
+| just uses the arguments which you pass in, data frame name and dollar signs\
+| included.\
+\
+...\
+|==========================                                           |  37%\
+| Note that there are other ways to call the plot command, i.e., using the\
+| "formula" interface. For example, we get a similar plot to the above with\
+| plot(dist ~ speed, cars). However, we will wait till later in the lesson\
+| before using the formula interface.\
+\
+...\
+  |===========================                                          |  39%\
+| Use plot() command to show dist on the x-axis and speed on the y-axis from\
+| the cars data frame. This is the opposite of what we did above.\
+\
+> plot(x =cars$dist, y = cars$speed)\
+\
+| Excellent work!\
+  |============================                                         |  41%\
+| It probably makes more sense for speed to go on the x-axis since stopping\
+| distance is a function of speed more than the other way around. So, for the\
+| rest of the questions in this portion of the lesson, always assign the\
+| arguments accordingly.\
+\
+...\
+ |==============================                                       |  43%\
+| In fact, you can assume that the answers to the next few questions are all\
+| of the form plot(x = cars$speed, y = cars$dist, ...) but with various\
+| arguments used in place of the ...\
+\
+...\
+  |===============================                                      |  46%\
+| Recreate the plot with the label of the x-axis set to "Speed".\
+\
+> plot(x = cars$speed, y = cars$dist, xlab = 'Speed')\
+\
+| You are quite good my friend!\
+  |=================================                                    |  48%\
+| Recreate the plot with the label of the y-axis set to "Stopping Distance".\
+\
+> plot(x = cars$speed, y = cars$dist, ylab = 'Stopping Distance')\
+\
+| You are amazing!\
+  |==================================                                   |  50%\
+| Recreate the plot with "Speed" and "Stopping Distance" as axis labels.\
+\
+>  plot(x = cars$speed, y = cars$dist, xlab = 'Speed', ylab = 'Stopping Distance')\
+\
+| That's correct!\
+  |====================================                                 |  52%\
+| The reason that plots(cars) worked at the beginning of the lesson was that R\
+| was smart enough to know that the first element (i.e., the first column) in\
+| cars should be assigned to the x argument and the second element to the y\
+| argument. To save on typing, the next set of answers will all be of the\
+| form, plot(cars, ...) with various arguments added.\
+\
+...\
+ |======================================                               |  54%\
+| For each question, we will only want one additional argument at a time. Of\
+| course, you can pass in more than one argument when doing a real project.\
+\
+...\
+  |=======================================                              |  57%\
+| Plot cars with a main title of "My Plot". Note that the argument for the\
+| main title is "main" not "title".\
+\
+> plot(cars, main = "My Plot")\
+\
+| You are really on a roll!\
+  |========================================                             |  59%\
+| Plot cars with a sub title of "My Plot Subtitle".\
+\
+> plot(cars, sub = "My Plot Subtitle")\
+\
+| That's the answer I was looking for.\
+  |==========================================                           |  61%\
+| The plot help page (?plot) only covers a small number of the many arguments\
+| that can be passed in to plot() and to other graphical functions. To begin\
+| to explore the many other options, look at ?par. Let's look at some of the\
+| more commonly used ones. Continue using plot(cars, ...) as the base answer\
+| to these questions.\
+\
+...\
+ |============================================                         |  63%\
+| Plot cars so that the plotted points are colored red. (Use col = 2 to achieve\
+| this effect.)\
+\
+> plot(cars, col = 2)\
+\
+| That's correct!\
+  |=============================================                        |  65%\
+| Plot cars while limiting the x-axis to 10 through 15.  (Use xlim = c(10, 15) to\
+| achieve this effect.)\
+\
+> plot(cars, xlim = c(10, 15))\
+\
+| Keep working like that and you'll get there!\
+  |==============================================                       |  67%\
+| You can also change the shape of the symbols in the plot. The help page for\
+| points (?points) provides the details.\
+\
+...\
+> plot(cars, pch = 2)\
+\
+| You are doing so well!\
+  |==================================================                   |  72%\
+| Arguments like "col" and "pch" may not seem very intuitive. And that is because\
+| they aren't! So, many/most people use more modern packages, like ggplot2, for\
+| creating their graphics in R.\
+\
+...\
+  |===================================================                  |  74%\
+| It is, however, useful to have an introduction to base graphics because many of\
+| the idioms in lattice and ggplot2 are modeled on them.\
+\
+...\
+  |====================================================                 |  76%\
+| Let's now look at some other functions in base graphics that may be useful,\
+| starting with boxplots.\
+\
+...\
+  |======================================================               |  78%\
+| Load the mtcars data frame.\
+\
+> data(mtcars)\
+\
+| Your dedication is inspiring!\
+  |========================================================             |  80%\
+| Anytime that you load up a new data frame, you should explore it before using\
+| it. In the middle of a swirl lesson, just type play(). This temporarily\
+| suspends the lesson (without losing the work you have already done) and allows\
+| you to issue commands like dim(mtcars) and head(mtcars). Once you are done\
+| examining the data, just type nxt() and the lesson will pick up where it left\
+| off.\
+\
+| Look up the help page for boxplot().\
+\
+> help(boxplot)\
+\
+| Keep up the great work!\
+  |==========================================================           |  85%\
+| Instead of adding data columns directly as input arguments, as we did with\
+| plot(), it is often handy to pass in the entire data frame. This is what the\
+| "data" argument in boxplot() allows.\
+\
+...\
+|============================================================         |  87%\
+| boxplot(), like many R functions, also takes a "formula" argument, generally an\
+| expression with a tilde ("~") which indicates the relationship between the\
+| input variables. This allows you to enter something like mpg ~ cyl to plot the\
+| relationship between cyl (number of cylinders) on the x-axis and mpg (miles per\
+| gallon) on the y-axis.\
+\
+...\
+  |==============================================================       |  89%\
+| Use boxplot() with formula = mpg ~ cyl and data = mtcars to create a box plot.\
+\
+> boxplot(formula = mpg ~ cyl, data = mtcars)\
+\
+| Your dedication is inspiring!\
+  |===============================================================      |  91%\
+| The plot shows that mpg is much lower for cars with more cylinders. Note that\
+| we can use the same set of arguments that we explored with plot() above to add\
+| axis labels, titles and so on.\
+\
+...\
+  |================================================================     |  93%\
+| When looking at a single variable, histograms are a useful tool. hist() is the\
+| associated R function. Like plot(), hist() is best used by just passing in a\
+| single vector.\
+\
+...\
+  |==================================================================   |  96%\
+| Use hist() with the vector mtcars$mpg to create a histogram.\
+\
+> hist(mtcars$mpg)\
+\
+| Keep working like that and you'll get there!\
+  |==================================================================== |  98%\
+| In this lesson, you learned how to work with base graphics in R. The best place\
+| to go from here is to study the ggplot2 package. If you want to explore other\
+| elements of base graphics, then this web page\
+| (http://www.ling.upenn.edu/~joseff/rstudy/week4.html) provides a useful\
+| overview.\
+\
+...\
+  |=====================================================================| 100%\
+\
+\
+\
+}
