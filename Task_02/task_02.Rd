@@ -12546,15 +12546,29 @@ dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*
 legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
 dev.off()
 unique(beren3$event)
+
+#Extra Credit I
 Naps <- which(Data$event == 'nap')
 Naps
 beren4 <- which(beren3$event == 'nap')
 beren4
-starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-'))
-startID <- sapply(starttime, as.POSIXct, format = '%H:%M', tz = 'America/New_York')
-endtime <- apply(Data, 1, function(x) paste(x[7:8], collapse = '-'))
-endID <- sapply('endtime', as.POSIXct, format = '%H:%M', tz = 'America/New_York')
-Data$Duration <- difftime(as.POSIXct('starttime', format = '%H:%M'), as.POSIXct('endtime', format = '%H:%M'), units = 'min')
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse=':'))
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M', tz = 'America/New_York', units = 'min')
+startID
+endtime <- apply(Data, 1, function(x) paste(x[7:8], collapse = ':'))
+endtime
+endID <- sapply(endtime, as.POSIXct, format = '%H:%M', tz = 'America/New_York', units = 'min')
+endID[11]
+Data$Duration <- as.numeric(endID) - as.numeric(startID)
+beren5 <- Data
+beren6 <- beren5[order(beren5$Duration) , ]
+Naps <- which(beren6$event == 'nap')
+totalNap <- tapply(beren6$age[Naps], beren6$Duration[Naps], sum)
+totalNap
+plot(as.numeric(names(totalNap)), totalNap, type='b', pch=16, xlab='age in days', ylab='min asleep')
+cor.test(beren6$start_hour, beren6$Duration)
+# There is a negative correlation between time of day and length of the nap.
+
 
 
 
