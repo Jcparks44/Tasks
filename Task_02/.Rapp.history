@@ -1,75 +1,262 @@
-install.packages("swirl")#
-library(swirl)
-swirl()
-5 + 7
-x <- 5 + 7
-x
-y <- x - 3
-y
-c(1.1, 9, 3.14)
-z <- c(1.1, 9, 3.14)
-?c
-z
-c(z, 555, z)
-z * 2 + 100
-my_sqrt <- sqrt(z-1)
-my_sqrt
-my_div <- z/my_sqrt
-my_div
-c(1, 2, 3, 4) + c(0, 10)
-c(1, 2, 3, 4) + c(0, 10, 100)
-z * 2 + 1000
-my_div
-setwd("~/Desktop/Evolution/Tasks/Task_02")
-setwd("~/Desktop/Evolution/Tasks/Task_02")
-# R won't see this#
-write.csv(Data, 'rawdata.csv', quote=F)
-R won't see this
-setwd("~/Desktop/Evolution/Tasks/Task_02")#
-#
-Data <- read.csv('http://jonsmitchell.com/data/beren.csv', stringsAsFactors=F)#
-#
-# R won't see this#
-write.csv(Data, 'rawdata.csv', quote=F)#
-#
-Feeds <- which(Data[,9] == 'bottle')#
-berenMilk <- Data[Feeds,]#
-#
-dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
-dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
-Data$age <- dateID - dateID[which(Data$event == 'birth')]#
-#
-beren2 <- Data
-setwd("~/Desktop/Evolution/Tasks/Task_02")#
-#
-Data <- read.csv('http://jonsmitchell.com/data/beren.csv', stringsAsFactors=F)#
-#
-# R won't see this#
-write.csv(Data, 'rawdata.csv', quote=F)#
-#
-Feeds <- which(Data[,9] == 'bottle')#
-berenMilk <- Data[Feeds,]#
-#
-dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
-dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
-Data$age <- dateID - dateID[which(Data$event == 'birth')]#
-#
-beren2 <- Data
-Sleep <- which(Data[,'event'] == 'nap')
-Solidfood <- which(Data$event == 'solids')
+Data$Duration <- difftime( as.POSIXct(endtime, format = '%H:%M'), as.POSIXct(starttime, format = '%H:%M'), units= 'min', (which(Data$event == 'nap'))
 head(Data)
-which(Data$event == "birth")
-dateID[1]
-Solidfood
-dateID[Solidfood]
-dateID[Solidfood[1]]
-unique(Solidfood)
-length(unique(Solidfood))
-length(unique(names(Solidfood)))
-names(Solidfood)
-Solidfood[1]
-length(unique(names(dateID[Solidfood])))
-dateID[Solidfood[44]]
-dateID[Solidfood[44:54]]
-dateID[Solidfood[seq(from=44, to=54, by=1)]]
-dateID[Solidfood[seq(from=44, to=54, by=2)]]
+head(Data)
+rm(Data$duration)
+Data$Duration <- endID - startID, units = 'min'[which(Data$event == 'nap')]
+Data$Duration <- endID - startID[which(Data$event == 'nap')]
+Data$Duration <- difftime( as.POSIXct(endtime, format = ':%M'), as.POSIXct(starttime, format = ':%M'), units= 'min')
+Data$Duration
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-'))#
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M', origin = '0:00'), units = 'min'#
+endtime <- apply(Data, 1, function(x) paste(x[7:8], collapse = '-'))#
+endID <- sapply(endtime, as.POSIXct, format = '%H:%M', origin = '0:00'), units = 'min'#
+Data$Duration <- difftime( as.POSIXct(endtime, format = '%H:%M'), as.POSIXct(starttime, format = '%H:%M'), units= 'min')
+Data$Duration <- abs(endtime - starttime)[which(Data$event == 'naps')]
+Data$Duration <- abs([endtime - starttime])[which(Data$event == 'naps')]
+Data$Duration <- as.difftime(endtime, starttime, format = '%H:%M', units = 'mins')[which(Data$event == 'naps')]
+Data$Duration <- as.difftime(endtime, starttime, tz ='UTC', format = '%H:%M', units = 'mins')[which(Data$event == 'naps')]
+Data$Duration <- difftime( as.POSIXct(endtime, format = '%H:%M'), as.POSIXct(starttime, format = '%H:%M'), units= 'min')
+Data$Duration
+Data$Duration <- difftime( as.POSIXct('endtime', format = '%H:%M'), as.POSIXct('starttime', format = '%H:%M'), units= 'min')
+Data$Duration
+head(Data)
+Data [12]
+head(Data[12])
+Data$Duration[12]
+startID
+startID [11]
+starttime [11]
+startID <- difftime(as.POSIXct('starttime', format = '%H:%M'), as.POSIXct('00:00', format = '%H:%M'), units = 'min')
+startID
+startID[11]
+startID
+startID[11]
+endtime[11]
+startID <- sapply('starttime', as.POSIXct, format = '%H:%M', origin = '00:00' units = 'min')
+endID <- sapply('endtime', as.POSIXct, format = '%H:%M', origin = '0:00', units = 'min')
+startID <- sapply('starttime', as.POSIXct, format = '%H:%M', origin = '0:00' units = 'min')
+startID <- sapply('starttime', as.POSIXct, format = '%H:%M', origin = '00:00', units = 'min')
+startID
+startID[11]
+endID
+endID[11]
+startID <- difftime('starttime', as.POSIXct, format = '%H:%M'), as.POSIXct('00:00', format = '%H:%M', units = 'min')
+startID <- difftime(as.POSIXct('starttime', format = '%H:%M'), as.POSIXct('00:00', format = '%H:%M', units = 'min')
+startID
+startID <- difftime(as.POSIXct('starttime', format = '%H:%M'), as.POSIXct('00:00', format = '%H:%M', units = 'min')
+startID <- difftime(as.POSIXct('starttime', format = '%H:%M'), as.POSIXct('00:00', format = '%H:%M', units = 'min'))
+startID <- difftime(as.POSIXct('starttime', format = '%H:%M'), as.POSIXct('00:00', format = '%H:%M'), units = 'min')
+startID
+startID[11]
+startID <- sapply('starttime', as.POSIXct, format = '%H:%M', origin = '00:00')
+startID[11]
+starttime[11]
+startID <- as.POSIXlt(paste(Sys.Date(), starttime))#
+startID$hour*60 + startID$min
+startID[11]
+startID <- as.POSIXlt(paste(Sys.Time(), starttime))#
+startID$hour*60 + startID$min
+startID <- as.POSIXlt(paste(Sys.Date(), load$starttime))#
+startID$hour*60 + startID$min
+startID[11]
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-'))#
+startID <- sapply('starttime', as.POSIXct, format = '%H:%M', origin = '00:00')#
+endtime <- apply(Data, 1, function(x) paste(x[7:8], collapse = '-'))#
+endID <- sapply('endtime', as.POSIXct, format = '%H:%M', origin = '00:00', units = 'min')#
+Data$Duration <- difftime( as.POSIXct('endtime', format = '%H:%M'), as.POSIXct('starttime, format = '%H:%M'), units= 'min')
+startID[11]
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-', units = 'min')
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-')
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-')
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-')
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-')
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-'))
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-'))
+starttime[11]
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M', origin = '0:00')
+startID[11]
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M', origin = '00:00')
+startID[11]
+startID <- format(starttime, '%H:%M')
+startID <- sapply(starttime, function(x) format(as.POSIXct(x, origin='1970-01-01'), '%H:%M'))
+startID <- sapply(starttime, function(x) format(as.POSIXlt(x, origin='1970-01-01'), '%H:%M'))
+Sys.timezone()
+startID <- sapply(starttime', as.POSIXct, format = '%H:%M', tz = 'America/New_York')
+startID <- sapply(''starttime', as.POSIXct, format = '%H:%M', tz = 'America/New_York')
+startID <- sapply('starttime', as.POSIXct, format = '%H:%M', tz = 'America/New_York')
+startID[11]
+startID <- sapply('starttime', as.POSIXlt, format = '%H:%M', tz = 'America/New_York')
+startID[11]
+startID[10]
+startID <- sapply(starttime, as.POSIXlt, format = '%H:%M', units = 'min', tz = 'America/New_York')
+startID[11]
+endID <- sapply('endtime', as.POSIXct, format = '%H:%M', units = 'min', tz = 'America/New_York')
+Data$Duration <- endID - startID[which(Data$event == 'nap')]
+Data$Duration <- (endID - startID)[which(Data$event == 'nap')]
+endID - startID
+startID <- sapply(starttime, as.POSIXlt, format = '%H:%M', tz = 'America/New_York')
+startID
+Data$Duration <- difftime(as.POSIXct(starttime, format = '%H:%M'), as.POSIXct(endtime, format = '%H:%M', units = 'min')
+Data$Duration <- difftime(as.POSIXct(starttime, format = '%H:%M'), as.POSIXct(endtime, format = '%H:%M'), units = 'min')
+Data$Duration <- difftime(as.POSIXct('starttime', format = '%H:%M'), as.POSIXct('endtime', format = '%H:%M'), units = 'min')
+Data$Duration
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M', tz = 'America/New_York') * 1440
+startID
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M') * 1440
+startID
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-')) * 1440
+starttime
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-')) * 1440
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-')) * 1440
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse='-'))
+starttime[11]
+paste(c(3,15))
+paste(c(3,15), collapse=':')
+starttime <- apply(Data, 1, function(x) paste(x[5:6], collapse=':'))
+starttime
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M') * 1440
+startID
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M')
+startID
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M' tz = 'America/New_York')
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M', tz = 'America/New_York')
+startID
+endID <- sapply('endtime', as.POSIXct, format = '%H:%M', tz = 'America/New_York')
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M', tz = 'America/New_York', units = 'min')
+startID
+Data$Duration <- difftime(as.POSIXct('starttime', format = '%H:%M'), as.POSIXct('endtime', format = '%H:%M'), units = 'min')
+Data$Duration
+Data$Duration <- as.numberic(endID) - as.numeric(startID)
+Data$Duration <- as.numeric(endID) - as.numeric(startID)
+Data$Duration
+endID
+endID <- sapply(endtime, as.POSIXct, format = '%H:%M', tz = 'America/New_York', units = 'min')
+endID
+endID <- sapply(endtime, as.POSIXct, format = '%H:%M', tz = 'America/New_York')
+endID
+endtime
+startID
+endtime <- apply(Data, 1, function(x) paste(x[7:8], collapse = ':'))
+endtime
+endID <- sapply(endtime, as.POSIXct, format = '%H:%M', tz = 'America/New_York', units = 'min')
+endID[11]
+Data$Duration <- as.numeric(endID) - as.numeric(startID)
+head(Data)
+Data$Duration <- as.numeric(endID) - as.numeric(startID)[which(Data$event == 'nap')]
+Data$Duration <- as.numeric(endID)[which(Data$event == 'nap')] - as.numeric(startID)
+Data$Duration <- as.numeric(endID) - as.numeric(startID)
+beren5 <- Data
+beren6 <- beren5[order(beren5$Duration)]
+totalNap <- tapply(beren5$duration[beren4], sum)
+beren4 <- which(beren3$event == 'nap')
+avgNap <- mean(beren3$Duration[beren4])
+avgNap <- mean(Data$Duration[beren4])
+avgNap
+beren5 <- Data#
+beren4 <- which(beren3$event == 'nap')
+avgNap <- mean(beren5$Duration[beren4])
+avgNap
+Naps <- which(beren3$event == 'nap')
+avgNap <- mean(beren3$event[Naps])
+avgNap <- mean(beren5$Duration[Naps])
+avgNap
+Data$Duration
+startID <- sapply(starttime, as.POSIXct, format = '%H:%M', tz = 'America/New_York', units = 'min') /1440
+startID
+Data$Duration
+Data$Duration <- as.numeric(endID) - as.numeric(startID)/ 60
+Data$Duration
+Data$Duration <- as.numeric(endID) - as.numeric(startID) * 1440
+Data$Duration
+avgNap <- mean(beren5$Duration[Naps])
+avgNap
+totalNap <- tapply(beren3$event[Naps], beren3$Duration[Naps], sum)
+totalNap <- tapply(beren3$event[Naps], beren5$Duration[Naps], sum)
+totalNap <- tapply(beren5$event[Naps], beren5$Duration[Naps], sum)
+totalNap <- tapply(beren3$event[Naps], beren3$Duration[Naps], sum)
+totalNap <- tapply(beren3$event[Naps], beren4$Duration[Naps], sum)
+totalNap <- tapply(beren2$event[Naps], beren2$Duration[Naps], sum)
+beren2.0 <- Data
+beren3.0 <- beren2.0[orderberen2.0$Duration]
+beren3.0 <- beren2.0[order(beren2.0$Duration) , ]
+totalNap <- tapply(beren2.0$event[Naps], beren2.0$Duration[Naps], sum)
+totalNap <- tapply(beren3.0$event[Naps], beren3.0$Duration[Naps], sum)
+beren5 <- Data
+beren6 <- beren5[order(beren2.0$Duration) , ]
+beren6 <- beren5[order(beren5$Duration) , ]
+beren5 <- Data
+beren6 <- beren5[order(beren5$Duration) , ]
+Naps <- which(beren3$event == 'nap')
+totalNap <- tapply(beren5$Duration[Naps] sum)
+totalNap <- tapply(beren5$Duration[Naps], sum)
+totalNap <- tapply(beren6$Duration[Naps], sum)
+totalNap <- tapply(beren6$event[Naps], beren6$Duration[Naps] sum)
+totalNap <- tapply(beren6$event[Naps], beren6$Duration[Naps], sum)
+totalNap <- tapply(beren6$event[Naps], beren6$Duration[Naps], sum)
+totalNap <- tapply(beren6$event[Naps], beren6$Duration[Naps], mean)
+warnings()
+Naps <- which(beren6$event == 'nap')
+totalNap <- tapply(beren6$event[Naps], beren6$Duration[Naps], mean)
+totalNap
+head(beren6)
+totalNap <- tapply(beren6$event[Naps], beren6$Duration[Naps], sum)
+totalNap <- tapply(beren6$event[Naps], as.Numeric(beren6$Duration[Naps]), sum)
+totalNap <- sum(beren6$event[Naps], beren6$Duration[Naps])
+totalNap <- sum(beren6$Duration[Naps])
+totalNap
+totalNap <- sum(beren5$Duration[Naps])
+totalNap
+totalNap <- tapply(beren6$event[Naps], beren6$Duration[Naps], sum)
+totalNap <- tapply(beren6$starttime[Naps], beren6$Duration[Naps], sum)
+totalNap <- tapply(beren6$[Naps], beren6$Duration[Naps], sum)
+totalNap <- tapply(beren6$value[Naps], beren6$Duration[Naps], sum)
+totalNap
+totalNap <- tapply(beren6$age[Naps], beren6$Duration[Naps], sum)
+totalNap
+plot(as.numeric(names(totalNap), totalNap, type='b', pch=16, xlab='age in days', ylab='min asleep'))
+plot(as.numeric(names(totalNap)), totalNap, type='b', pch=16, xlab='age in days', ylab='min asleep'))
+plot(as.numeric(names(totalNap)), totalNap, type='b', pch=16, xlab='age in days', ylab='min asleep')
+cor(beren6$starttime[Naps], beren6$Duration[Naps])
+cor(beren6$startID[Naps], beren6$Duration[Naps])
+cor(beren5$starttime[Naps], beren5$Duration[Naps])
+cor.test(beren5$starttime[Naps], beren5$Duration[Naps])
+cor.test(beren6$starttime[Naps], beren6$Duration[Naps])
+plot(as.numeric(names(totalNap)), totalNap, type='b', pch=16, xlab='age in days', ylab='min asleep')
+cor.test(beren6$starttime, beren6$Duration)
+#I got everything to work except the correlation. After correspondence with classmates, I came up with the following:
+beren4 <- which(beren3$event == 'nap')
+beren4
+stopHour <- (beren4$end_hour)
+startHour
+startHour <- (beren4$start_hour)
+startMin <- (beren4$start_minute)
+stopHour <- (beren4$end_hour)
+stopMin <- (beren4$end_minute)
+startHour
+startHour <- (Data$start_hour)
+startHour
+startHour <- (beren5$start_hour)
+startHour
+cor.test(beren6$startHour, beren6$duration)
+startHour <- (beren6$start_hour)
+startHour
+cor.test(beren6$startHour, beren6$duration)
+cor.test(beren6$startHour[Naps], beren6$duration)
+cor.test(Naps$startHour, beren6$duration)
+beren4 <- beren3[Naps,]
+startHour <- (beren4$start_hour)
+beren4 <- beren3[Naps,]
+startHour
+cor.test(beren4$start_hour, beren6$Duration)
+startMin <- (beren4$start_minute)
+startMin
+stopHour <- (beren4$end_hour)
+stopHour
+stopMin <- (beren4$end_minute)
+stopMin
+beren4$Duration<- ((stopHour - startHour)*60)+(stopMin-startMin)
+head(beren4)
+cor.test(beren6$start_hour, beren6$Duration)
+totalNap <- tapply(beren6$age[Naps], beren6$Duration[Naps], sum)
+totalNap
+plot(as.numeric(names(totalNap)), totalNap, type='b', pch=16, xlab='age in days', ylab='min asleep')

@@ -1,6 +1,6 @@
-> setwd('~/Desktop/Evolution/Tasks/Task_02')
-> Data <- read.csv('http://jonsmitchell.com/data/beren.csv', stringsAsFactors=F)
-> write.csv(Data, 'rawdata.csv', quote=F)
+setwd('~/Desktop/Evolution/Tasks/Task_02')
+Data <- read.csv('http://jonsmitchell.com/data/beren.csv', stringsAsFactors=F)
+write.csv(Data, 'rawdata.csv', quote=F)
 
 ALWAYS SAVE THINGS INTO OBJECTS - If you type in ‘Data’ and hit Enter, then you see all of the numbers but if you just type in read.csv(… without storing anything, it’ll show up but you can’t utilize it 
 
@@ -4165,9 +4165,8 @@ head(berenMilk)
 6        ap
 
 The 9th column is event, so we utilized ‘9’ as the data set we wanted, then subset ‘bottle’ as the event that we wanted. The code reads in each, Feeds is an assigned variable of which data we want, from column 9. This is set == to bottle, as we are looking for the bottle only. Row 145 method, using column names, sets the Data by column name, rather than number. Row 148, we use the dollar sign instead of the square brackets to clarify which data set we want. To prove it, I will repeat the process using each technique to set ‘Feeds’ as a variable of the event bottle, and then display the data. 
-
-> Feeds <- which(Data[,9] == 'bottle')
-> Feeds
+Feeds <- which(Data[,9] == 'bottle')
+Feeds
   [1]    6    7    8    9   20   21   22   23   29   30   31   39   40   41   42   51
  [17]   52   57   58   59   68   69   76   77   78   85   86   87   88   96   97  106
  [33]  107  108  116  117  118  119  128  136  137  138  149  150  151  152  159  160
@@ -4214,7 +4213,7 @@ The 9th column is event, so we utilized ‘9’ as the data set we wanted, then 
 [305] 1254 1255 1262 1263 1270 1272 1273 1280 1296 1310 1312 1321 1322 1327 1328 1335
 [321] 1336 1343 1344
 
-> Feeds <- which(Data$event == 'bottle')
+Feeds <- which(Data$event == 'bottle')
 > Feeds
   [1]    6    7    8    9   20   21   22   23   29   30   31   39   40   41   42   51
  [17]   52   57   58   59   68   69   76   77   78   85   86   87   88   96   97  106
@@ -4238,10 +4237,11 @@ The 9th column is event, so we utilized ‘9’ as the data set we wanted, then 
 [305] 1254 1255 1262 1263 1270 1272 1273 1280 1296 1310 1312 1321 1322 1327 1328 1335
 [321] 1336 1343 1344
 
-> dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
-> dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
-> Data$age <- dateID - dateID[which(Data$event == 'birth')]
-> head(Data)
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$Date <- dateID
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+head(Data)
   year month day     dotw start_hour start_minute end_hour end_minute  event value
 1 2019     4  18 Thursday         11           53       NA         NA  birth      
 2 2019    10  18   Friday          7           50       NA         NA    wet      
@@ -4256,8 +4256,8 @@ The 9th column is event, so we utilized ‘9’ as the data set we wanted, then 
 4              ap 183
 5              ap 183
 6    oz        ap 183
-> beren2 <- Data
-> beren2
+beren2 <- Data
+beren2
      year month day      dotw start_hour start_minute end_hour end_minute
 1    2019     4  18  Thursday         11           53       NA         NA
 2    2019    10  18    Friday          7           50       NA         NA
@@ -12569,6 +12569,26 @@ plot(as.numeric(names(totalNap)), totalNap, type='b', pch=16, xlab='age in days'
 cor.test(beren6$start_hour, beren6$Duration)
 # There is a negative correlation between time of day and length of the nap.
 
+
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$Date <- dateID
+head(Data)
+Days <- unique(beren3$age[Feeds])
+ndays <- length(Days)
+Days
+ndays
+Alpha <- 0.75
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)
+
+Cols <- Pal(ndays)
+names(Cols) <- Days
+
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)
+
+# blank plot
+plot(1, 1, xlim=c(0, 500), ylim=c(0, 20), type="n", xlab="Times in Days", ylab="total milk (oz)")
 
 
 
