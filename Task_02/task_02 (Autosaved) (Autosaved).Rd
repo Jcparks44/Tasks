@@ -201,8 +201,10 @@ totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)
 numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)
 rateFeeds <- totalFeed/numFeeds
 
-
+pdf('r02b-RateMilkConsumption.pdf', height = 4, width = 4)
+par(las=1, mar=c(5,5,1,1), mgp=c(2, 0.5, 0), tck=-0.01)
 plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption(oz/day)')
+dev.off()
 #My hypothesis was that the rate of milk consumption at daycare decreases over time. My graph is kind of like a derivative of the one we did in part B. Amount of milk per day is measured in terms of how that changes as Beren ages. My hypothesis was not entirely supported. The end showed an increase in the rate of milk consumption toward the end, but I also could be wrong in my interpretation of how to develop a type of graph that supports this hypothesis. 
 
 

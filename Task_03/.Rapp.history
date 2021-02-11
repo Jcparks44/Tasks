@@ -1,0 +1,573 @@
+Data$Date <- DateID
+Data$Date <- dateID
+head(Data)
+head(beren3)
+plot(as.numeric(names(totalFeed)), totalFeed, type= 'b', pch= 16, xlab= 'age in days', ylab= 'ounces of milk')
+length(Data)
+unique(beren3$age[Feeds])
+length(Days)
+Feeds
+unique(beren3$Date[Feeds])
+beren7 <- beren3[order(beren3$Date)]
+beren7 <- beren2[order(beren2$Date)]
+beren7 <- beren2[order(beren2$date)]
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$Date <- dateID
+head(Data)
+beren2 <- Data
+beren7 <- beren2[order(beren2$date)]
+beren7 <- beren2[order(beren2$Date)]
+beren3 <- beren2[order(beren2$age)]
+beren3
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$Date <- dateID
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+head(Data)
+unique(beren3$age[Feeds])
+unique(beren3$Date[Feeds])
+Dates <- unique(beren3$Date[Feeds])
+nDates <- length(Dates)
+nDates
+Alpha <- 0.75
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)
+Cols <- Pal(nDates)
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Dates <- beren3$Date#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Dates <- beren3$Date#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Date <- dateID#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Dates#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Dates <- beren3$Date#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Date <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Dates#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Days <- unique(beren3$Date[Feeds])#
+nDates <- length(Days)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]
+Days <- unique(beren3$Time[Feeds])
+nDates <- length(Days)
+Alpha <- 0.75
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)
+Cols <- Pal(nDays)
+Cols <- Pal(nDates)
+names(Cols) <- Days
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")
+for (Day in Days)	{
+FeedsOnDay <- which(beren3$age[Feeds] == Day)
+Time <- beren3$Time
+Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])
+points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Days <- unique(beren3$Time[Feeds])#
+nDates <- length(Days)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Days <- unique(beren3$Time[Feeds])#
+nDates <- length(Days)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 200), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+plot(1,1, type='n', xlim=c(125, 700), ylim=c(7, 16, xlab='age(days)', ylab='total milk(oz)')#
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x))
+plot(1,1, type='n', xlim=c(125, 700), ylim=c(7, 16) xlab='age(days)', ylab='total milk(oz)')#
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x))
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x)
+points(beren3$Time[Feeds][x], )
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+beren3 <- Data
+Feeds <- which(Data$event == 'bottle')
+Days <- unique(beren3$Time[Feeds])
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)
+numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)
+rateFeeds <- totalFeed/numFeeds
+rateFeeds
+plot(as.numeric(names(rateFeeds)), type='n', xlim=c(125, 700), ylim=c(7, 16) xlab='Age in Days', ylab='Rate of Milk Consumption')
+plot(as.numeric(names(rateFeeds)), type='n', xlim=c(125, 700), ylim=c(7, 16), xlab='Age in Days', ylab='Rate of Milk Consumption')
+plot(as.numeric(names(rateFeeds)), type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption'
+plot(as.numeric(names(rateFeeds)), type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+beren3 <- Data#
+Feeds <- which(Data$event == 'bottle')#
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)#
+numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)#
+rateFeeds <- totalFeed/numFeeds#
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption(oz/day)')
+setwd(~/Downloads/Desktop Stuff/Evolution/Tasks/Task_02')
+setwd(~/Downloads/Desktop Stuff/Evolution/Tasks/Task_02)
+setwd(~Downloads/Desktop Stuff/Evolution/Tasks/Task_02)
+setwd(~/Desktop/Evolution/Tasks/Task_02)
+setwd('~/Desktop/Evolution/Tasks/Task_02')
+setwd('~/Desktop/Evolution/Tasks/Task_03')
+trueMean1 <- 5
+trueSD1 <- 5
+population1 <- rnorm(1e6, trueMean1, trueSD1)
+trueMean2 <- 4
+trueSD2 <- 5
+population2 <- rnorm(1e6, trueMean2, trueSD2)
+Size <- 50
+Sample1 <- sample(population1, Size)
+Sample2 <- sample(population2, Size)
+population1
+population2
+Sample1
+Sample2
+boxplot(Sample1, Sample2)
+boxplot(Sample1, Sample2)
+source('http://jonsmitchell.com/code/simFxn04.R')
+matGrandma <- makeFounder('grandma_mom')
+head(makeGrandma)
+head(matGrandma)
+MatGrandma <- makeFounder('grandma_mom')
+head(matGrandma)
+nrow(matGrandma)
+MatGrandpa <- makeFounder('grandma_mom')
+MatGrandma <- makeFounder('grandma_mom')
+head(MatGrandma)
+nrow(MatGrandma)
+MatGrandpa <- makeFounder('grandpa_mom')
+head(MatGrandpa)
+nrow(MatGrandpa)
+PatGrandma <- makeFounder('grandma_da')
+head('grandma_da')
+head(PatGrandma)
+nrow(PatGrandma)
+head(PatGrandpa)
+PatGrandpa <- makeFounder('grandpa_da')
+head(PatGrandpa)
+nrow(PatGrandpa)
+Alan <- makeBaby(PatGrandma, PatGrandpa)
+Alan
+Brenda <- makeBaby(MatGrandma, MatGrandpa)
+Brenda
+Focus <- makeBaby(Brenda, Alan)
+Focus
+ToMom <- length(grep('mom', Focus)) / length (Focus)
+ToMom
+ToMomMom <- length(grep('grandma_mom', Focus)) / length(Focus)
+ToMomDad <- length(grep('grandma_mom', Focus)) / length(Focus)
+ToMomMom
+ToMomDad
+ToDadDad <- length(grep('grandpa_dad', Focus)) / length(Focus)
+ToDadDad
+ToDadDad <- length(grep('grandpa_da', Focus)) / length(Focus)
+ToDadDad
+ToMomDad <- length(grep('grandpa_mom', Focus)) / length(Focus)
+ToMomDad
+ToDadMom <- length(grep('grandma_da', Focus)) / length(Focus)
+ToDadMom
+AvgRelate <- mean('ToMomMom', 'ToMomDad', 'ToDadDad', 'ToDadMom')
+c('ToMomMom', 'ToMomDad', 'ToDadDad', 'ToDadMom')
+as.numeric('ToMomMom', 'ToMomDad', 'ToDadDad', 'ToDadMom')
+('ToMomMom', 'ToMomDad', 'ToDadDad', 'ToDadMom')
+ToMomMom
+ToMomDad
+ToDadMom
+ToDadDad
+AvgRelate <- mean(0.33765, 0.16235, 0.29125, 0.20875)
+AvgRelate
+ToMomMom <- length(grep('grandma_mom', Focus)) / length(Focus)#
+ToMomDad <- length(grep('grandpa_mom', Focus)) / length(Focus)#
+ToDadDad <- length(grep('grandpa_da', Focus)) / length(Focus)#
+ToDadMom <- length(grep('grandma_da', Focus)) / length(Focus)#
+ToMomMom#
+ToMomDad#
+ToDadMom #
+ToDadDad
+AvgRelate <- mean(0.33765, 0.16235, 0.29125, 0.20875)
+AvgRelate
+Sibling_01 <- makeBaby(Brenda, Alan)
+Sibling_01
+ToSib <- length(intersect(Focus, Sibling_01)) / length(Focus)
+ToSib
+ManySiblings <- replicate(1e3, length(intersect(Focus, makeBaby(Brenda, Alan)))/ length(Focus))
+ManySiblings
+quantile(ManySiblings)
+mean(ManySiblings)
+plot(density(ManySiblings), main='', xlab='proportion shared genes')
+makeFounder <- function(Name, len = 1e1, uni = T)	{#
+	z <- sapply(1:len, function(x) paste(Name, x, sep="-"))#
+	return(cbind(z,z))#
+}#
+makeGamete <- function( individual, rate = 1.6 )	{#
+	Ncuts <- rgeom(1, prob = 1 / rate) + 1#
+	Stop <- nrow(individual) - 1#
+	Spots <- sort(sample(1:Stop, Ncuts))#
+#
+	for ( i in Spots )	{#
+		individual <- rbind(individual[1 : i, c(1,2)], individual[(i + 1) : nrow(individual), c(2,1)])#
+	}
+Gam <- individual[,sample(c(1,2),1)]#
+	return(Gam)#
+}#
+makeBaby <- function(mother, father)	{#
+	egg <- makeGamete( mother )#
+	sperm <- makeGamete( father )#
+	zygote <- cbind(egg, sperm)#
+	return(zygote)#
+}
+plot(density(ManySiblings), main='', xlab='proportion shared genes')
+source('http://jonsmitchell.com/code/simFxn04.R')#### Fxn for multi-locus IBD tracker
+plot(density(ManySiblings), main='', xlab='proportion shared genes')
+quantile(ManySiblings)
+mean(ManySiblings)
+HWE <- function(p)	{#
+	aa <- p^2#
+	ab <- 2*p*(1-p)#
+	bb <- (1-p)^2#
+	return(c(aa=aa, ab=ab, bb=bb))#
+}#
+HWE(0.5)
+plot(1, 1, type='n', xlim=c(0,1), xlab='freq. allele a', ylab='geno. freq')
+p <- seq(from = 0, to = 1, by = 0.01)
+GenoFreq <- t(sapply(p, HWE))
+# Given allele frequency 'p', we can calculate the expected genotype frequencies#
+HWE <- function(p)	{#
+	aa <- p^2#
+	ab <- 2*p*(1-p)#
+	bb <- (1-p)^2#
+	return(c(aa=aa, ab=ab, bb=bb))#
+}#
+HWE(0.5)#
+#this function defines P as HWE and the equation aa, ab, bb are all parts to add up to get p. When P is 0.5, our values of aa, ab, and bb are 0.25, 0.50, and 0.25 respectively.#
+#
+#Make a Blank Plot#
+plot(1, 1, type='n', xlim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
+#
+#Calculate genotype frequencies for a bunch of allele frequencies.#
+p <- seq(from = 0, to = 1, by = 0.01)#
+GenoFreq <- t(sapply(p, HWE))#
+#
+#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
+lines(p, GenoFreq[,'aa'], lwd=2, col='red')
+lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
+lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
+legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')
+#Make a Blank Plot#
+plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
+#
+#Calculate genotype frequencies for a bunch of allele frequencies.#
+p <- seq(from = 0, to = 1, by = 0.01)#
+GenoFreq <- t(sapply(p, HWE))#
+#
+#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
+lines(p, GenoFreq[,'aa'], lwd=2, col='red')#
+#
+#GenoFreq represents our expected genotype frequencies so the y axis is what we expect to occur, and as the frequency of allele a increases, the likelihood of what we expect increases also. This graph is showing how the more allele a is present, the more likely ot is expressed at a rate that we would expect it to. #
+#
+#Add other genotypes#
+lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
+lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
+legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')
+#Make a Blank Plot#
+plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
+#
+#Calculate genotype frequencies for a bunch of allele frequencies.#
+p <- seq(from = 0, to = 1, by = 0.01)#
+GenoFreq <- t(sapply(p, HWE))#
+#
+#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
+lines(p, GenoFreq[,'aa'], lwd=2, col='red')#
+#
+#GenoFreq represents our expected genotype frequencies so the y axis is what we expect to occur, and as the frequency of allele a increases, the likelihood of what we expect increases also. This graph is showing how the more allele a is present, the more likely ot is expressed at a rate that we would expect it to. The units on each axis represent a percentage. i.e. 0.8 is 80%#
+#
+#Add other genotypes#
+lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
+lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
+legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')
+Pop <- simPop(500)
+points(Pop[,'freqA'], Pop[,'Genotypes.aa']/500, pch=21, bg='red')
+#Make a Blank Plot#
+plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
+#
+#Calculate genotype frequencies for a bunch of allele frequencies.#
+p <- seq(from = 0, to = 1, by = 0.01)#
+GenoFreq <- t(sapply(p, HWE))#
+#
+#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
+lines(p, GenoFreq[,'aa'], lwd=2, col='red')#
+#
+#GenoFreq represents our expected genotype frequencies so the y axis is what we expect to occur, and as the frequency of allele a increases, the likelihood of what we expect increases also. This graph is showing how the more allele a is present, the more likely ot is expressed at a rate that we would expect it to. The units on each axis represent a percentage. i.e. 0.8 is 80%#
+#
+#Add other genotypes#
+lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
+lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
+legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')#
+#The plot is the defintion of HWE#
+#
+Pop <- simPop(500)#
+#Add these simulation pop points to the HWE plot I just made#
+points(Pop[,'freqA'], Pop[,'Genotypes.aa']/500, pch=21, bg='red')
+points(Pop[,'freqa'], Pop[,'Genotypes.aa']/500, pch=21, bg='red')
+# Given allele frequency 'p', we can calculate the expected genotype frequencies#
+HWE <- function(p)	{#
+	aa <- p^2#
+	ab <- 2*p*(1-p)#
+	bb <- (1-p)^2#
+	return(c(aa=aa, ab=ab, bb=bb))#
+}#
+HWE(0.5)#
+#this function defines P as HWE and the equation aa, ab, bb are all parts to add up to get p. When P is 0.5, our values of aa, ab, and bb are 0.25, 0.50, and 0.25 respectively.#
+#
+#Make a Blank Plot#
+plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
+#
+#Calculate genotype frequencies for a bunch of allele frequencies.#
+p <- seq(from = 0, to = 1, by = 0.01)#
+GenoFreq <- t(sapply(p, HWE))#
+#
+#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
+lines(p, GenoFreq[,'aa'], lwd=2, col='red')#
+#
+#GenoFreq represents our expected genotype frequencies so the y axis is what we expect to occur, and as the frequency of allele a increases, the likelihood of what we expect increases also. This graph is showing how the more allele a is present, the more likely ot is expressed at a rate that we would expect it to. The units on each axis represent a percentage. i.e. 0.8 is 80%#
+#
+#Add other genotypes#
+lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
+lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
+legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')#
+#The plot is the defintion of HWE#
+#
+Pop <- simPop(500)#
+#Add these simulation pop points to the HWE plot I just made#
+points(Pop[,'freqa'], Pop[,'Genotypes.aa']/500, pch=21, bg='red')
+plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
+#
+#Calculate genotype frequencies for a bunch of allele frequencies.#
+p <- seq(from = 0, to = 1, by = 0.01)#
+GenoFreq <- t(sapply(p, HWE))#
+#
+#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
+lines(p, GenoFreq[,'aa'], lwd=2, col='red')#
+#
+#GenoFreq represents our expected genotype frequencies so the y axis is what we expect to occur, and as the frequency of allele a increases, the likelihood of what we expect increases also. This graph is showing how the more allele a is present, the more likely ot is expressed at a rate that we would expect it to. The units on each axis represent a percentage. i.e. 0.8 is 80%#
+#
+#Add other genotypes#
+lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
+lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
+legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')#
+#The plot is the defintion of HWE
+Pop <- simPop(500)
+points(Pop[,'freqa'], Pop[,'Genotypes.aa']/500, pch=21, bg='red')
+Pop<- simPop(50)
+points(Pop[,'freqa'], Pop[,'Genotypes.aa']/50, pch=22, bg='red')
+library(learnPopGen)
+library(learnpopGen)
+library(learnpopgen)
+library(learnPopGen)
+install_load
+install_load()
+install_load(learnPopGen)
+library('learnPopGen')
+install_load('chron')
+install.packages('learnPopGen')
+library('learnPopGen')
+x <- genetic.drift(Ne=200, nrep=5, pause=0.01)
+x <- genetic.drift(Ne=200, nrep=5, pause=0.0001)
+x <- genetic.drift(Ne=200, nrep=5, pause=0.01)
+x <- genetic.drift(Ne=200, nrep=5, pause=0.1)
+x <- genetic.drift(Ne=2000000000, nrep=5, pause=0.1)
+x <- genetic.drift(Ne=20000, nrep=5, pause=0.1)
+x <- genetic.drift(Ne=200, nrep=5, pause=0.1)
+x <- genetic.drift(Ne=600, nrep=5, pause=0.1)
+x <- genetic.drift(Ne=200, nrep=5, pause=0.1)
+x <- genetic.drift(Ne=600, nrep=5, pause=0.1)
+x <- genetic.drift(Ne=600, nrep=5, pause=0.001)
+x <- genetic.drift(Ne=200, nrep=5, pause=0.001)
+x <- genetic.drift(Ne=10, nrep=5, pause=0.001)
+x <- genetic.drift(Ne=800, nrep=5, pause=0.001)
+x <- genetic.drift(Ne=5, nrep=5, pause=0.001)
+PopSizes <- 5:50
+Samples <- rep(PopSizes, 5)
+Samples
+tExt <- sapply(Samples, function(x) nrow(simPop(x, 500)))
+tExt
+Line <- lm(tEXT ~Samples)
+Line <- lm(tExt ~Samples)
+#Linear model
+Line <- lm(tExt ~Samples)
+Line
+summary(Line)
+Line$coef
+Line$res
+plot(Samples, tExt)
+abline(Line)
+Line2 <- lm( tExt~Samples +0 )
+Line2 <- lm( tExt~Samples +0 )
+Line2
+Line
+plot(Samples, tExt)
+plot(Samples+0, tExt)
+plot(Samples+0, tExt)
+plot(Samples, tExt)
+plot(Samples, tExt)
+abline(Line)
+abline(Line2)
+abline(Line)
