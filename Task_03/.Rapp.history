@@ -1,3 +1,397 @@
+install.packages("swirl")#
+library(swirl)
+swirl()
+5 + 7
+x <- 5 + 7
+x
+y <- x - 3
+y
+c(1.1, 9, 3.14)
+z <- c(1.1, 9, 3.14)
+?c
+z
+c(z, 555, z)
+z * 2 + 100
+my_sqrt <- sqrt(z-1)
+my_sqrt
+my_div <- z/my_sqrt
+my_div
+c(1, 2, 3, 4) + c(0, 10)
+c(1, 2, 3, 4) + c(0, 10, 100)
+z * 2 + 1000
+my_div
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Date <- dateID#
+head(Data)#
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+Days#
+ndays#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# blank plot#
+plot(1, 1, xlim=c(0, 500), ylim=c(0, 20), type="n", xlab="Time in Days", ylab="total milk (oz)")#
+#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Date[Feeds[FeedsOnDay]]#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+Data
+setwd('~/Desktop/Evolution/Tasks/Task_02')
+setwd(' ~/Desktop/Evolution/Tasks/Task_02')
+Data <- read.csv('http://jonsmitchell.com/data/beren.csv', stringsAsFactors=F)
+write.csv(Data, 'rawdata.csv', quote=F)
+Feeds <- which(Data[,9] == 'bottle')
+berenMilk <- Data[Feeds,]
+head(berenMilk)
+Feeds <- which(Data[,9] == 'bottle')
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$Date <- dateID
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+head(Data)
+beren2 <- Data
+beren3 <- beren2[order(beren2$age) ,]
+beren3
+> head(beren3)
+head(beren3)
+Feeds <- which(beren3$event == 'bottle')
+Feeds
+avgMilk <- mean(beren3$value[Feeds])
+avgFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], mean)
+varFeed <-  tapply(beren3$value[Feeds], beren3$age[Feeds], var)
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)
+berenANOVA <- aov(beren3$value[Feeds] ~beren3$caregiver[Feeds])
+Days <- unique(beren3$age[Feeds])
+ndays <- length(Days)
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(7, 16), ylim=c(0, 20), type="n", xlab="time of day", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+Days
+ndays
+Data$Date <- dateID
+head(Data)
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+head(Data)
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+head(Data)
+head(beren3)
+Data$Date <- DateID
+Data$Date <- dateID
+head(Data)
+head(beren3)
+Days <- unique(beren3$age[Feeds])
+ndays <- length(Days)
+ndays
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(ndays)#
+names(Cols) <- Days
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)
+plot(1, 1, xlim=c(0, 500), ylim=c(0, 20), type="n", xlab="Time in Days", ylab="total milk (oz)")
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Date[Feeds[FeedsOnDay]]#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+# summarize the day count#
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="time of day", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")#
+# make a nap plot!#
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+# summarize the day count#
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="time of day", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+# summarize the day count#
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+plot(1, 1, xlim=c(0, 104), ylim=c(0, 20), type="n", xlab="", ylab="total milk (oz)")
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(0, 104), ylim=c(0, 20), type="n", xlab="", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+# summarize the day count#
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(0, 104), ylim=c(0, 20), type="n", xlab="Number of Days Milk was Consumed", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")#
+# make a nap plot!#
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(0, 1), ylim=c(0, 20), type="n", xlab="Number of Days Milk was Consumed", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(1, 300), ylim=c(0, 20), type="n", xlab="Number of Days Milk was Consumed", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))
+plot(1, 1, xlim=c(1, 104), ylim=c(0, 20), type="n", xlab="Number of Days Milk was Consumed", ylab="total milk (oz)")
+par(las=1, mar=c(5, 5, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01)
+plot(as.numeric(names(totalFeed)), totalFeed, type= 'b', pch= 16, xlab= 'age in days', ylab= 'ounces of milk')
+# summarize the day count#
+Days <- unique(beren3$Date[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(7, 16), ylim=c(0, 20), type="n", xlab="time of day", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+Days <- unique(beren3$Date[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(7, 16), ylim=c(0, 20), type="n", xlab="time of day", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = 'Dates')
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
 Data$Date <- DateID
 Data$Date <- dateID
 head(Data)
@@ -266,93 +660,33 @@ setwd(~/Downloads/Desktop Stuff/Evolution/Tasks/Task_02)
 setwd(~Downloads/Desktop Stuff/Evolution/Tasks/Task_02)
 setwd(~/Desktop/Evolution/Tasks/Task_02)
 setwd('~/Desktop/Evolution/Tasks/Task_02')
+install.packages('learnPopGen')
 setwd('~/Desktop/Evolution/Tasks/Task_03')
-trueMean1 <- 5
-trueSD1 <- 5
-population1 <- rnorm(1e6, trueMean1, trueSD1)
-trueMean2 <- 4
-trueSD2 <- 5
-population2 <- rnorm(1e6, trueMean2, trueSD2)
-Size <- 50
-Sample1 <- sample(population1, Size)
-Sample2 <- sample(population2, Size)
-population1
-population2
-Sample1
-Sample2
-boxplot(Sample1, Sample2)
-boxplot(Sample1, Sample2)
-source('http://jonsmitchell.com/code/simFxn04.R')
-matGrandma <- makeFounder('grandma_mom')
-head(makeGrandma)
-head(matGrandma)
-MatGrandma <- makeFounder('grandma_mom')
-head(matGrandma)
-nrow(matGrandma)
-MatGrandpa <- makeFounder('grandma_mom')
-MatGrandma <- makeFounder('grandma_mom')
-head(MatGrandma)
-nrow(MatGrandma)
-MatGrandpa <- makeFounder('grandpa_mom')
-head(MatGrandpa)
-nrow(MatGrandpa)
-PatGrandma <- makeFounder('grandma_da')
-head('grandma_da')
-head(PatGrandma)
-nrow(PatGrandma)
-head(PatGrandpa)
-PatGrandpa <- makeFounder('grandpa_da')
-head(PatGrandpa)
-nrow(PatGrandpa)
-Alan <- makeBaby(PatGrandma, PatGrandpa)
-Alan
-Brenda <- makeBaby(MatGrandma, MatGrandpa)
-Brenda
-Focus <- makeBaby(Brenda, Alan)
-Focus
-ToMom <- length(grep('mom', Focus)) / length (Focus)
-ToMom
-ToMomMom <- length(grep('grandma_mom', Focus)) / length(Focus)
-ToMomDad <- length(grep('grandma_mom', Focus)) / length(Focus)
-ToMomMom
-ToMomDad
-ToDadDad <- length(grep('grandpa_dad', Focus)) / length(Focus)
-ToDadDad
-ToDadDad <- length(grep('grandpa_da', Focus)) / length(Focus)
-ToDadDad
-ToMomDad <- length(grep('grandpa_mom', Focus)) / length(Focus)
-ToMomDad
-ToDadMom <- length(grep('grandma_da', Focus)) / length(Focus)
-ToDadMom
-AvgRelate <- mean('ToMomMom', 'ToMomDad', 'ToDadDad', 'ToDadMom')
-c('ToMomMom', 'ToMomDad', 'ToDadDad', 'ToDadMom')
-as.numeric('ToMomMom', 'ToMomDad', 'ToDadDad', 'ToDadMom')
-('ToMomMom', 'ToMomDad', 'ToDadDad', 'ToDadMom')
-ToMomMom
-ToMomDad
-ToDadMom
-ToDadDad
-AvgRelate <- mean(0.33765, 0.16235, 0.29125, 0.20875)
-AvgRelate
-ToMomMom <- length(grep('grandma_mom', Focus)) / length(Focus)#
-ToMomDad <- length(grep('grandpa_mom', Focus)) / length(Focus)#
-ToDadDad <- length(grep('grandpa_da', Focus)) / length(Focus)#
-ToDadMom <- length(grep('grandma_da', Focus)) / length(Focus)#
-ToMomMom#
-ToMomDad#
-ToDadMom #
-ToDadDad
-AvgRelate <- mean(0.33765, 0.16235, 0.29125, 0.20875)
-AvgRelate
-Sibling_01 <- makeBaby(Brenda, Alan)
-Sibling_01
-ToSib <- length(intersect(Focus, Sibling_01)) / length(Focus)
-ToSib
-ManySiblings <- replicate(1e3, length(intersect(Focus, makeBaby(Brenda, Alan)))/ length(Focus))
-ManySiblings
-quantile(ManySiblings)
-mean(ManySiblings)
-plot(density(ManySiblings), main='', xlab='proportion shared genes')
+trueMean1 <- 5#
+trueSD1 <- 5#
+population1 <- rnorm(1e6, trueMean1, trueSD1)#
+population1#
+#
+trueMean2 <- 4#
+trueSD2 <- 5#
+population2 <- rnorm(1e6, trueMean2, trueSD2)#
+population2#
+#
+#Take a sample of each population#
+Size <- 50#
+Sample1 <- sample(population1, Size)#
+Sample2 <- sample(population2, Size)#
+Sample1#
+Sample2#
+#
+#The samples are different because the population object was defined differently. Population one was a simulated random variate distribution across a population of size 1e^6 with a mean of 5 and standard deviation of 5. The second was the same size population but with varied by a mean of 4 and a standard deviation of 5. #
+boxplot(Sample1, Sample2)#
+#The samples are different means and standard deviations which is shown using the boxplot. the lines across the box indicate the mean and the dashed lines are the standard deviation. The two boxes are in different positions according the data we typed in. #
+#
+#We're going to track the genes shared between four grandparents and two parents, Alan and Brenda. We can manipulate the number of loci within the len argument using the makeFounder function. We will model 10,000 loci from each grandparent and then follow those loci into Alan and Brenda, then to their kids. #
+#
+#Reading the needed functions#
+source('http://jonsmitchell.com/code/simFxn04.R')#### Fxn for multi-locus IBD tracker#
 makeFounder <- function(Name, len = 1e1, uni = T)	{#
 	z <- sapply(1:len, function(x) paste(Name, x, sep="-"))#
 	return(cbind(z,z))#
@@ -364,8 +698,9 @@ makeGamete <- function( individual, rate = 1.6 )	{#
 #
 	for ( i in Spots )	{#
 		individual <- rbind(individual[1 : i, c(1,2)], individual[(i + 1) : nrow(individual), c(2,1)])#
-	}
-Gam <- individual[,sample(c(1,2),1)]#
+	}#
+#
+	Gam <- individual[,sample(c(1,2),1)]#
 	return(Gam)#
 }#
 makeBaby <- function(mother, father)	{#
@@ -373,201 +708,251 @@ makeBaby <- function(mother, father)	{#
 	sperm <- makeGamete( father )#
 	zygote <- cbind(egg, sperm)#
 	return(zygote)#
+}#
+#Make the Grandparents, Don't forget to use head() and nrow() to examine the objects.#
+MatGrandma <- makeFounder('grandma_mom')#
+head(MatGrandma)#
+nrow(MatGrandma)#
+#
+MatGrandpa <- makeFounder('grandpa_mom')#
+head(MatGrandpa)#
+nrow(MatGrandpa)#
+#
+PatGrandma <- makeFounder('grandma_da')#
+head(PatGrandma)#
+nrow(PatGrandma)#
+#
+PatGrandpa <- makeFounder('grandpa_da')#
+head(PatGrandpa)#
+nrow(PatGrandpa)#
+#
+Alan <- makeBaby(PatGrandma, PatGrandpa)#
+Alan#
+#Alan's genome#
+#
+Brenda <- makeBaby(MatGrandma, MatGrandpa)#
+Brenda#
+#Brenda's genome is the name number as nrow for each parent. #
+#
+#Focus is Alan and Brenda's child#
+Focus <- makeBaby(Brenda, Alan)#
+Focus#
+#
+#Each locus is tagged with which grandparent and parent it came from, and we can search to see how many genes came from any one ancestor of Focus. For this we use grep() which is basically like ctrlF function. It will find any matches. So grandpa_mom and grandma_mom both include 'mom' and will both match to the line below. We will find how many loci Focus inherited from Brenda, and then divide that by the number of loci present. That gives us the percentage of genes shared between Brenda and Focus. I think the number will be 10,000/2. #
+#
+ToMom <- length(grep('mom', Focus)) / length (Focus)#
+ToMom#
+#Okay so I wasn't dead on, but my fraction was right in a sense I guess.#
+#
+#Now we'll look at how many genes Focus shares with each of his maternal grandparents. What should these numbers be? My guess is 0.125#
+ToMomMom <- length(grep('grandma_mom', Focus)) / length(Focus)#
+ToMomDad <- length(grep('grandpa_mom', Focus)) / length(Focus)#
+ToDadDad <- length(grep('grandpa_da', Focus)) / length(Focus)#
+ToDadMom <- length(grep('grandma_da', Focus)) / length(Focus)#
+ToMomMom#
+ToMomDad#
+ToDadMom #
+ToDadDad#
+#Focus is not equally related to the four grandparents like I expected. #
+AvgRelate <- mean(0.33765, 0.16235, 0.29125, 0.20875)#
+AvgRelate#
+#Focus' average relatedness to the four grandparents is 0.33765. This means that the majority of Focus' DNA in terms of grandparents is from the maternal grandmother#
+#
+#Focus gets sibling#
+Sibling_01 <- makeBaby(Brenda, Alan)#
+Sibling_01#
+#
+#I would expect sibling 1 to share approximately 50% of its DNA with Focus, but after seeing the relatedness of Focus to the grandparents, I have my doubts. #
+ToSib <- length(intersect(Focus, Sibling_01)) / length(Focus)#
+ToSib#
+#0.4301, so not too far from 50. #
+#
+#Brenda and Alan have 1,000 more children lol#
+ManySiblings <- replicate(1e3, length(intersect(Focus, makeBaby(Brenda, Alan)))/ length(Focus))#
+ManySiblings#
+#This object shows how much DNA each sibling has in common with Focus#
+#
+quantile(ManySiblings)#
+mean(ManySiblings)#
+#
+plot(density(ManySiblings), main='', xlab='proportion shared genes')#
+#There's a range of values for how many genes are shared between Focus and his many siblings becuase it is completely random. They share around 50% because there is such a large population of siblings, bringing it closer to the expected values. The less siblings he has the lower the distribution of traits, thus the lower they are in relatedness. #
+#
+# Given allele frequency 'p', we can calculate the expected genotype frequencies#
+HWE <- function(p)	{#
+	aa <- p^2#
+	ab <- 2*p*(1-p)#
+	bb <- (1-p)^2#
+	return(c(aa=aa, ab=ab, bb=bb))#
+}#
+HWE(0.5)#
+#this function defines P as HWE and the equation aa, ab, bb are all parts to add up to get p. When P is 0.5, our values of aa, ab, and bb are 0.25, 0.50, and 0.25 respectively.#
+#
+#Make a Blank Plot#
+plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
+#
+#Calculate genotype frequencies for a bunch of allele frequencies.#
+p <- seq(from = 0, to = 1, by = 0.01)#
+GenoFreq <- t(sapply(p, HWE))#
+#
+#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
+lines(p, GenoFreq[,'aa'], lwd=2, col='red')#
+#
+#GenoFreq represents our expected genotype frequencies so the y axis is what we expect to occur, and as the frequency of allele a increases, the likelihood of what we expect increases also. This graph is showing how the more allele a is present, the more likely ot is expressed at a rate that we would expect it to. The units on each axis represent a percentage. i.e. 0.8 is 80%#
+#
+#Add other genotypes#
+lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
+lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
+legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')#
+#The plot is the defintion of HWE#
+#
+Pop <- simPop(500)#
+#Add these simulation pop points to the HWE plot I just made#
+points(Pop[,'freqa'], Pop[,'Genotypes.aa']/500, pch=21, bg='red')#
+#
+#The frequency of the aa genotype almost matches the expecation from HWE but it isn't exact. It's also clustered in one area, so it follows the trend but doesn't distribute throughout the whole trendline. I'm thinking if we had a larger population, it would though.#
+#
+Pop<- simPop(50)#
+points(Pop[,'freqa'], Pop[,'Genotypes.aa']/50, pch=22, bg='red')#
+#
+#The frequency of a has increased because our population is smaller. It is more frequently occurring because the likelihood of b is smaller in a smaller population size. #
+#
+install.packages('learnPopGen')#
+library('learnPopGen')#
+#Ne is how many individuals are in each population#
+#nrep is how many populations are simulating at once#
+#pause is how fast the lines grow #
+x <- genetic.drift(Ne=5, nrep=5, pause=0.001)#
+#It's the same graph we saw in lecture today, the lines eventually separate out to 0 and 1 until the allele wipes out. Smaller population sizes make this happen faster.#
+#
+#Let's look at how population sizes effect time to extinction for an allele. #
+PopSizes <- 5:50#
+#
+#There are 5 populations within each given size#
+Samples <- rep(PopSizes, 5)#
+Samples#
+#We will simulate all 230 of those populations and get the time one of the two alleles went extinct#
+tExt <- sapply(Samples, function(x) nrow(simPop(x, 500)))#
+tExt#
+#
+#Linear model#
+Line <- lm(tExt ~Samples)#
+Line#
+summary(Line)#
+#
+#to extract coefficients, use $coef#
+Line$coef#
+#To add it to the plot we use abline()#
+plot(Samples, tExt)#
+abline(Line)#
+Line2 <- lm( tExt~Samples +0 )#
+#Samples+0 gets rid of the intercept leaving the only coefficient the samples. The sample number is also smaller now. #
+#
+#As the population size increases, the points move away from the line. To me, this means that they are less likely to go extinct as population size increases. This is because the line is a function of the extinction of the allele in our samples. So as sample size increases, it is not as likely that our allele will go extinct. #
+#
+#Heteroskedasticity quite literally means exactly what I previoulsy said. Essentially the variance of residuals is unequal over a range of values. This is exactly what our last graph and its residuals showed.
+library('lmtest')
+install.packages('lmtest')
+install.packages('sandwich')
+coeftest(Samples, vcov = vcovHC(model, type = 'HCo'))
+coeftest(Samples, vcov = vcovHC(Samples, type = 'HCo'))
+coefftest(Samples, vcov = vcovHC(Samples, type = 'HCo'))
+waldtest(Samples, Line, vcov = vcovHC(line, type = 'HCo'))
+bptest(Line)
+plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')
+Line %>%#
+ vcovHC() %>%#
+ diag() %>%#
+ sqrt() %>%
 }
-plot(density(ManySiblings), main='', xlab='proportion shared genes')
-source('http://jonsmitchell.com/code/simFxn04.R')#### Fxn for multi-locus IBD tracker
-plot(density(ManySiblings), main='', xlab='proportion shared genes')
-quantile(ManySiblings)
-mean(ManySiblings)
-HWE <- function(p)	{#
-	aa <- p^2#
-	ab <- 2*p*(1-p)#
-	bb <- (1-p)^2#
-	return(c(aa=aa, ab=ab, bb=bb))#
-}#
-HWE(0.5)
-plot(1, 1, type='n', xlim=c(0,1), xlab='freq. allele a', ylab='geno. freq')
-p <- seq(from = 0, to = 1, by = 0.01)
-GenoFreq <- t(sapply(p, HWE))
-# Given allele frequency 'p', we can calculate the expected genotype frequencies#
-HWE <- function(p)	{#
-	aa <- p^2#
-	ab <- 2*p*(1-p)#
-	bb <- (1-p)^2#
-	return(c(aa=aa, ab=ab, bb=bb))#
-}#
-HWE(0.5)#
-#this function defines P as HWE and the equation aa, ab, bb are all parts to add up to get p. When P is 0.5, our values of aa, ab, and bb are 0.25, 0.50, and 0.25 respectively.#
-#
-#Make a Blank Plot#
-plot(1, 1, type='n', xlim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
-#
-#Calculate genotype frequencies for a bunch of allele frequencies.#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-#
-#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
-lines(p, GenoFreq[,'aa'], lwd=2, col='red')
-lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
-lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
-legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')
-#Make a Blank Plot#
-plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
-#
-#Calculate genotype frequencies for a bunch of allele frequencies.#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-#
-#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
-lines(p, GenoFreq[,'aa'], lwd=2, col='red')#
-#
-#GenoFreq represents our expected genotype frequencies so the y axis is what we expect to occur, and as the frequency of allele a increases, the likelihood of what we expect increases also. This graph is showing how the more allele a is present, the more likely ot is expressed at a rate that we would expect it to. #
-#
-#Add other genotypes#
-lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
-lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
-legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')
-#Make a Blank Plot#
-plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
-#
-#Calculate genotype frequencies for a bunch of allele frequencies.#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-#
-#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
-lines(p, GenoFreq[,'aa'], lwd=2, col='red')#
-#
-#GenoFreq represents our expected genotype frequencies so the y axis is what we expect to occur, and as the frequency of allele a increases, the likelihood of what we expect increases also. This graph is showing how the more allele a is present, the more likely ot is expressed at a rate that we would expect it to. The units on each axis represent a percentage. i.e. 0.8 is 80%#
-#
-#Add other genotypes#
-lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
-lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
-legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')
-Pop <- simPop(500)
-points(Pop[,'freqA'], Pop[,'Genotypes.aa']/500, pch=21, bg='red')
-#Make a Blank Plot#
-plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
-#
-#Calculate genotype frequencies for a bunch of allele frequencies.#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-#
-#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
-lines(p, GenoFreq[,'aa'], lwd=2, col='red')#
-#
-#GenoFreq represents our expected genotype frequencies so the y axis is what we expect to occur, and as the frequency of allele a increases, the likelihood of what we expect increases also. This graph is showing how the more allele a is present, the more likely ot is expressed at a rate that we would expect it to. The units on each axis represent a percentage. i.e. 0.8 is 80%#
-#
-#Add other genotypes#
-lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
-lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
-legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')#
-#The plot is the defintion of HWE#
-#
-Pop <- simPop(500)#
-#Add these simulation pop points to the HWE plot I just made#
-points(Pop[,'freqA'], Pop[,'Genotypes.aa']/500, pch=21, bg='red')
-points(Pop[,'freqa'], Pop[,'Genotypes.aa']/500, pch=21, bg='red')
-# Given allele frequency 'p', we can calculate the expected genotype frequencies#
-HWE <- function(p)	{#
-	aa <- p^2#
-	ab <- 2*p*(1-p)#
-	bb <- (1-p)^2#
-	return(c(aa=aa, ab=ab, bb=bb))#
-}#
-HWE(0.5)#
-#this function defines P as HWE and the equation aa, ab, bb are all parts to add up to get p. When P is 0.5, our values of aa, ab, and bb are 0.25, 0.50, and 0.25 respectively.#
-#
-#Make a Blank Plot#
-plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
-#
-#Calculate genotype frequencies for a bunch of allele frequencies.#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-#
-#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
-lines(p, GenoFreq[,'aa'], lwd=2, col='red')#
-#
-#GenoFreq represents our expected genotype frequencies so the y axis is what we expect to occur, and as the frequency of allele a increases, the likelihood of what we expect increases also. This graph is showing how the more allele a is present, the more likely ot is expressed at a rate that we would expect it to. The units on each axis represent a percentage. i.e. 0.8 is 80%#
-#
-#Add other genotypes#
-lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
-lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
-legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')#
-#The plot is the defintion of HWE#
-#
-Pop <- simPop(500)#
-#Add these simulation pop points to the HWE plot I just made#
-points(Pop[,'freqa'], Pop[,'Genotypes.aa']/500, pch=21, bg='red')
-plot(1, 1, type='n', xlim=c(0,1), ylim=c(0,1), xlab='freq. allele a', ylab='geno. freq')#
-#
-#Calculate genotype frequencies for a bunch of allele frequencies.#
-p <- seq(from = 0, to = 1, by = 0.01)#
-GenoFreq <- t(sapply(p, HWE))#
-#
-#Plot known allele frequency (p) against our expected genotype frequencies(GenoFreq)#
-lines(p, GenoFreq[,'aa'], lwd=2, col='red')#
-#
-#GenoFreq represents our expected genotype frequencies so the y axis is what we expect to occur, and as the frequency of allele a increases, the likelihood of what we expect increases also. This graph is showing how the more allele a is present, the more likely ot is expressed at a rate that we would expect it to. The units on each axis represent a percentage. i.e. 0.8 is 80%#
-#
-#Add other genotypes#
-lines(p, GenoFreq[,'ab'], lwd=2, col='purple')#
-lines(p, GenoFreq[,'bb'], lwd=2, col='blue')#
-legend('top', legend=c('aa', 'ab', 'bb'), col=c('red', 'purple', 'blue'), lty=1, lwd=2, bty='n')#
-#The plot is the defintion of HWE
-Pop <- simPop(500)
-points(Pop[,'freqa'], Pop[,'Genotypes.aa']/500, pch=21, bg='red')
-Pop<- simPop(50)
-points(Pop[,'freqa'], Pop[,'Genotypes.aa']/50, pch=22, bg='red')
-library(learnPopGen)
-library(learnpopGen)
-library(learnpopgen)
-library(learnPopGen)
-install_load
-install_load()
-install_load(learnPopGen)
-library('learnPopGen')
-install_load('chron')
-install.packages('learnPopGen')
-library('learnPopGen')
-x <- genetic.drift(Ne=200, nrep=5, pause=0.01)
-x <- genetic.drift(Ne=200, nrep=5, pause=0.0001)
-x <- genetic.drift(Ne=200, nrep=5, pause=0.01)
-x <- genetic.drift(Ne=200, nrep=5, pause=0.1)
-x <- genetic.drift(Ne=2000000000, nrep=5, pause=0.1)
-x <- genetic.drift(Ne=20000, nrep=5, pause=0.1)
-x <- genetic.drift(Ne=200, nrep=5, pause=0.1)
-x <- genetic.drift(Ne=600, nrep=5, pause=0.1)
-x <- genetic.drift(Ne=200, nrep=5, pause=0.1)
-x <- genetic.drift(Ne=600, nrep=5, pause=0.1)
-x <- genetic.drift(Ne=600, nrep=5, pause=0.001)
-x <- genetic.drift(Ne=200, nrep=5, pause=0.001)
-x <- genetic.drift(Ne=10, nrep=5, pause=0.001)
-x <- genetic.drift(Ne=800, nrep=5, pause=0.001)
-x <- genetic.drift(Ne=5, nrep=5, pause=0.001)
-PopSizes <- 5:50
-Samples <- rep(PopSizes, 5)
-Samples
-tExt <- sapply(Samples, function(x) nrow(simPop(x, 500)))
-tExt
-Line <- lm(tEXT ~Samples)
-Line <- lm(tExt ~Samples)
-#Linear model
-Line <- lm(tExt ~Samples)
-Line
+{Line %>%#
+ vcovHC() %>%#
+ diag() %>%#
+ sqrt() %>%}
+coeftest()
+if(require('sandwich'))
+{
+coeftest(Samples, Line = Inf, vcov =vcovHC, type = 'HCo')
+}
+if(require('lmtest'))
+{}
+coeftest(Line, vcov = vcovHC(Line))
+bptest(Line)
+bptest(Line2)
 summary(Line)
-Line$coef
-Line$res
+Line %>%#
+	vcovHC() %>%#
+	diag() %>%#
+	sqrt()
+{Line %>%#
+	vcovHC() %>%#
+	diag() %>%#
+	sqrt()#
+	}
+vcovHC(Line)
+coeftest(Line, vcov = vcovHC(Line))
+install.packages('robustbase')
+if(required('robustbase'))
+Linerob <- lmrob( tEXT~Samples)
+if(require('robustbase'))
+Linerob <- lmrob( tEXT~Samples)
+Linerob <- lmrob(tExt~Samples)
+summary(Linerob)
+abline(Linerob)
+plot(Samples, tExt)#
+abline(Line)#
+abline(Linerob)
+plot(Samples, tExt)#
+abline(Line)#
+abline(Linerob)
+install.packages(RColorBrewer)
+install.packages('RColorBrewer')
+if(require('RColorBrewer'))
+.
+display.brewer.all()
+cols <- brewer.pal(n=4, name='Set1')
+cols <- brewer.pal(n=2, name='Set1')
+cols <- brewer.pal(n=4, name='Set1')
+cols_Linerob <- cols[Linerob]
+abline(Linerob, col=cols[1])
+plot(Samples, tExt)#
+abline(Line, col=cols[2])#
+abline(Linerob, col=cols[1])
+display.brewer.all()
 plot(Samples, tExt)
-abline(Line)
-Line2 <- lm( tExt~Samples +0 )
-Line2 <- lm( tExt~Samples +0 )
-Line2
-Line
 plot(Samples, tExt)
-plot(Samples+0, tExt)
-plot(Samples+0, tExt)
-plot(Samples, tExt)
-plot(Samples, tExt)
-abline(Line)
-abline(Line2)
-abline(Line)
+plot(Samples, tExt)#
+abline(Line, col=cols[2])#
+abline(Linerob, col=cols[1])#
+legend(x=20,y=400, legend=c('Robust', 'Linear'), col=c('blue', 'red'), lty=1:2, cex=0.8)
+legend(x=20,y=400, legend=c('Robust', 'Linear'), col=c('blue', 'red'), lty=0.8, cex=0.8)
+plot(Samples, tExt)#
+abline(Line, col=cols[2])#
+abline(Linerob, col=cols[1])#
+legend(x=20,y=400, legend=c('Robust', 'Linear'), col=c('blue', 'red'), lty=0.8, cex=0.8)
+?legend
+abline(Line, col=cols[2])#
+abline(Linerob, col=cols[1])#
+legend(x=20,y=400, legend=c('Robust', 'Linear'), col=c('blue', 'red'), lwd=1.2, cex=0.8)
+plot(Samples, tExt)#
+abline(Line, col=cols[2])#
+abline(Linerob, col=cols[1])#
+legend(x=20,y=400, legend=c('Robust', 'Linear'), col=c('blue', 'red'), lwd=1.2, cex=0.8)
+plot(Samples, tExt)#
+abline(Line, col='red')#
+abline(Linerob, col='blue')#
+legend(x=20,y=400, legend=c('Robust', 'Linear'), col=c('blue', 'red'), lwd=1.2, cex=0.8)
+plot(Samples, tExt)#
+abline(Line, col='red')#
+abline(Linerob, col='blue')#
+legend(x=20,y=400, legend=c('Robust', 'Linear'), col=c('blue', 'red'), lwd=1.2, cex=0.8)
+pdf('r03ec-RobustHeteroskedasticity.pdf', height = 5, width = 5)#
+plot(Samples, tExt)#
+abline(Line, col='red')#
+abline(Linerob, col='blue')#
+legend(x=20,y=400, legend=c('Robust', 'Linear'), col=c('blue', 'red'), lwd=1.2, cex=0.8)#
+dev.off()
+plot(Samples, tExt)#
+abline(Line, col='red')#
+abline(Linerob, col='blue')#
+legend(x=20,y=400, legend=c('Robust', 'Linear'), col=c('blue', 'red'), lwd=1.2, cex=0.8)
