@@ -8,13 +8,13 @@ coalescent.plot(n=20, ngen=20, colors=NULL)
 dev.off()
 
 
-#To determine how long it takes alleles to go extinct, I ran several coalescent.plot fxns, changing the number of generations. Then I ran it over and over without changing the number of generations. It appears to be highly variable as to when an allele goes extinct, but the average is approxamtely 5 generations. One might go extinct right in the beginning and another might go extinct at the end, but for the most part, they go extinct near the 5 generations range, with outliers around or just past 10 and as low as 1. The variance is plus or minus 5.
+#To determine how long it takes alleles to go extinct, I ran several coalescent.plot fxns, changing the number of generations. Then I ran it over and over without changing the number of generations. It appears to be highly variable as to when an allele goes to fixation, but the average is approximately 10 generations. 
 pdf('r05-Question2.pdf', height=5, width=5)
 coalescent.plot(n=10, ngen=15, colors=NULL)
 dev.off()
 
 pdf('r05-Question3.pdf', height=5, width=5)
-coalescent.plot(n=10, ngen=1, colors=NULL)
+coalescent.plot(n=10, ngen=5, colors=NULL)
 dev.off()
 #The lines represent parent-offspring relationships as stated by the help page, so I ran a simulation of one generation. The average was pretty consistently 2 from what I saw. 
 #Fitness is very clearly demonstrated here, in that the alleles can only be widely distributed if the indvidual carrying these alleles is able to mate a lot. 
@@ -127,51 +127,29 @@ dev.off()
 help(feat_selection)
 install.packages('phyclust')
 library('phyclust')
-activate_ms(priority = 400)
-activate_msms(jar = NULL, java = NULL, priority = 400, download = TRUE)
-model4 <- coal_model(c(13, 18)) +
-feat_selection(
-	strength_AA = 0,
-	strength_Aa = 0, 
-	strength_aa = 1,
-	strength_A = NULL,
-	population = 1,
-	time = '1',
-	start = TRUE,
-	start_frequency = 5e-04,
-	Ne = 10000,
-	position = 0.5,
-	force_keep = TRUE,
-	locus_group = 'all') +
-feat_selection(
-	strength_AA = 0,
-	strength_Aa = 1, 
-	strength_aa = 0,
-	strength_A = NULL,
-	population = 2,
-	time = '1',
-	start = TRUE,
-	start_frequency = 5e-04,
-	Ne = 10000,
-	position = 0.5,
-	force_keep = TRUE,
-	locus_group = 'all') +
-feat_size_change(0.5,
-	population = 1, 
-	time = '1', 
-	locus_group = 'all') +
-feat_size_change(0.1, 
-	population = 2, 
-	time = '2', 
-	locus_group = 'all') +
-feat_migration(1.2, 
-	pop_to = 1, 
-	pop_from = 2, 
-	symmetric = FALSE, time = '3', locus_group = 'all') +
-feat_mutation(array(c(2,5)))
-sumstat_nucleotide_div() +
-sumstat_trees() 
+activate_ms(priority = 100)
+activate_msms(priority = 500, download = TRUE)
+
+model4 <- coal_model(c(13, 18), loci_number = 10, loci_length = 1000, ploidy = 2) +
+	feat_selection(10, time = 1, population = 1) +
+	feat_selection(25, time = 1, population = 2) +
+	feat_size_change(0.5,
+		population = 1, 
+		time = '1', 
+		locus_group = 'all') +
+	feat_size_change(0.1, 
+		population = 2, 
+		time = '2', 
+		locus_group = 'all') +
+	feat_migration(1.2, 
+		pop_to = 1, 
+		pop_from = 2, 
+		symmetric = FALSE, time = '3', locus_group = 'all') +
+	feat_mutation(10) +
+	sumstat_trees() +
+	sumstat_nucleotide_div()
 check_model(model4)
 list_simulators()
-activate_scrm(priority = 400)
-stat2 <- simulate(model4)
+stat2 <- simulate(model4, nsim = 40)
+Diversity2 <- stat2$pi
+Diversity2
