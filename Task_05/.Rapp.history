@@ -1,3 +1,6 @@
+Data <- read.csv('http://jonsmitchell.com/data/beren.csv', stringsAsFactors=F)
+write.csv(Data, 'rawdata.csv', quote=F)
+Feeds <- which(Data[,9] == 'bottle')
 berenMilk <- Data[Feeds,]
 head(berenMilk)
 Feeds <- which(Data[,9] == 'bottle')
@@ -609,665 +612,10 @@ setwd('~/Desktop/Evolution/Tasks/Task_02')
 install.packages('learnPopGen')
 setwd('~/Desktop/Evolution/Tasks/Task_05')
 library(learnPopGen)
-library('coala')
 library('phytools')
+library('coala')
 library('phyclust')
-model4 <- coal_model(c(13, 18)) +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 0, #
-	strength_aa = 1,#
-	strength_A = NULL,#
-	population = 1,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 1, #
-	strength_aa = 0,#
-	strength_A = NULL,#
-	population = 2,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +#
-sumstat_nucleotide_div() +#
-sumstat_trees() #
-activate_scrm(priority = 400)#
-stat2 <- simulate(model4)
-check_model(model4)
-activate_ms(priority = 300)
-activate_msms(jar = NULL, java = NULL, priority = 200, download = TRUE)
-activate_msms(jar = NULL, java = NULL, priority = 200, download = TRUE)
-check_model(model4)
-activate_scrm(priority = 400)
-check_model(model4)
-list_simulators()
-activate_ms(priority = 400)
-activate_msms(jar = NULL, java = NULL, priority = 400, download = TRUE)
-activate_scrm(priority = 400)
-check_model(model4)
-list_simulators()
-check_model(model4)
-feat_mutation(0.75,#
-	model = 'IFS',#
-	base_frequencies = NA,#
-	tstv_ratio = NA, #
-	gtr_rates = NA, #
-	fixed_number = FALSE,#
-	locus_group = 'all' )
-model4 <- coal_model(c(13, 18)) +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 0, #
-	strength_aa = 1,#
-	strength_A = NULL,#
-	population = 1,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 1, #
-	strength_aa = 0,#
-	strength_A = NULL,#
-	population = 2,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +#
-feat_mutation(0.75,#
-	model = 'IFS',#
-	base_frequencies = NA,#
-	tstv_ratio = NA, #
-	gtr_rates = NA, #
-	fixed_number = FALSE,#
-	locus_group = 'all' )#
-sumstat_nucleotide_div() +#
-sumstat_trees() #
-check_model(model4)
-feat_mutation(0.75,#
-	model = 'IFS',#
-	base_frequencies = NA,#
-	tstv_ratio = NA, #
-	gtr_rates = NA, #
-	fixed_number = FALSE,#
-	population = 1#
-	locus_group = 'all' )
-feat_mutation(0.75,#
-	model = 'IFS',#
-	base_frequencies = NA,#
-	tstv_ratio = NA, #
-	gtr_rates = NA, #
-	fixed_number = FALSE,#
-	population = 1,#
-	locus_group = 'all' )
-model4 <- coal_model(c(13, 18)) +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 0, #
-	strength_aa = 1,#
-	strength_A = NULL,#
-	population = 1,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 1, #
-	strength_aa = 0,#
-	strength_A = NULL,#
-	population = 2,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +#
-feat_mutation(2,#
-	model = 'IFS',#
-	base_frequencies = NA,#
-	tstv_ratio = NA, #
-	gtr_rates = NA, #
-	fixed_number = FALSE,#
-	population = 1,#
-	locus_group = 'all' )#
-sumstat_nucleotide_div() +#
-sumstat_trees() #
-check_model(model4)
-model4 <- coal_model(c(13, 18)) +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 0, #
-	strength_aa = 1,#
-	strength_A = NULL,#
-	population = 1,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 1, #
-	strength_aa = 0,#
-	strength_A = NULL,#
-	population = 2,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +#
-feat_mutation([2:5],#
-	model = 'IFS',#
-	base_frequencies = NA,#
-	tstv_ratio = NA, #
-	gtr_rates = NA, #
-	fixed_number = FALSE,#
-	population = 1,#
-	locus_group = 'all' )#
-sumstat_nucleotide_div() +#
-sumstat_trees() #
-check_model(model4)
-model4 <- coal_model(c(13, 18)) +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 0, #
-	strength_aa = 1,#
-	strength_A = NULL,#
-	population = 1,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 1, #
-	strength_aa = 0,#
-	strength_A = NULL,#
-	population = 2,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +#
-feat_mutation(2, 5)#
-sumstat_nucleotide_div() +#
-sumstat_trees() #
-check_model(model4)
-model4 <- coal_model(c(13, 18)) +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 0, #
-	strength_aa = 1,#
-	strength_A = NULL,#
-	population = 1,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 1, #
-	strength_aa = 0,#
-	strength_A = NULL,#
-	population = 2,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +#
-feat_mutation(2, 5, fixed_number = FALSE)#
-sumstat_nucleotide_div() +#
-sumstat_trees() #
-check_model(model4)
-model4 <- coal_model(c(13, 18)) +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 0, #
-	strength_aa = 1,#
-	strength_A = NULL,#
-	population = 1,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 1, #
-	strength_aa = 0,#
-	strength_A = NULL,#
-	population = 2,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +#
-feat_mutation([2:5], fixed_number = FALSE)#
-sumstat_nucleotide_div() +#
-sumstat_trees() #
-check_model(model4)
-model4 <- coal_model(c(13, 18)) +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 0, #
-	strength_aa = 1,#
-	strength_A = NULL,#
-	population = 1,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 1, #
-	strength_aa = 0,#
-	strength_A = NULL,#
-	population = 2,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +#
-feat_mutation(2)#
-feat_mutation(10)#
-sumstat_nucleotide_div() +#
-sumstat_trees() #
-check_model(model4)
-model4 <- coal_model(c(13, 18)) +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 0, #
-	strength_aa = 1,#
-	strength_A = NULL,#
-	population = 1,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 1, #
-	strength_aa = 0,#
-	strength_A = NULL,#
-	population = 2,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +#
-feat_mutation(c(4, 5))#
-sumstat_nucleotide_div() +#
-sumstat_trees() #
-check_model(model4)
-model4 <- coal_model(c(13, 18)) +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 0, #
-	strength_aa = 1,#
-	strength_A = NULL,#
-	population = 1,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 1, #
-	strength_aa = 0,#
-	strength_A = NULL,#
-	population = 2,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +#
-feat_mutation(array(c(2,5)))#
-sumstat_nucleotide_div() +#
-sumstat_trees() #
-check_model(model4)
-Dataset <- read.csv('~/Desktop/Evolution/Final Project/Final_Project_Data.csv', #
-	stringsAsFactors=F)
-Dataset()
-Datset
-Dataset
-stat2 <- simulate(model4)
-check_model(model4)
-activate_ms(priority = 600)
-activate_scrm(priority = 500)
-check_model(model4)
-coalescent.plot(n=10, ngen=15, colors=NULL)
-coalescent.plot(n=10, ngen=15, colors=NULL)
-coalescent.plot(n=10, ngen=10, colors=NULL)
-coalescent.plot(n=10, ngen=15, colors=NULL)
-coalescent.plot(n=10, ngen=20, colors=NULL)
-coalescent.plot(n=10, ngen=17, colors=NULL)
-coalescent.plot(n=10, ngen=12, colors=NULL)
-coalescent.plot(n=10, ngen=15, colors=NULL)
-pdf('r05-Question2.pdf', height=5, width=5)#
-coalescent.plot(n=10, ngen=15, colors=NULL)#
-dev.off()
-pdf('r05-Question2.pdf', height=5, width=5)#
-coalescent.plot(n=10, ngen=15, colors=NULL)#
-dev.off()
-coalescent.plot(n=10, ngen=15, colors=NULL)
-coalescent.plot(n=10, ngen=15, colors=NULL)
-pdf('r05-Question2.pdf', height=5, width=5)#
-coalescent.plot(n=10, ngen=15, colors=NULL)#
-dev.off()
-coalescent.plot(n=10, ngen=15, colors=NULL)
-pdf('r05-Question2.pdf', height=5, width=5)#
-coalescent.plot(n=10, ngen=15, colors=NULL)#
-dev.off()
-coalescent.plot(n=10, ngen=3, colors=NULL)
-coalescent.plot(n=10, ngen=5, colors=NULL)
-pdf('r05-Question3.pdf', height=5, width=5)#
-coalescent.plot(n=10, ngen=5, colors=NULL)#
-dev.off()
-model4 <- coal_model(c(13, 18)) +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 0, #
-	strength_aa = 1,#
-	strength_A = NULL,#
-	population = 1,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_selection(#
-	strength_AA = 0,#
-	strength_Aa = 1, #
-	strength_aa = 0,#
-	strength_A = NULL,#
-	population = 2,#
-	time = '1',#
-	start = TRUE,#
-	start_frequency = 5e-04,#
-	Ne = 10000,#
-	position = 0.5,#
-	force_keep = TRUE,#
-	locus_group = 'all') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +
-feat_mutation(array(c(2,5)))
-feat_mutation(2, 5)
-feat_mutation(10)
-check_model(model4)
-stat2 <- simulate(model4)
-list_simulators()
-library(coala)
-stat2 <- simulate(model4)
-model4 <- coal_model(c(13, 18)) +#
-	feat_selection(#
-		strength_Aa = 10#
-		population = 1#
-		time = '1') +#
-	feat_selection(#
-		strength_Aa = 13#
-		population = 2#
-		time = '1')
-model4 <- coal_model(c(13, 18)) +#
-	feat_selection(#
-		strength_Aa = 10,#
-		population = 1,#
-		time = '1') +#
-	feat_selection(#
-		strength_Aa = 13,#
-		population = 2,#
-		time = '1')
-check_model(model4)
-model4 <- coal_model(c(13, 18)) +#
-	feat_selection(#
-		strength_Aa = 10,#
-		population = 1,#
-		time = '1') +#
-	feat_selection(#
-		strength_Aa = 13,#
-		population = 2,#
-		time = '1') +#
-feat_size_change(0.5,#
-	population = 1, #
-	time = '1', #
-	locus_group = 'all') +#
-feat_size_change(0.1, #
-	population = 2, #
-	time = '2', #
-	locus_group = 'all') +#
-feat_migration(1.2, #
-	pop_to = 1, #
-	pop_from = 2, #
-	symmetric = FALSE, time = '3', locus_group = 'all') +#
-feat_mutation(10)
-check_model(model4)
-model4 <- coal_model(c(13, 18)) +#
-	feat_pop_merge(0.5, 2, 1) +#
-	feat_selection(#
-		strength_Aa = 10,#
-		population = 1,#
-		time = '1') +#
-	feat_selection(#
-		strength_Aa = 13,#
-		population = 2,#
-		time = '1')
-check_model(model4)
-model4 <- coal_model(c(13, 18)) +#
-	feat_pop_merge(0.5, 2, 1) +#
-	feat_selection(#
-		strength_Aa = 10,#
-		population = 1,#
-		time = '1') +#
-	feat_selection(#
-		strength_Aa = 13,#
-		population = 2,#
-		time = '1') +#
-	feat_size_change(0.5,#
-		population = 1, #
-		time = '1', #
-		locus_group = 'all') +#
-	feat_size_change(0.1, #
-		population = 2, #
-		time = '2', #
-		locus_group = 'all') +#
-	feat_migration(1.2, #
-		pop_to = 1, #
-		pop_from = 2, #
-		symmetric = FALSE, time = '3', locus_group = 'all') +#
-	feat_mutation(10) +#
-	sumstat_nucleotide_div() +#
-	sumstat_trees()
-check_model(model4)
-stat2 <- simulate(model4)
-help(feat_selection)
-help(feat_selection)
-activate_msms(jar = '~/Downloads/msms/lib/msms.jar', java = '~/Downloads/jre-8u281-macosx-x64.dmg', priority = 200, download = TRUE)
+activate_msms(jar = '~/Downloads/msms/lib/msms.jar', java = '~/Downloads/jre-8u281-macosx-x64.dmg', priority = 500, download = TRUE)
 model4 <- coal_model(c(13, 18)) +#
 	feat_selection(#
 		strength_Aa = 10,#
@@ -1292,16 +640,277 @@ model4 <- coal_model(c(13, 18)) +#
 	feat_mutation(10) +#
 	sumstat_nucleotide_div() +#
 	sumstat_trees()
+stat2 <- simulate(model4)
+list_simulators()
+coala--introduction
+read('coala--introduction')
+coala-introduction
+vignette('coala-introduction')
+vignette('coala')
+vignette('feat_selection', package = coala)
+vignette('feat_selection', package = 'coala')
+vignette('package = 'coala')
+vignette(package = 'coala')
+vignette(coala-install, package = 'coala')
+vignette(coala-install, package = coala)
+vignette('coala-install', package = 'coala')
+model4 <- coal_model(c(13, 18)) +#
+	feat_selection(#
+		strength_Aa = 10,#
+		population = 1,#
+		time = '1') +#
+	feat_selection(#
+		strength_Aa = 13,#
+		population = 2,#
+		time = '1') +#
+	feat_size_change(0.5,#
+		population = 1, #
+		time = '1', #
+		locus_group = 'all') +#
+	feat_size_change(0.1, #
+		population = 2, #
+		time = '2', #
+		locus_group = 'all') +#
+	feat_migration(1.2, #
+		pop_to = 1, #
+		pop_from = 2, #
+		symmetric = FALSE, time = '3', locus_group = 'all') +#
+	feat_mutation(10, model = 'IFS') +#
+	sumstat_nucleotide_div() +#
+	sumstat_trees() #
+check_model(model4)
+list_simulators()
+vignette('coala-install', package = 'coala')
+get_simulator('msms')
+if (!has_msms()) skip('msms not installed')
+model4 <- coal_model(13, 18) +#
+	feat_selection(#
+		strength_Aa = 10,#
+		population = 1,#
+		time = '1') +#
+	feat_selection(#
+		strength_Aa = 13,#
+		population = 2,#
+		time = '1')
+feat_selection(10, 20, time = 1, population = 1) +
+model4 <- coal_model(c(13, 18), 1, 1000) +#
+	feat_selection(10, 20, time = 1, population = 1) +#
+	feat_selection(25, 35, time = 1, population = 2)
+model4 <- coal_model(c(13, 18), 1, 1000) +#
+	feat_selection(10, time = 1, population = 1) +#
+	feat_selection(25, time = 1, population = 2)
 check_model(model4)
 stat2 <- simulate(model4)
-list_simulators()
-activate_ms(priority = 300)
-activate_scrm(priority = 400)
-activate_msms(jar = '~/Downloads/msms/lib/msms.jar', java = '~/Downloads/jre-8u281-macosx-x64.dmg', priority = 500, download = TRUE)
-stat2 <- simulate(model4)
-help(feat_selection)
-list_simulators()
-activate_msms(jar = '~/Downloads/msms/lib/msms.jar', java = '~/Downloads/jre-8u281-macosx-x64.dmg', priority = 500, download = TRUE)
-list_simulators()
-activate_ms(priority = 100)
-list_simulators()
+stat2 <- simulate(model4, nsim = 40)
+activate_msms(priority = 500, download = TRUE)
+stat2 <- simulate(model4, nsim = 40)
+model4 <- coal_model(c(13, 18), 1, 1000) +#
+	feat_selection(10, time = 1, population = 1) +#
+	feat_selection(25, time = 1, population = 2) +#
+	feat_size_change(0.5,#
+		population = 1, #
+		time = '1', #
+		locus_group = 'all') +#
+	feat_size_change(0.1, #
+		population = 2, #
+		time = '2', #
+		locus_group = 'all') +#
+	feat_migration(1.2, #
+		pop_to = 1, #
+		pop_from = 2, #
+		symmetric = FALSE, time = '3', locus_group = 'all') +#
+	feat_mutation(10, model = 'IFS') +#
+	sumstat_nucleotide_div() +#
+	sumstat_trees()
+stat2 <- simulate(model4, nsim = 40)
+mean_pi2 <- sapply(stat2, function(x) mean(x$pi))
+theta2 <- sapply(stat2, function(x) x$pars[['theta']])
+check_model(model4)
+model4 <- coal_model(c(13, 18), 1, 1000) +#
+	feat_selection(10, time = 1, population = 1) +#
+	feat_selection(25, time = 1, population = 2) +#
+	feat_size_change(0.5,#
+		population = 1, #
+		time = '1', #
+		locus_group = 'all') +#
+	feat_size_change(0.1, #
+		population = 2, #
+		time = '2', #
+		locus_group = 'all') +#
+	feat_migration(1.2, #
+		pop_to = 1, #
+		pop_from = 2, #
+		symmetric = FALSE, time = '3', locus_group = 'all') +#
+	feat_mutation(10) +#
+	sumstat_nucleotide_div() +#
+	sumstat_trees()
+stat2 <- simulate(model4, nsim = 40)
+theta2 <- sapply(stat2, function(x) x$pars[['theta']])
+plot(mean_pi2)
+model4 <- coal_model(c(13, 18), 1, 1000) +#
+	feat_selection(10, time = 1, population = 1) +#
+	feat_selection(25, time = 1, population = 2) +#
+	feat_size_change(0.5,#
+		population = 1, #
+		time = '1', #
+		locus_group = 'all') +#
+	feat_size_change(0.1, #
+		population = 2, #
+		time = '2', #
+		locus_group = 'all') +#
+	feat_migration(1.2, #
+		pop_to = 1, #
+		pop_from = 2, #
+		symmetric = FALSE, time = '3', locus_group = 'all') +#
+	feat_mutation(par_prior('theta', sample.int(100, 1))) +#
+	sumstat_nucleotide_div() +#
+	sumstat_trees()
+check_model(model4)
+stat2 <- simulate(model4, nsim = 40)
+theta <- sapply(stats, function(x) x$pars[['theta']])
+theta <- sapply(stat2, function(x) x$pars[['theta']])
+plot(mean_pi2)
+plot(theta)
+plot(mean_pi2, theta, xlab='Diversity', ylab='Mutation Rate', pch=16, cex=1.3, col='black', main='Diversity In Two Populations'
+plot(mean_pi2, theta, xlab='Diversity', ylab='Mutation Rate', pch=16, cex=1.3, col='black', main='Diversity In Two Populations')
+plot(mean_pi2, theta)
+plot(mean_pi, theta, xlab='Diversity', ylab='Mutation Rate', pch=16, cex=1.3, col='black', main='Diversity As a Result of Varied Mutation Rate')
+model3 <- coal_model(10, 50) +#
+	feat_mutation(par_prior('theta', sample.int(100, 1))) +#
+	sumstat_nucleotide_div()
+stats <- simulate(model3, nsim = 40)
+mean_pi <- sapply(stats, function(x) mean(x$pi))
+theta <- sapply(stats, function(x) x$pars[['theta']])
+plot(mean_pi, theta, xlab='Diversity', ylab='Mutation Rate', pch=16, cex=1.3, col='black', main='Diversity As a Result of Varied Mutation Rate')
+population1 <- population = 1
+plot(mean_pi2, theta)
+Diversity2 <- stat2$pi
+Nloci2 <- length(stat2$trees)
+sumstat_nucleotide_div(name = 'pi', population = 1)
+plot(stat2)
+theta <- sumstat_nucleotide_div(population = 1)
+Pop2 <- sumstat_nucleotide_div(population =2)
+Pop1 <- sumstat_nucleotide_div(population = 1)
+plot(Pop1, Pop2)
+model4 <- coal_model(c(13, 18), 1, 1000) +#
+	feat_selection(10, time = 1, population = 1) +#
+	feat_selection(25, time = 1, population = 2) +#
+	feat_size_change(0.5,#
+		population = 1, #
+		time = '1', #
+		locus_group = 'all') +#
+	feat_size_change(0.1, #
+		population = 2, #
+		time = '2', #
+		locus_group = 'all') +#
+	feat_migration(1.2, #
+		pop_to = 1, #
+		pop_from = 2, #
+		symmetric = FALSE, time = '3', locus_group = 'all') +#
+	feat_mutation(par_prior('theta', sample.int(100, 1))) +#
+	Pop1 <- sumstat_nucleotide_div(population = 1)#
+	Pop2 <- sumstat_nucleotide_div(population = 2)
+model4 <- coal_model(c(13, 18), 1, 1000) +#
+	feat_selection(10, time = 1, population = 1) +#
+	feat_selection(25, time = 1, population = 2) +#
+	feat_size_change(0.5,#
+		population = 1, #
+		time = '1', #
+		locus_group = 'all') +#
+	feat_size_change(0.1, #
+		population = 2, #
+		time = '2', #
+		locus_group = 'all') +#
+	feat_migration(1.2, #
+		pop_to = 1, #
+		pop_from = 2, #
+		symmetric = FALSE, time = '3', locus_group = 'all') +#
+	feat_mutation(par_prior('theta', sample.int(100, 1)))
+Pop1 <- sumstat_nucleotide_div(population = 1)#
+	Pop2 <- sumstat_nucleotide_div(population = 2)
+plot(Pop1, Pop2)
+Diversity2 <- stat2$pi
+Diversity2
+model4 <- coal_model(c(13, 18), 1, 1000) +#
+	feat_selection(10, time = 1, population = 1) +#
+	feat_selection(25, time = 1, population = 2) +#
+	feat_size_change(0.5,#
+		population = 1, #
+		time = '1', #
+		locus_group = 'all') +#
+	feat_size_change(0.1, #
+		population = 2, #
+		time = '2', #
+		locus_group = 'all') +#
+	feat_migration(1.2, #
+		pop_to = 1, #
+		pop_from = 2, #
+		symmetric = FALSE, time = '3', locus_group = 'all') +#
+	feat_mutation(par_prior('theta', sample.int(100, 1))) +#
+	Pop1 <- sumstat_nucleotide_div(population = 1)#
+	Pop2 <- sumstat_nucleotide_div(population = 2)
+model4 <- coal_model(c(13, 18), 1, 1000) +#
+	feat_selection(10, time = 1, population = 1) +#
+	feat_selection(25, time = 1, population = 2) +#
+	feat_size_change(0.5,#
+		population = 1, #
+		time = '1', #
+		locus_group = 'all') +#
+	feat_size_change(0.1, #
+		population = 2, #
+		time = '2', #
+		locus_group = 'all') +#
+	feat_migration(1.2, #
+		pop_to = 1, #
+		pop_from = 2, #
+		symmetric = FALSE, time = '3', locus_group = 'all') +#
+	feat_mutation(par_prior('theta', sample.int(100, 1))) +#
+	sumstat_nucleotide_div() +#
+	sumstat_trees()
+check_model(model4)
+stat2
+Nloci2 <- length(stat2$trees)
+Nloci2
+Pi_Pop1 <- sumstat_nucleotide_div(name = 'pi', population = 1)
+Pi_Pop1
+model4 <- coal_model(c(13, 18), loci_number = 10, loci_length = 1000, ploidy = 2) +#
+	feat_selection(10, time = 1, population = 1) +#
+	feat_selection(25, time = 1, population = 2) +#
+	feat_size_change(0.5,#
+		population = 1, #
+		time = '1', #
+		locus_group = 'all') +#
+	feat_size_change(0.1, #
+		population = 2, #
+		time = '2', #
+		locus_group = 'all') +#
+	feat_migration(1.2, #
+		pop_to = 1, #
+		pop_from = 2, #
+		symmetric = FALSE, time = '3', locus_group = 'all') +#
+	feat_mutation(par_prior('theta', sample.int(100, 1))) +#
+	sumstat_trees()
+Diversity2 <- stat2$pi
+Diversity
+Diversity2
+model4 <- coal_model(c(13, 18), loci_number = 10, loci_length = 1000, ploidy = 2) +#
+	feat_selection(10, time = 1, population = 1) +#
+	feat_selection(25, time = 1, population = 2) +#
+	feat_size_change(0.5,#
+		population = 1, #
+		time = '1', #
+		locus_group = 'all') +#
+	feat_size_change(0.1, #
+		population = 2, #
+		time = '2', #
+		locus_group = 'all') +#
+	feat_migration(1.2, #
+		pop_to = 1, #
+		pop_from = 2, #
+		symmetric = FALSE, time = '3', locus_group = 'all') +#
+	feat_mutation(10) +#
+	sumstat_trees() #
+	sumstat_nucleotide_div()
+check_model(model4)
+Diversity2 <- stat2$pi
+Diversity2
