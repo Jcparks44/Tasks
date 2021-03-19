@@ -1,0 +1,301 @@
+bb
+X <- c(0.7175141, 0.2429379, 0.03954802)
+sum(X)
+b <- sqrt(0.03954802)
+b
+n <- 177 # sample size
+aa # p^2
+aa <- 127/n # frequency of aa
+aa # p^2
+ab <- 43/n #frequency of ab
+ab # 2pq
+bb <- 7/n #frequency of bb
+bb # q^2
+X <- c(0.7175141, 0.2429379, 0.03954802)
+sum(X) # p + q
+b <- sqrt(0.03954802)
+b #frequency of allele b
+w <- 95.5/7.7
+w
+w <- 99.5/7.7
+w
+w40 <- 98/7.7
+w40
+wbb <- w/w40
+wbb
+wbb <- w40/w
+wbb
+dnorm(40, mean = 30.5)
+dnorm(7.7, mean = 30.5)
+w <- 99.5/99.5
+w # relative fitness
+w40 <- 98/99.5
+w40
+wbb <- 99.5/98
+wbb
+142/200
+n <- 177 #sample size
+aa <- 127/n
+aa
+ab <- 43/n
+ab
+bb <- 7/n
+bb
+b <- (bb + (0.5*ab))
+b
+a <- (aa + (0.5*ab))
+a
+a + b
+w40 #relative fitness of aa and ab
+age <- 40:100
+age
+dnorm(age, mean = 30.5, sd = 6.7)
+plot(dnorm)
+dnorm(age, mean =30.5, sd = 6.7) * 7.7
+dnorm(age * 7.7, mean = 30.5, sd=6.7)
+percent_birth <- dnorm(age, mean = 30.5, sd = 6.7)
+percent_birth * 7.7
+age <- 1:100
+age
+dnorm(age, mean = 30.5, sd = 6.7)
+percent_birth <- dnorm(age, mean = 30.5, sd = 6.7)
+percent_birth * 7.7
+dnorm(40, mean = 30.5, sd = 6.7)
+dnorm(40.5, mean = 30.5, sd = 6.7)
+dnorm(43, mean = 30.5, sd = 6.7)
+fit_aa <- 0.98 * 127
+fit_aa
+fit_ab <- 1 * 43
+fit_ab
+rfit_aa <- fit_aa / fit_aa
+rfit_aa
+rfit_ab <- fit_ab / fit_aa
+rfit_ab
+plot(rfit_aa, rfit_ab)
+plot(age, rfit_aa, rfit_ab)
+plot(age, rfit_aa)
+fit_aa <- 0.96 * 127
+fit_aa
+fit_ab <- 0.98 * 43
+fit_ab
+rfit_aa <- fit_aa / fit_aa
+rfit_aa
+rfit_ab <- fit_ab / fit_aa
+rfit_ab
+fit_aa
+fit_aa40
+fit_aa40 <- 0.98 * 127
+fit_aa40
+fit_aa40 <- 0.98 * 127
+fit_aa40
+fit_ab40 <- 0.98 *43
+fit_ab40
+rfit_ab40 <- fit_ab40 / fit_aa40
+rfit_ab40
+rfit_ab
+fit_aa46 <- 0.93 * 127
+fit_aa46
+fit_ab46 <- 0.98 * 43
+fit_ab46
+rfit_ab46 <- fit_ab46 / fit_aa46
+rfit_ab46
+fit_aa45 <- 0.96 * 127
+fit_aa45
+fit_ab45 <- 0.98 * 43
+fit_ab45
+rfit_ab45 <- fit_ab46 / fit_aa46
+rfit_ab46
+rfit_ab
+fit_aa <- 0.96 * 127
+fit_aa
+fit_ab <- 0.98 * 43
+fit_ab
+rfit_aa <- fit_aa / fit_aa
+rfit_aa
+rfit_ab <- fit_ab / fit_aa
+rfit_ab
+rfit_ab40
+fit_aa45 <- 0.96 * 127
+fit_aa45
+fit_ab45 <- 0.98 * 43
+fit_ab45
+rfit_ab45 <- fit_ab46 / fit_aa46
+rfit_ab46
+rfit_ab45 <- fit_ab45 / fit_aa45
+rfit_ab45
+fit_aa50 <- 0.93 * 127
+fit_aa50
+fit_ab50
+fit_ab50 <- 0.98 * 43
+fit_ab50
+rfit_ab50 <- fit_ab50 / fit_aa50
+rfit_ab50
+average(rfit_ab40, rfit_ab45, rfit_ab50)
+mean(rfit_ab40, rfit_ab45, rfit_ab50)
+rfit_ab40
+fit_ab45
+rfit_ab45
+rfit_ab50
+mean(c(0.3385827, 0.3456365, 0.356786))
+age <- 40:55
+age
+dnorm(age, mean = 30.5, sd = 6.7)
+percent_birth * 7.7
+percent_birth <- dnorm(age, mean = 30.5, sd = 6.7)
+percent_birth * 7.7
+b # frequency of allele b
+url = {https://www.nature.com/scitable/topicpage/the-variety-of-genes-in-the-gene-6526291/#:~:text=Relative%20genotype%20frequency%20and%20relative,genetic%20variation%20in%20a%20population.}
+make.hyperlink('https://www.nature.com/scitable/topicpage/the-variety-of-genes-in-the-gene-6526291/#:~:text=Relative%20genotype%20frequency%20and%20relative,genetic%20variation%20in%20a%20population.')
+open('https://www.nature.com/scitable/topicpage/the-variety-of-genes-in-the-gene-6526291/#:~:text=Relative%20genotype%20frequency%20and%20relative,genetic%20variation%20in%20a%20population.')
+b # frequency of allele b
+before40aa <- 127/127
+before40ab <- 43/127
+before40aa
+before40ab
+before40aa <- 0.995 * 127
+rbefore40ab <- before40ab / before40aa
+rbefore40ab
+before40aa <- 0.995 * 127
+before40aa # fitness of aa before the age of 40
+before40ab <- 0.995 * 43
+before40ab #fitness of ab before the age of 40
+rbefore40ab <- before40ab / before40aa
+rbefore40ab
+theta <- (1/0.035) - 1
+theta
+theta <- (1/0.035) - 1
+theta
+Ne <- (theta/4)/(1.13*10e-08)
+Ne
+heterozygosity <- 1 - 0.035
+heterozygosity
+Ne <- heterozygosity / (4 * (1.13e-08))
+Ne
+aa # frequency of aa
+bb # frequency of bb
+heterozygosity <- bb * aa * 2
+heterozygosity
+Ne <- heterozygosity / (4 * (1.13e-08))
+Ne
+bb <- 7/n
+ab # frequency of ab
+heterozygosity <- ab
+heterozygosity
+Ne <- heterozygosity / (4 * (1.13e-08))
+Ne
+heterozygosity <- 0.035
+heterozygosity
+Ne <- heterozygosity / (4 * (1.13e-08))
+Ne
+Ne <- heterozygosity / (2 * (1.13e-08))
+Ne
+library('coala')
+library('phytools')
+model <- coal_model(sample_size = 177, loci_number=1000, ploidy=2) +#
+	feat_mutation(1.13e-08)#
+	sumstat_trees()#
+	sumstat_nucleotide_div()
+model <- coal_model(sample_size = 177, loci_number=1000, ploidy=2) +#
+	feat_mutation(1.13e-08) +#
+	sumstat_trees() +#
+	sumstat_nucleotide_div()
+stats <- simulate(model, nsim =1)
+Diversity <- stats$pi
+Diversity
+model <- coal_model(sample_size=5, loci_number=10, loci_length=500, ploidy=2) +#
+	feat_mutation(10) +#
+	feat_recombination(10) +#
+	sumstat_trees() +#
+	sumstat_nucleotide_div()
+stats <- simulate(model, nsim=1)
+Diversity <- stats$pi
+Diversity
+model <- coal_model(sample_size = 177, loci_number=1000, loci_length=1000, ploidy=2) +#
+	feat_mutation(1.13e-08) +#
+	sumstat_trees() +#
+	sumstat_nucleotide_div()#
+stats <- simulate(model, nsim =1)#
+Diversity <- stats$pi#
+Diversity
+model <- coal_model(sample_size = 177, loci_number=1000, loci_length=1000, ploidy=2) +#
+	feat_mutation(1.13e-08) +#
+	feat_recombination(10) +#
+	sumstat_trees() +#
+	sumstat_nucleotide_div()#
+stats <- simulate(model, nsim =1)#
+Diversity <- stats$pi#
+Diversity
+model <- coal_model(sample_size = 177, loci_number=1000, loci_length=500, ploidy=2) +#
+	feat_mutation(1.13e-08) +#
+	feat_recombination(10) +#
+	sumstat_trees() +#
+	sumstat_nucleotide_div()#
+stats <- simulate(model, nsim =1)#
+Diversity <- stats$pi#
+Diversity
+model <- coal_model(sample_size=5, loci_number=10, loci_length=500, ploidy=2) +#
+	feat_mutation(10) +#
+	feat_recombination(10) +#
+	sumstat_trees() +#
+	sumstat_nucleotide_div()#
+#Now we run the simulation: We can run more than one for the same parameters by changing nsim. #
+stats <- simulate(model, nsim=1)#
+#Each locus has a measure of genetic diveristy called 'pi' which is a standard measure. It's the average number of differences at a locus between any two individuals#
+Diversity <- stats$pi
+Diversity
+model <- coal_model(sample_size = 177, loci_number=10, loci_length=500, ploidy=2) +#
+	feat_mutation(1.13e-08) +#
+	feat_recombination(10) +#
+	sumstat_trees() +#
+	sumstat_nucleotide_div()#
+stats <- simulate(model, nsim =1)#
+Diversity <- stats$pi
+Diversity
+model <- coal_model(sample_size = 177, loci_number=10, loci_length=500, ploidy=2) +#
+	feat_mutation(1.13e-08 * 500) +#
+	feat_recombination(10) +#
+	sumstat_trees() +#
+	sumstat_nucleotide_div()#
+stats <- simulate(model, nsim =1)#
+Diversity <- stats$pi#
+Diversity
+install.packages('NEff')
+library('NEff')
+population(max.repeat = 13, max.time = 260, mut.rate = 1.13e-08, Na = 275000, N.allele = 2, n.loci = 1000, one.step = 0.9)
+population(max.repeat = 13, max.time = 260, mut.rate = 1.13e-08, Na = 275000, N.allele = 2, N.loci = 1000, one.step = 0.9)
+population(max.repeat = 13, max.time = 260, mut.rate = 1.13e-08, Na = 275000, N.allele = 2, N.loci = 1000, n.recruit.fem = 0.19, surv.ad.fem = 0.995, surv.ad.mal = 0.995, one.step = 0.9)
+population(max.repeat = 3, max.time = 260, mut.rate = 1.13e-08, Na = 250000, N.allele = 2, N.loci = 1000, n.recruit.fem = 0.19, surv.ad.fem = 7.7, surv.ad.mal = 0.995, one.step = 0.9)
+population(max.repeat = 3, max.time = 260, mut.rate = 1.13e-08, Na = 250000, N.allele = 2, N.loci = 1000, n.recruit.fem = 7.7, surv.ad.fem = 0.995, surv.ad.mal = 0.995, one.step = 0.9)
+expected <- aa * bb * 2
+expected
+observed <- ab
+observed
+heterozygosity <- observed/expected
+heterozygosity
+Ne <- heterozygosity / (4 *(1.13e-08))
+Ne
+expected <- a * b * 2
+expected
+observed <- ab
+observed
+heterozygosity <- observed/expected
+heterozygosity
+Ne <- heterozygosity / (4 *(1.13e-08))
+Ne
+F_value <- 1 - (observed/expected)
+Ne <- heterozygosity / (4 *(1.13e-08))
+Ne
+b # frequency of allele b
+delta_F <- abs(0.035-0.017)
+delta_F
+delta_F * 2
+x <- delta_F * 2
+Ne <- 1/x
+Ne
+Generations <- 4 * Ne
+Years <- Generations * 21
+Years
+bb # frequency of bb
+x <- delta_F * 2
+Ne <- 1/x
+Ne
