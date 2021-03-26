@@ -52,3 +52,4 @@ points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')
 #If a change in allele frequency promotes the ability of an individual to survive into the next generation, then the probability of selection for a trait can be found upon mapping the correlation between survivability and change in allele frequency.
 plot(alleleFreqs$d_surv, alleleFreqs$rfreq, xlab ='change in allele freq', ylab = 'selection pressure change')
 
+

@@ -1,0 +1,1100 @@
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")
+for (Day in Days)	{
+FeedsOnDay <- which(beren3$age[Feeds] == Day)
+Time <- beren3$Time
+Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])
+points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Days <- unique(beren3$Time[Feeds])#
+nDates <- length(Days)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Days <- unique(beren3$Time[Feeds])#
+nDates <- length(Days)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 200), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+plot(1,1, type='n', xlim=c(125, 700), ylim=c(7, 16, xlab='age(days)', ylab='total milk(oz)')#
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x))
+plot(1,1, type='n', xlim=c(125, 700), ylim=c(7, 16) xlab='age(days)', ylab='total milk(oz)')#
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x))
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x)
+points(beren3$Time[Feeds][x], )
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+beren3 <- Data
+Feeds <- which(Data$event == 'bottle')
+Days <- unique(beren3$Time[Feeds])
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)
+numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)
+rateFeeds <- totalFeed/numFeeds
+rateFeeds
+plot(as.numeric(names(rateFeeds)), type='n', xlim=c(125, 700), ylim=c(7, 16) xlab='Age in Days', ylab='Rate of Milk Consumption')
+plot(as.numeric(names(rateFeeds)), type='n', xlim=c(125, 700), ylim=c(7, 16), xlab='Age in Days', ylab='Rate of Milk Consumption')
+plot(as.numeric(names(rateFeeds)), type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption'
+plot(as.numeric(names(rateFeeds)), type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+beren3 <- Data#
+Feeds <- which(Data$event == 'bottle')#
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)#
+numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)#
+rateFeeds <- totalFeed/numFeeds#
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption(oz/day)')
+setwd(~/Downloads/Desktop Stuff/Evolution/Tasks/Task_02')
+setwd(~/Downloads/Desktop Stuff/Evolution/Tasks/Task_02)
+setwd(~Downloads/Desktop Stuff/Evolution/Tasks/Task_02)
+setwd(~/Desktop/Evolution/Tasks/Task_02)
+setwd('~/Desktop/Evolution/Tasks/Task_02')
+install.packages('learnPopGen')
+setwd('~/Desktop/Evolution/Tasks/Task_06')
+source('http://jonsmitchell.com/code/reformatData07.R')
+source('http://jonsmitchell.com/code/simFxn.R')
+plot(1, 1, type='n', xlim=c(1998, 2013), ylim=c(0, 1))
+s <- apply(overallFreq, 2, function(x) lines(overallFreq[,1], x, col=rgb(0,0,0,0.01)))
+plot(1, 1, type='n', xlim=c(1998, 2013), ylim=c(0, 1))#
+s <- apply(overallFreq, 2, function(x) lines(overallFreq[,1], x, col=rgb(0,0,0,0.01)))
+plot(1, 1, type='n', xlim=c(1998, 2013), ylim=c(0, 1))#
+s <- apply(overallFreq, 2, function(x) lines(overallFreq[,1], x, col=rgb(0,0,0,0.01)))
+rescaleFreq <- apply(overallFreqe[,3:ncol(overallFreq)], 2, function(x) x - x[1])
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])#
+plot(1, 1, type='n', xlim=c(1998, 2013), ylim=c(-0.25, 0.25))#
+s <- apply(rescaleFreq, 2, function(x), lines(overallFreq[,1], x, col=rgb(0,0,0,0.01)))
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])#
+plot(1, 1, type='n', xlim=c(1998, 2013), ylim=c(-0.25, 0.25))#
+s <- apply(rescaleFreq, 2, function(x) lines(overallFreq[,1], x, col=rgb(0,0,0,0.01)))
+dYear <- c()
+dAlleles <- c()
+for (i in 3:ncol(overallFreq))	{#
+	dYear <- c(dYear, overallFreq[,1])#
+	Vec <- overallFreq[,i]#
+	Init <- overalFreq[1, i]#
+	dAlleles <- c(dAlleles, Vec - Init)#
+}
+for (i in 3:ncol(overallFreq))	{#
+	dYear <- c(dYear, overallFreq[,1])#
+	Vec <- overallFreq[,i]#
+	Init <- overallFreq[1, i]#
+	dAlleles <- c(dAlleles, Vec - Init)#
+}
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100)
+dYear <- c()#
+dAlleles <- c()#
+#
+for (i in 3:ncol(overallFreq))	{#
+	dYear <- c(dYear, overallFreq[,1])#
+	Vec <- overallFreq[,i]#
+	Init <- overallFreq[1, i]#
+	dAlleles <- c(dAlleles, Vec - Init)#
+}#
+#
+#instead of plotting individual allele frequencies, now we'll plot the probability of change in freqeuncy (y) by year (x)#
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, startT = 1997, simCol = 'gray40', rescale = TRUE)
+addFit(nruns = 50, n = 100, ngens = 12, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 12, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, startT = 1997, simCol = 'gray40', rescale = TRUE)
+plot(alleleFreqs$d_freq, alleleFreqs$d_imm, xlim=c(-0.15, 0.15), xlab='overall freq.change', ylab='freq change in subset')#
+points(alleleFreqs$d_freq, alleleFreqs$d_birth, col='blue')#
+points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, h =1, s = 0 startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, h =1, s = 0, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, h =2, s = 0, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, h =1, s = 1, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, h =1, s = 0.05, startT = 1997, simCol = 'gray40', rescale = TRUE)
+addFit(nruns = 50, n = 100, ngens = 18, h =1, s = 0.6, startT = 1997, simCol = 'gray40', rescale = TRUE)
+addFit(nruns = 50, n = 100, ngens = 18, h =1, s = 0.09, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, h =1, s = 0.09, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, h =1, s = 0.07, startT = 1997, simCol = 'gray40', rescale = TRUE)
+addFit(nruns = 50, n = 100, ngens = 18, h =1, s = 0.06, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, h =1, s = 0.06, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, h =0.5, s = 0.06, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 200, ngens = 18, h =0.5, s = 0.06, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 500, ngens = 18, h =0.5, s = 0.06, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 500, ngens = 18, h =0.5, s = 0.06, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 100, ngens = 18, h =0.5, s = 0.06, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 300, ngens = 18, h =0.5, s = 0.06, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =0.5, s = 0.06, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =0.6, s = 0.06, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =0.5, s = 0.06, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =0.5, s = 0.04, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =0.5, s = 0.03, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =0.5, s = 0.035, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =0.5, s = 0.04, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =0.5, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =0.5, s = 0.05, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =0.5, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+addFit(nruns = 50, n = 250, ngens = 18, h =1, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =1, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =1.5, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =2, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =2, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =2.5, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =4, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =3.5, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 300, ngens = 18, h =3.5, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =3.5, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 250, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 200, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 225, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 50, n = 225, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+addFit(nruns = 50, n = 225, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+pdf('r06-nhs_best_fit.pdf', height = 5, width = 5)#
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)#
+dev.off()
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale =
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 200, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 180, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 200, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =3, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =2, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =2.5, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =1.5, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 250, ngens = 18, h =1, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =1.25, s = 0.045, startT = 1997, simCol = 'gray40', rescale = TRUE)
+pdf('r06-nhs_best_fit.pdf', height = 5, width = 5)#
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =1.25, s = 0.04, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =1.25, s = 0.04, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =1.25, s = 0.04, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =1.25, s = 0.035, startT = 1997, simCol = 'gray40', rescale = TRUE)
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 19, h =1.25, s = 0.035, startT = 1997, simCol = 'gray40', rescale = TRUE)
+pdf('r06-nhs_best_fit.pdf', height = 5, width = 5)#
+smoothScatter(dYear, dAlleles, colramp = Pal, nbin = 100, xlab = 'year', ylab = 'change in allele freq. since 1998')#
+addFit(nruns = 100, n = 225, ngens = 18, h =1.25, s = 0.035, startT = 1997, simCol = 'gray40', rescale = TRUE)#
+dev.off()
+plot(alleleFreqs$d_freq, alleleFreqs$d_imm, xlim=c(-0.15, 0.15), xlab='overall freq.change', ylab='freq change in subset')
+plot(alleleFreqs$d_freq, alleleFreqs$d_imm, xlim=c(-0.15, 0.15), xlab='overall freq.change', ylab='freq change in subset')
+plot(alleleFreqs$d_freq, alleleFreqs$d_imm, xlim=c(-0.15, 0.15), xlab='overall freq.change', ylab='freq change in subset')
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])#
+plot(1, 1, type='n', xlim=c(1998, 2013), ylim=c(-0.25, 0.25))#
+s <- apply(rescaleFreq, 2, function(x) lines(overallFreq[,1], x, col=rgb(0,0,0,0.01)))
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])#
+plot(1, 1, type='n', xlim=c(1998, 2013), ylim=c(-0.25, 0.25))#
+s <- apply(rescaleFreq, 2, function(x) lines(overallFreq[,1], x, col=rgb(0,0,0,0.01)))
+alleleFreqs()
+alleleFreqs
+R -f analyzeSelOutput.r --vanilla
+pval_1999to2013<-data.frame(snp=snplist$SNP,stringsAsFactors=FALSE)
+library(plyr)
+install.packages('plyr')
+library(plyr)
+snplist<-read.table('SNPlist.txt',header=TRUE,stringsAsFactors=FALSE)
+snplist<-read.table('SNPlist.txt',header=TRUE,stringsAsFactors=FALSE)
+read.table('~/Downloads/SNPlist.txt')
+snplist <- read.table('~/Downloads/SNPlist.txt')
+pval_1999to2013<-data.frame(snp=snplist$SNP,stringsAsFactors=FALSE)
+snplist<-read.table('SNPlist.txt',header=TRUE,stringsAsFactors=FALSE)
+snplist<-read.table('~/Downloads/SNPlist.txt',header=TRUE,stringsAsFactors=FALSE)
+pval_1999to2013<-data.frame(snp=snplist$SNP,stringsAsFactors=FALSE)
+pval_change<-data.frame(snp=rep(snplist$SNP,each=14),year=rep(c(1999:2012),length(snplist$SNP)),stringsAsFactors=FALSE)
+for (i in snplist$SNP)#
+{#
+	obs<-read.table(file=paste('batch_',i,'.',j,'.drop.data.txt',sep=''),header=TRUE)#
+	sim<-read.table(file=paste('batch_',i,'.',j,'.drop.sim.txt',sep=''),header=TRUE)#
+	simfreq<-mapply('/',sim[,11:25],obs[obs$allele==2 & obs$cohort_year>1998,'all_alleles_count'])#
+#
+	#test for net selection between 1999-2013#
+	obsDelta1999<-obs[obs$allele==2 & obs$cohort_year==2013,'frequency_of_allele']-obs[obs$allele==2 & obs$cohort_year==1999,'frequency_of_allele']#
+	simDelta1999<-simfreq[,15]-simfreq[,1]#
+	pval_1999to2013[pval_1999to2013$snp==i,'obsChange']<-obsDelta1999#
+	pval_1999to2013[pval_1999to2013$snp==i,'simChange']<-median(simDelta1999)#
+	simdiff1999<-simDelta1999 - median(simDelta1999)#
+	obsdiff1999<-obsDelta1999 - median(simDelta1999)#
+#
+	if (obsdiff1999 < 0)#
+	{#
+		pval_1999to2013[pval_1999to2013$snp==i,'dir']<-'-'#
+		pval_1999to2013[pval_1999to2013$snp==i,'pval']<-sum(simdiff1999<obsdiff1999)/1000000 + sum(simdiff1999==obsdiff1999)/2000000#
+	} else #
+	{#
+		pval_1999to2013[pval_1999to2013$snp==i,'dir']<-'+'#
+		pval_1999to2013[pval_1999to2013$snp==i,'pval']<-sum(simdiff1999>obsdiff1999)/1000000 + sum(simdiff1999==obsdiff1999)/2000000#
+	}#
+#
+	#test for selection in adjacent years#
+	for(x in c(1:14)) #
+	{#
+		yr<-1998 + x#
+		obsDelta<-obs[obs$allele==2 & obs$cohort_year==(yr+1),'frequency_of_allele']-obs[obs$allele==2 & obs$cohort_year==yr,'frequency_of_allele']#
+		simDelta<-simfreq[,x+1]-simfreq[,x]#
+		pval_change[pval_change$snp==i & pval_change$year==yr,'obsChange']<-obsDelta#
+		pval_change[pval_change$snp==i & pval_change$year==yr,'simChange']<-median(simDelta)#
+		simdiff<-simDelta - median(simDelta)#
+		obsdiff<-obsDelta - median(simDelta)#
+#
+		if (obsdiff < 0)#
+		{#
+			pval_change[pval_change$snp==i & pval_change$year==yr,'dir']<-'-'#
+			pval_change[pval_change$snp==i & pval_change$year==yr,'pval_change']<-sum(simdiff<obsdiff)/1000000 + sum(simdiff==obsdiff)/2000000#
+		} #
+		else #
+		{#
+			pval_change[pval_change$snp==i & pval_change$year==yr,'dir']<-'+'#
+			pval_change[pval_change$snp==i & pval_change$year==yr,'pval_change']<-sum(simdiff>obsdiff)/1000000 + sum(simdiff==obsdiff)/2000000#
+		}#
+	}#
+#
+}
+#test for net selection between 1999-2013#
+	obsDelta1999<-obs[obs$allele==2 & obs$cohort_year==2013,'frequency_of_allele']-obs[obs$allele==2 & obs$cohort_year==1999,'frequency_of_allele']#
+	simDelta1999<-simfreq[,15]-simfreq[,1]#
+	pval_1999to2013[pval_1999to2013$snp==i,'obsChange']<-obsDelta1999#
+	pval_1999to2013[pval_1999to2013$snp==i,'simChange']<-median(simDelta1999)#
+	simdiff1999<-simDelta1999 - median(simDelta1999)#
+	obsdiff1999<-obsDelta1999 - median(simDelta1999)#
+#
+	if (obsdiff1999 < 0)#
+	{#
+		pval_1999to2013[pval_1999to2013$snp==i,'dir']<-'-'#
+		pval_1999to2013[pval_1999to2013$snp==i,'pval']<-sum(simdiff1999<obsdiff1999)/1000000 + sum(simdiff1999==obsdiff1999)/2000000#
+	} else #
+	{#
+		pval_1999to2013[pval_1999to2013$snp==i,'dir']<-'+'#
+		pval_1999to2013[pval_1999to2013$snp==i,'pval']<-sum(simdiff1999>obsdiff1999)/1000000 + sum(simdiff1999==obsdiff1999)/2000000#
+	}#
+#
+	#test for selection in adjacent years#
+	for(x in c(1:14)) #
+	{#
+		yr<-1998 + x#
+		obsDelta<-obs[obs$allele==2 & obs$cohort_year==(yr+1),'frequency_of_allele']-obs[obs$allele==2 & obs$cohort_year==yr,'frequency_of_allele']#
+		simDelta<-simfreq[,x+1]-simfreq[,x]#
+		pval_change[pval_change$snp==i & pval_change$year==yr,'obsChange']<-obsDelta#
+		pval_change[pval_change$snp==i & pval_change$year==yr,'simChange']<-median(simDelta)#
+		simdiff<-simDelta - median(simDelta)#
+		obsdiff<-obsDelta - median(simDelta)#
+#
+		if (obsdiff < 0)#
+		{#
+			pval_change[pval_change$snp==i & pval_change$year==yr,'dir']<-'-'#
+			pval_change[pval_change$snp==i & pval_change$year==yr,'pval_change']<-sum(simdiff<obsdiff)/1000000 + sum(simdiff==obsdiff)/2000000#
+		} #
+		else #
+		{#
+			pval_change[pval_change$snp==i & pval_change$year==yr,'dir']<-'+'#
+			pval_change[pval_change$snp==i & pval_change$year==yr,'pval_change']<-sum(simdiff>obsdiff)/1000000 + sum(simdiff==obsdiff)/2000000#
+		}#
+	}
+import numpy as np#
+import pandas as pd#
+import subprocess#
+#
+import time#
+import sys#
+#
+pd.set_option('mode.chained_assignment', None)#
+#
+def load_files(ped_filename, cohort_filename):#
+    pedigree = pd.read_csv(ped_filename, sep=' ', names=None, header=None)#
+    cohort = pd.read_csv(cohort_filename, sep=' ', names=None, header=None)#
+    return pedigree, cohort#
+#
+def check_alleles(p_all, founders, a1, a2):#
+    alleles = pd.unique(p_all[[a1, a2]].values.ravel('K'))#
+    count = founders[a1].value_counts().add(founders[a2].value_counts(),fill_value=0)#
+    k = np.concatenate((['0'], count.sort_values(ascending=False).index), axis = 0).tolist()#
+    v = np.arange(len(k))#
+    allele_mapping = dict(zip(k,v))#
+    print 'mapping',allele_mapping#
+    p_all[a1].replace(k,v,inplace=True)#
+    p_all[a2].replace(k,v,inplace=True)#
+    return allele_mapping#
+#
+def check_alleles_v2(p_all, founders, a1, a2):#
+    alleles = pd.unique(p_all[[a1, a2]].values.ravel('K'))#
+    alleles_str = map(str, alleles)#
+    allele_mapping = dict(zip(alleles_str,alleles))#
+    return allele_mapping#
+ped_fname = sys.argv[1] ## ped file#
+coh_fname = sys.argv[2] ## cohort file#
+out_prefix = sys.argv[3] ## prefix of file#
+nDrops = sys.argv[4] ## number of drops for each SNP#
+useUngenotypedIndFilter = sys.argv[5] ## whether to count ungenotyped individuals when doing drops (default no)#
+outputType = sys.argv[6] ## l for long, s for short#
+#
+out_prefix = out_prefix + '.'#
+#
+print ped_fname, coh_fname#
+p, c = load_files(ped_fname, coh_fname)#
+c[0] = c[[0]].applymap(str)#
+#
+## file containing allele mapping ###
+allele_mapping_str = ''#
+## columns representing first of two loci in the ped file (columns 6, 8, 10, ..)#
+loci = list(p)[6::2]#
+#
+for locus in loci:#
+    a1 = locus#
+    a2 = locus + 1#
+## need to convert from int to str because allele can ge either letter or number#
+    p[[1,2,3,a1,a2]] = p[[1,2,3,a1,a2]].applymap(str)#
+    founders_ng = p.loc[( (p[2] == '0') | (p[3] == '0') ) & (p[a1] == '0') & (p[a2] == '0') ]#
+    ids = founders_ng[1]#
+    all_ng_founders = ids#
+    pt = p.copy()    #
+    while(ids.size > 0):#
+    # make all founder_ng kids founders#
+        pt[2].loc[(pt[2].isin(ids)) | (pt[3].isin(ids))] = '0'#
+        pt[3].loc[(pt[2].isin(ids)) | (pt[3].isin(ids)) | (pt[2] == '0')] = '0'#
+    # remove all founder_ng from previous generation#
+        pt = pt.loc[ ~pt[1].isin(ids)]#
+    # make all non genotyped founders founder_ng#
+        ids = pt[1].loc[( (pt[2] == '0') | (pt[3] == '0') ) & (pt[a1] == '0') & (pt[a2] == '0') ]#
+    # save names of all founder_ngs#
+        all_ng_founders = all_ng_founders.append(ids)    #
+## founders of trimmed pedigree (both parents unknown in trimmedp edigree, genotype known)#
+    founders = pt.loc[( (pt[2] == '0') | (pt[3] == '0') ) ]#
+## all individuals in trimmed pedigree (descendents of trimmed pedigree founders)#
+    in_pedigree = pt.loc[ ~pt[1].isin(founders[1])]#
+## individuals who and father in pedigree#
+    p_all = pd.concat([founders, in_pedigree])#
+    p_all[a1].value_counts().add(p_all[a2].value_counts(),fill_value=0)#
+    founders[a1].value_counts().add(founders[a2].value_counts(),fill_value=0)#
+    allele_mapping = check_alleles_v2(p_all, founders, a1, a2)#
+    p_all[a1].value_counts().add(p_all[a2].value_counts(),fill_value=0)#
+    c_output = p_all[[1,a1,a2,2,3]].reset_index(drop=True)#
+    c_output.replace({2:'0',3:'0'},-1,inplace=True)#
+    c_output.rename(index=int, columns={1:'id'},inplace=True)#
+    c.rename(index=int, columns={0:'id'},inplace=True)#
+    cp = c.pivot(index='id', columns=1, values=1)#
+    cp.index.name = None#
+    cp.reset_index(inplace=True)#
+    cp.columns = ['c'+str(i) for i in list(cp)] #need this hack coz allele name can be same as cohort name otherwise shich messe up merge later#
+    cp.rename(columns={'cindex':'id'},inplace=True)#
+    cp['cohort'] = cp[cp.columns[1:]].apply(lambda x: ','.join(x.dropna().astype(int).astype(str)),axis=1)#
+    cp['cohortN'] = cp.shape[1] - cp.isnull().sum(axis=1) - 2#
+    result = pd.merge(c_output, cp, how='left', on='id')#
+    nCohorts = int(result[list(result)[5:-2]].max().max() - result[list(result)[5:-2]].min().min() + 1)#
+    result['cohortN'].fillna('0', inplace=True)#
+    result['cohort'].fillna('0', inplace=True)#
+    result = result[['id', a1, a2, 2, 3, 'cohortN', 'cohort']]#
+## redo indexes so that they go from 0 to length of individuals#
+    d = dict(zip(result['id'], result.index))#
+    result.replace({2: d}, inplace=True)#
+    result.replace({3: d}, inplace=True)#
+    result['id'] = result.index#
+## create c file#
+    xAlleles = pd.unique(result[[a1, a2]].values.ravel('K'))#
+    ## special case if everyone is genotyped, you need still to add 0 allele#
+    if '0' in xAlleles:#
+        nAlleles = pd.unique(result[[a1, a2]].values.ravel('K')).size#
+    else:#
+        nAlleles = pd.unique(result[[a1, a2]].values.ravel('K')).size + 1#
+    nIndividuals = result.shape[0]#
+    existingCohorts = result['cohort'].unique()[1:].astype(int)#
+    existingCohorts.sort()#
+    existingCohortsNumber = str(existingCohorts.size)#
+    c_header = str(nCohorts) + ',' + str(nAlleles) + ',' + str(nIndividuals) + ',' + str(nDrops) + '\n'#
+    c_line2 = existingCohortsNumber + ',' + ','.join(existingCohorts.astype(str)) + '\n'#
+    fname = out_prefix + str( (int(a1) - 4)//2 ) +'.drop'#
+    with open(fname,'w') as f:#
+        f.write(c_header)#
+        f.write(c_line2)#
+        result.to_csv(f,columns=None,index=False,header=None,sep=',')#
+    f.close()#
+    if outputType == 'l':#
+        callstr = './a.out ' + fname + ' ' + useUngenotypedIndFilter + ' L >' + fname + '.sim.txt\n'#
+        print(callstr)#
+        print('creating .drop.sim.txt file for .pedped file columns ', a1,a2, ' corresponding to locus ', str((int(a1) - 4)//2) )#
+        subprocess.call(callstr, shell=True)#
+        print('creating .drop.data.txt file for .pedped file columns ', a1,a2, ' corresponding to locus ', str((int(a1) - 4)//2) )#
+        callstr = './a.out ' + fname + ' ' + useUngenotypedIndFilter + ' DL >' + fname + '.data.txt\n'#
+        print(callstr)#
+        subprocess.call(callstr, shell=True)#
+    else:#
+        callstr = './a.out ' + fname + ' ' + useUngenotypedIndFilter + ' >' + fname + '.sim.txt\n'#
+        print(callstr)#
+        print('creating .drop.sim.txt file for .pedped file columns ', a1,a2, ' corresponding to locus ', str((int(a1) - 4)//2) )#
+        subprocess.call(callstr, shell=True)#
+        print('creating .drop.data.txt file for .pedped file columns ', a1,a2, ' corresponding to locus ', str((int(a1) - 4)//2) )#
+        callstr = './a.out ' + fname + ' ' + useUngenotypedIndFilter + ' D >' + fname + '.data.txt\n'#
+        print(callstr)#
+        subprocess.call(callstr, shell=True)#
+#
+    allele_mapping_str = allele_mapping_str + fname + '.sim.txt ' + fname + '.data.txt ' +\#
+    (','.join("{},{}".format(k, v) for k, v in allele_mapping.items())) + '\n'#
+#
+allele_mapping_fname = out_prefix + 'info.txt'#
+with open(allele_mapping_fname, 'w') as f:#
+    f.write(allele_mapping_str)#
+f.close()
+//compile with: gcc geneDrop_final.c -lgsl#
+#
+#include <stdio.h>#
+#include <stdlib.h>#
+#include <string.h>#
+#include <gsl/gsl_rng.h>#
+#include <gsl/gsl_randist.h>#
+#include <time.h>#
+#
+//macros for easier code reading#
+#define ALLELE(x,y,z) allele[o3d(x, y, z)]#
+#define ALLELE_ONE_RUN(x,y) alleleOneRun[o2d(x,y)]#
+#define ALLELE_ONE_RUN_DATA(x,y) alleleOneRunData[o2d(x,y)]#
+#
+struct ind {#
+  int *a1; // you get this gene from mom#
+  int *a2; // you get this gene from dad#
+  struct ind *mom;#
+  struct ind *dad;#
+  int i;#
+  int *cohort;#
+  int geno;#
+  int cohortNumber;#
+};#
+#
+struct ind *tree;#
+int treeLength; // number of individuals in tree#
+int *a;#
+int *cohortIndicator;#
+int *allele;#
+int *alleleOneRun;#
+int *alleleOneRunData;#
+int *print_filter;#
+#
+int nIndividuals, nAlleles, nCohorts;#
+#
+int o3d(int x, int y, int z) { #
+    return (z * nCohorts * nAlleles) + (y * nCohorts) + x; #
+}#
+#
+int o2d(int x, int y) {#
+    return (y * nCohorts) + x;#
+}#
+#
+void fill_tree(char *line, int *print_filter, int print_filter_switch) {#
+    int i, ia1, ia2, imom, idad, icN, j;#
+    char *ic;#
+#
+    i = atoi(strtok(line,","));#
+    tree[i].i = i;#
+#
+    ia1 = atoi(strtok(NULL,","));#
+    tree[i].a1 = &a[ia1];#
+#
+    ia2 = atoi(strtok(NULL,","));#
+    tree[i].a2 = &a[ia2];#
+    imom = atoi(strtok(NULL,","));#
+    if ( imom == -1 ) { tree[i].mom = NULL; } else { tree[i].mom = &tree[imom]; }#
+#
+    idad = atoi(strtok(NULL,","));#
+    if ( idad == -1 ) { tree[i].dad = NULL; } else { tree[i].dad = &tree[idad]; }#
+#
+    icN = atoi(strtok(NULL,","));#
+    tree[i].cohortNumber = icN;#
+#
+    if (icN > 0) {#
+        j = 0;#
+        tree[i].cohort = malloc(sizeof(int) * icN);#
+        ic = strtok(NULL, ",");#
+        while (ic != NULL) {#
+            tree[i].cohort[j] = atoi(ic);#
+            ic = strtok(NULL, ",");#
+            j = j + 1;#
+        }#
+    }#
+    // setting up print_filter for this individual.#
+    // if print_filter == 1, print this ind's genotype in output#
+    // only counting genotyped, non-founder individuals#
+    if (print_filter_switch == 1) {#
+        if ( idad != -1 && imom != -1 && ia1 != 0 && ia2 != 0)#
+        {#
+            print_filter[i] = 1;#
+        } else {#
+            print_filter[i] = 0;#
+        }#
+    } else {#
+        print_filter[i] = 1;#
+    }#
+}#
+#
+void drop_genes_faster (gsl_rng *r) {#
+    int i, rnd;#
+    for (i = 0; i < treeLength; i++) {#
+    if (tree[i].mom != NULL && tree[i].dad != NULL) {#
+        rnd = gsl_rng_uniform_int(r, 4);#
+    if (rnd == 0) {#
+        tree[i].a1 = tree[i].mom->a1;#
+        tree[i].a2 = tree[i].dad->a1;#
+    }#
+    if (rnd == 1) {#
+        tree[i].a1 = tree[i].mom->a2;#
+        tree[i].a2 = tree[i].dad->a1;#
+    }#
+    if (rnd == 2) {#
+        tree[i].a1 = tree[i].mom->a1;#
+        tree[i].a2 = tree[i].dad->a2;#
+    }#
+    if (rnd == 3) {#
+        tree[i].a1 = tree[i].mom->a2;#
+        tree[i].a2 = tree[i].dad->a2;#
+      }#
+    }#
+  }#
+}#
+#
+void init_freq() {#
+    int i, j, k;#
+    for (i = 0; i < nCohorts; i++) {#
+        for (j = 0; j < nAlleles; j++) {#
+            for (k = 0; k < treeLength + 1; k++) {#
+                ALLELE(i,j,k) = 0;#
+            }#
+        }#
+    }#
+}#
+#
+void init_freq_one_run() {#
+    int i, j;#
+    for (i = 0; i < nCohorts; i++) {#
+        for (j = 0; j < nAlleles; j++) {#
+            ALLELE_ONE_RUN(i,j) = 0;#
+        }#
+    }#
+}#
+#
+void print_freq_one_run_v2(int run, int allele) {#
+    int i, j;#
+    printf("%d ", run);#
+    for (i = 0; i < nCohorts; i++) {#
+        if (cohortIndicator[i] == 1) {#
+            for (j = 0; j < nAlleles; j++) {#
+                if (j == allele) {#
+                    printf("%d ", ALLELE_ONE_RUN(i,j));#
+                }#
+            }#
+        }#
+        else {#
+            printf("NA ");#
+        }#
+    }#
+    printf("\n");#
+}#
+void print_freq_one_run(int run) {#
+    int i, j, s;#
+    for (i = 0; i < nCohorts; i++) {#
+        if (cohortIndicator[i] == 1) {#
+            s = 0;#
+            j = 0;#
+            while (s == 0 && j < nAlleles) {#
+                s = s + ALLELE_ONE_RUN(i,j);#
+                j += 1;#
+            }#
+            if (s > 0) {#
+                for (j = 1; j < nAlleles; j++) { /* do not print allele 0 (missing data) */#
+                    printf("%d %d %d %d\n", run, i, j, ALLELE_ONE_RUN(i,j));#
+                }#
+            }#
+        }#
+    }#
+}#
+#
+void calc_freq_one_run(int startingCohort, int * print_filter) {#
+    int i, j, k, l, t;#
+#
+    for (i = 0; i < treeLength; i++)#
+    {#
+        if (print_filter[i] == 1)#
+        {#
+            for (l = 0; l < nAlleles; l++)#
+            {#
+                k = 0;#
+                if (tree[i].cohortNumber > 0)#
+                {#
+                    if ((*(tree[i].a1) == l) && (*(tree[i].a2) != l)) {#
+                        k = 1;#
+                    }#
+                    else if ((*(tree[i].a1) != l) && (*(tree[i].a2) == l)) {#
+                        k = 1;#
+                    }#
+                    else if ((*(tree[i].a1) == l) && (*(tree[i].a2) == l)) {#
+                        k = 2;#
+                    }#
+                    for (j = 0; j < tree[i].cohortNumber; j++)#
+                    {#
+                        t = tree[i].cohort[j] - startingCohort;#
+                        ALLELE_ONE_RUN(t,l) += k;#
+//                      printf("copy_num: %d ind: %d allele: %d a1: %d a2: %d cohort: %d allele_one_run: %d %d %d-\n", k, i, l, *tree[i].a1, *tree[i].a2, tree[i].cohort[j], ALLELE_ONE_RUN(t,l),t,l);#
+                    }#
+                }#
+            }#
+        }#
+    }#
+}#
+/*calculated the number of alleles for each cohort. This is needed to calcualte allele frequency for data */#
+void calc_freq_one_run_data(int startingCohort, int * print_filter) {#
+    int i, j, k, l, t;#
+#
+    for (i = 0; i < treeLength; i++)#
+    {#
+        if (print_filter[i] == 1)#
+        {#
+            for (l = 0; l < nAlleles; l++)#
+            {#
+                k = 0;#
+                if (tree[i].cohortNumber > 0)#
+                {#
+                    for (j = 0; j < tree[i].cohortNumber; j++)#
+                    {#
+                        t = tree[i].cohort[j] - startingCohort;#
+                        ALLELE_ONE_RUN_DATA(t,l) += 2;#
+                    }#
+                }#
+            }#
+        }#
+    }#
+}#
+void calc_freq() {#
+    int a, i, j;#
+    for (i = 0; i < nCohorts; i++) {#
+        if (cohortIndicator[i] == 1) {#
+            for (j = 0; j < nAlleles; j++) {#
+                a = ALLELE_ONE_RUN(i,j);#
+                if (a) {#
+                    ALLELE(i,j,a) = ALLELE(i,j,a) + 1;#
+                }#
+            }#
+        }#
+    }#
+}#
+void show_tree(struct ind *tree) {#
+    int i,j;#
+    for (i = 0; i < treeLength; i++) {#
+        printf("%d %d %d %d ", tree[i].i, *tree[i].a1, *tree[i].a2, tree[i].cohortNumber);#
+        for (j = 0; j < tree[i].cohortNumber; j++) {#
+            printf("%d ", tree[i].cohort[j]);#
+        }#
+        printf("\n");#
+    }#
+}#
+#
+int main(int argc, char** argv) {#
+#
+    FILE *fp;#
+    char line[1023];#
+    char *pt;#
+    int existingCohortsNumber, existingCohort, i, j, k, startingCohort, nDrops, print_long_format, allele_to_print_in_long_format, print_filter_switch;#
+    const gsl_rng_type * T;#
+    gsl_rng_env_setup();#
+    T = gsl_rng_taus2;#
+    gsl_rng *rnd = gsl_rng_alloc(T);#
+    allele_to_print_in_long_format = 2; // allele 2#
+    print_long_format = 0;#
+#
+    /* Initialize the GSL generator with time */#
+    gsl_rng_set(rnd, time(NULL)); #
+#
+   /* handling first line */#
+    print_filter_switch = 1;#
+    fp = fopen(argv[1], "r");#
+    int cur_line = 0;#
+    fgets(line, 1023, fp);#
+    nCohorts = atoi(strtok(line,","));#
+    nAlleles = atoi(strtok(NULL,","));#
+    nIndividuals = atoi(strtok(NULL,","));#
+    if (strcmp(argv[2], "0") == 0) {#
+        print_filter_switch = 0;#
+    }#
+    if ( argc == 4 && (strcmp(argv[3], "D") == 0 || strcmp(argv[3], "d") == 0) )#
+    {#
+        nDrops = 0;#
+    } else if (argc == 4 && (strcmp(argv[3], "L") == 0 || strcmp(argv[3], "l") == 0))#
+    {#
+        print_long_format = 1;#
+        nDrops = atoi(strtok(NULL,","));#
+    } else if (argc == 4 && (strcmp(argv[3], "DL") == 0 || strcmp(argv[3], "dl") == 0))#
+    {#
+        print_long_format = 1;#
+        nDrops = 0;#
+    }#
+    else {#
+        nDrops = atoi(strtok(NULL,","));#
+    }#
+    treeLength = nIndividuals;#
+#
+    cohortIndicator = malloc(nCohorts * sizeof(int));#
+    for (i = 0; i < nCohorts; i++) { cohortIndicator[i] = 0;}#
+    fgets(line, 1023, fp);#
+    existingCohortsNumber = atoi(strtok(line,","));#
+    for( i = 0; i < existingCohortsNumber; i++)#
+    {#
+        existingCohort = atoi(strtok(NULL,","));#
+        if (i == 0) { startingCohort = existingCohort; }#
+        j = existingCohort - startingCohort;#
+        cohortIndicator[j] = 1;#
+    }#
+    print_filter = malloc (nIndividuals * sizeof(int));#
+    a = malloc (nAlleles * sizeof(int));#
+    for (i = 0; i < nAlleles; i++) { a[i] = i;}#
+    allele = malloc ( nCohorts * nAlleles * (nIndividuals + 1) * sizeof(int));#
+    alleleOneRun = malloc (nCohorts * nAlleles * sizeof(int));#
+    alleleOneRunData = malloc (nCohorts * nAlleles * sizeof(int));#
+    tree = malloc (sizeof (struct ind) * treeLength );#
+#
+//    allele[o3d(1,1,1)] = 1;#
+    while(cur_line < treeLength) {#
+        fgets(line, 1023, fp);#
+        fill_tree(line, print_filter, print_filter_switch);#
+        cur_line += 1;#
+   }#
+    fclose(fp);#
+    init_freq();#
+#
+//  header line#
+    if(nDrops == 0) {#
+ 	    printf("cohort allele allele_count all_alleles_count frequency_of_allele cohort_year\n");#
+    } #
+    else {#
+    	if (print_long_format == 0) {#
+   	        printf("cohort allele allele_count all_alleles_count\n");#
+    	}#
+    	else {#
+            printf("run ");#
+            for (i = 0; i < nCohorts; i++) {#
+                printf("%d ",i);#
+            }#
+            printf("\n");    	#
+    	}#
+    }#
+#
+/* when nDrops == 0, we calculate the allele counts of the original data */#
+    if (nDrops == 0)#
+    {#
+        init_freq_one_run();#
+        calc_freq_one_run(startingCohort, print_filter);#
+        calc_freq_one_run_data(startingCohort, print_filter);#
+        calc_freq();#
+        for (i = 0; i < nCohorts; i++) {#
+            for (j = 0; j < nAlleles; j++) {#
+                for (k = 0; k < treeLength + 1; k++) {#
+                    if (ALLELE(i,j,k)) {#
+                        printf("%d %d %d %d %f %d\n", i, j, k, ALLELE_ONE_RUN_DATA(i,j),( 0.0 + k)/ALLELE_ONE_RUN_DATA(i,j), i + startingCohort );#
+                    }#
+                }#
+            }#
+        }#
+    }#
+    for (i = 0; i < nDrops; i++) {#
+        init_freq_one_run();#
+        drop_genes_faster(rnd);#
+        calc_freq_one_run(startingCohort, print_filter);#
+        calc_freq();#
+        if (print_long_format == 1)#
+        {#
+            print_freq_one_run_v2(i, allele_to_print_in_long_format);#
+        }#
+    }#
+    if (print_long_format == 0 && nDrops > 0)#
+    {#
+        for (i = 0; i < nCohorts; i++) {#
+            for (j = 0; j < nAlleles; j++) {#
+                for (k = 0; k < treeLength + 1; k++) {#
+                    if (ALLELE(i,j,k)) {#
+                        printf("%d %d %d %d\n", i, j, k, ALLELE(i,j,k));#
+                    }#
+                }#
+            }#
+        }#
+    }#
+    return(1);#
+}
+dOver <- c()
+dAlleles <- c()
+for (i in 3:ncol(overallFreq))	{#
+	dOver <- c(dOver, overallFreq[,1])#
+	Vec <- overallFreq[,i]#
+	Init <- overallFreq[1, i]#
+	dAlleles <- c(dAlleles, Vec - Init)#
+}
+smoothScatter(dYear, dOver, colramp = Pal, nbin = 100)
+smoothScatter(dYear, dOver, colramp = Pal, nbin = 100)
+smoothScatter(dYear, dOver, colramp = Pal, nbin = 100)
+dBirths <- c()
+dAlleles <- c()
+for (i in 3:ncol(overallFreq))	{#
+	dBirths <- c(dBirths, overallFreq[,1])#
+	Vec <- overallFreq[,i]#
+	Init <- overallFreq[1, i]#
+	dAlleles <- c(dAlleles, Vec - Init)#
+}
+smoothScatter(dYear, dOver, colramp = Pal, nbin = 100)
+smoothScatter(dYear, dBirths, colramp = Pal, nbin = 100)
+smoothScatter(dYear, dBirths, colramp = Pal, nbin = 100)
+plot(overallFreq, d_births)
+plot(overallFreq, d_birth)
+plot(alleleFreqs$d_freq, alleleFreqs$d_imm, xlim=c(-0.15, 0.15), xlab='overall freq.change', ylab='freq change in subset')#
+points(alleleFreqs$d_freq, alleleFreqs$d_birth, col='blue')#
+points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')
+plot(alleleFreqs$d_freq, alleleFreqs$d_imm, xlim=c(-0.15, 0.15), xlab='overall freq.change', ylab='freq change in subset')#
+points(alleleFreqs$d_freq, alleleFreqs$d_birth, col='blue')#
+points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')
+plot(alleleFreqs$d_freq, alleleFreqs$d_birth)
+d_surv
+overallFreq
+Percent_Birth <- nestlingsFreq/overallFreq
+Percent_Birth <- nestlingsFreq/sampleFreq
+Percent_Birth <- dBirths/dOver
+Percent_Birth <- dBirths/dOver
+Percent_Birth
+Percent_Birth <- overallN/nestlingsN
+Percent_Birth <- nestlingsN/overallN
+Percent_Birth <- dBirths/dOver
+Percent_Birth
+n_columns(d_birth)
+n_columns
+d_births
+dBirths
+n_columns(dBirths)
+n_col(dBirths)
+ncol(dBirths)
+nrow(dBirths)
+plot(alleleFreqs$n_births, alleleFreqs$n_surv, xlim=c(-0.15, 0.15), xlab='allele freq birth', ylab='allele freq surv')
+n_births
+n_surv
+overallN
+plot(alleleFreqs$d_freq, alleleFreqs$d_imm, xlim=c(-0.15, 0.15), xlab='overall freq.change', ylab='freq change in subset')#
+points(alleleFreqs$d_freq, alleleFreqs$d_birth, col='blue')#
+points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')
+alleleFreqs$d_birth/alleleFreqs$d_surv
+alleleFreqs$n_birth/alleleFreqs$n_surv
+alleleFreqs$n_birth * alleleFreqs$n_surv * 100
+n_birth * n_surv * 100
+plot(alleleFreqs$d_freq, alleleFreqs$d_surv, xlim=c(-0.15, 0.15), xlab='overall freq.change', ylab='freq change in survivors')
+abline()
+dSurv <- c()#
+dAlleles <- c()#
+#
+for (i in 3:ncol(overallFreq))	{#
+	dSurv <- c(dSurv, overallFreq[,1])#
+	Vec <- overallFreq[,i]#
+	Init <- overallFreq[1, i]#
+	dAlleles <- c(dAlleles, Vec - Init)#
+}#
+#
+#instead of plotting individual allele frequencies, now we'll plot the probability of change in freqeuncy (y) by year (x)#
+smoothScatter(dSurv, dAlleles, colramp = Pal, nbin = 100)
+points(alleleFreqs$d_freq, alleleFreqs$d_birth, col='blue')#
+points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')
+plot(dSurv, dAlleles, colramp = Pal, nbin = 100)#
+points(alleleFreqs$d_freq, alleleFreqs$d_birth, col='blue')#
+points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')
+plot(dSurv, dAlleles)#
+points(alleleFreqs$d_freq, alleleFreqs$d_birth, col='blue')#
+points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')
+boxplot(dSurv, dAlleles)
+plot(dSurv, dAlleles)
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])#
+plot(1, 1, type='n', xlim=c(1998, 2013), ylim=c(-0.25, 0.25))#
+s <- apply(rescaleFreq, 2, function(x) lines(overallFreq[,1], x, col=rgb(0,0,0,0.01)))
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])#
+plot(1, 1, type='n', xlim=c(1998, 2013), ylim=c(-0.25, 0.25))#
+s <- apply(rescaleFreq, 2, function(x) lines(overallFreq[,1], x, col=rgb(0,0,0,0.01)))
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])#
+plot(1, 1, xlim=c(1998, 2013), ylim=c(-0.25, 0.25))#
+s <- apply(rescaleFreq, 2, function(x) lines(overallFreq[,1], x)))
+#make a plot of each allele's rescaled frequency (observed - initial) over time. #
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])#
+plot(1, 1, xlim=c(1998, 2013), ylim=c(-0.25, 0.25))#
+s <- apply(rescaleFreq, 2, function(x) lines(overallFreq[,1], x))
+points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])#
+plot(1, 1, xlim=c(1998, 2013), ylim=c(-0.25, 0.25))#
+s <- apply(rescaleFreq, 2, function(x) lines(overallFreq[,1], x))#
+#
+points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])#
+plot(1, 1, xlim=c(1998, 2013), ylim=c(-0.25, 0.25))#
+points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')#
+s <- apply(rescaleFreq, 2, function(x) lines(overallFreq[,1], x))
+rescaleFreq <- apply(overallFreq[,3:ncol(overallFreq)], 2, function(x) x - x[1])#
+plot(1, 1, xlim=c(1998, 2013), ylim=c(-0.25, 0.25))#
+points(alleleFreqs$d_freq, alleleFreqs$d_surv, col='red')#
+s <- apply(rescaleFreq, 2, function(x) lines(overallFreq[,1], x))
+plot(rfreq, alleleFreqs$d_surv)
+plot(alleleFreqs$n_births, alleleFreqs$n_surv)
+plot(alleleFreqs$d_births, alleleFreqs$d_surv)
+plot(dSurv, dAlleles)
+survivorN
+survivorFreq
+alleleFreqs(rfreq)
+smoothscatter(dAlleles, rfreq, colramp = Pal, nbin = 100)
+smoothScatter(dAlleles, rfreq, colramp = Pal, nbin = 100)
+rFreq <- c()#
+dAlleles <- c()#
+#
+for (i in 3:ncol(rFreq))	{#
+	rFreq <- c(rFreq, overallFreq[,1])#
+	Vec <- overallFreq[,i]#
+	Init <- overallFreq[1, i]#
+	dAlleles <- c(dAlleles, Vec - Init)#
+}
+Freq <- c()#
+dAlleles <- c()#
+#
+for (i in 3:ncol(overallFreq))	{#
+	rFreq <- c(rFreq, overallFreq[,1])#
+	Vec <- overallFreq[,i]#
+	Init <- overallFreq[1, i]#
+	dAlleles <- c(dAlleles, Vec - Init)#
+}
+smoothScatter(rFreq, dAlleles, colramp = Pal, nbin = 100)
+smoothScatter(rFreq, dAlleles, colramp = Pal, nbin = 100)
+smoothScatter?
+?smoothScatter()
+plot(alleleFreqs$d_surv, alleleFreqs$d_freq, col = 'pink')
+plot(alleleFreqs$d_surv, alleleFreqs$d_freq, xlab = 'overall freq change', ylab = 'freq change in survivors' col = 'pink')
+plot(alleleFreqs$d_surv, alleleFreqs$d_freq, xlab = 'overall freq change', ylab = 'freq change in survivors', col = 'pink')
+plot(alleleFreqs$d_surv, alleleFreqs$d_freq, xlab = 'overall freq change', ylab = 'freq change in survivors', col = 'purple')
+Selection_Prob <- pval(0.035)
+install.packages('pvaluefunctions')
+Selection_Prob <- pval(0.035)
+library('pvaluefunctions')
+Selection_Prob <- pval(0.035)
+plot(alleleFreqs$d_freq, pval(0.035))
+pnorm(0.035)
+probability <- pnorm(0.035)
+plot(alleleFreqs$d_freq, probability)
+plot(alleleFreqs$d_freq, alleleFreqs$rfreq)
+plot(alleleFreqs$d_freq, alleleFreqs$rfreq)
+plot(dAlleles, alleleFreqs$rfreq)
+for (i in 3:ncol(overallFreq))	{#
+	dprob <- c(dprob, rFreq[,1])#
+	Vec <- overallFreq[,i]#
+	Init <- overallFreq[1, i]#
+	dAlleles <- c(dAlleles, Vec - Init)#
+}
+dprob <- c()#
+dAlleles <- c()#
+#
+for (i in 3:ncol(overallFreq))	{#
+	dprob <- c(dprob, rFreq[,1])#
+	Vec <- overallFreq[,i]#
+	Init <- overallFreq[1, i]#
+	dAlleles <- c(dAlleles, Vec - Init)#
+}
+plot(dAlleles, alleleFreqs$rfreq, xlab ='change in allele freq', ylab = 'selection pressure change')
+plot(alleleFreqs$d_freq, alleleFreqs$rfreq, xlab ='change in allele freq', ylab = 'selection pressure change')
+plot(alleleFreqs$d_freq, alleleFreqs$rfreq, xlab ='change in allele freq', ylab = 'selection pressure change')
+plot(alleleFreqs$dAlleles, alleleFreqs$rfreq, xlab ='change in allele freq', ylab = 'selection pressure change')
+plot(dAlleles, alleleFreqs$rfreq, xlab ='change in allele freq', ylab = 'selection pressure change')
+plot(alleleFreqs$d_surv, alleleFreqs$rfreq, xlab ='change in allele freq', ylab = 'selection pressure change')
+plot(alleleFreqs$d_surv, alleleFreqs$rfreq, xlab ='change in allele freq', ylab = 'selection pressure change')
+plot(alleleFreqs$d_surv, alleleFreqs$rfreq, xlab ='change in allele freq', ylab = 'selection pressure change')
