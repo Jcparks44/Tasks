@@ -54,6 +54,14 @@ fossilData
 ##?fastMRCA
 fossilNodes <- c()
 nodeN <- c()
+{	
+	for(i in 1:nrow(fossilData))
+	i <- 1
+	if( i == 1) {
+	print(Ancestors)
+	 
+	}
+}
 Node <- fastMRCA(tree, fossilData[i, 'tip1'], fossilData[i, 'tip2'])
 Node
 fossilNodes[i] <- fossilData[i, 'svl']
