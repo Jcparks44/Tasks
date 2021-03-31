@@ -1,0 +1,713 @@
+install.packages("swirl")#
+library(swirl)
+swirl()
+5 + 7
+x <- 5 + 7
+x
+y <- x - 3
+y
+c(1.1, 9, 3.14)
+z <- c(1.1, 9, 3.14)
+?c
+z
+c(z, 555, z)
+z * 2 + 100
+my_sqrt <- sqrt(z-1)
+my_sqrt
+my_div <- z/my_sqrt
+my_div
+c(1, 2, 3, 4) + c(0, 10)
+c(1, 2, 3, 4) + c(0, 10, 100)
+z * 2 + 1000
+my_div
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Date <- dateID#
+head(Data)#
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+Days#
+ndays#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# blank plot#
+plot(1, 1, xlim=c(0, 500), ylim=c(0, 20), type="n", xlab="Time in Days", ylab="total milk (oz)")#
+#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Date[Feeds[FeedsOnDay]]#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+Data
+setwd('~/Desktop/Evolution/Tasks/Task_02')
+setwd(' ~/Desktop/Evolution/Tasks/Task_02')
+Data <- read.csv('http://jonsmitchell.com/data/beren.csv', stringsAsFactors=F)
+write.csv(Data, 'rawdata.csv', quote=F)
+Feeds <- which(Data[,9] == 'bottle')
+berenMilk <- Data[Feeds,]
+head(berenMilk)
+Feeds <- which(Data[,9] == 'bottle')
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$Date <- dateID
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+head(Data)
+beren2 <- Data
+beren3 <- beren2[order(beren2$age) ,]
+beren3
+> head(beren3)
+head(beren3)
+Feeds <- which(beren3$event == 'bottle')
+Feeds
+avgMilk <- mean(beren3$value[Feeds])
+avgFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], mean)
+varFeed <-  tapply(beren3$value[Feeds], beren3$age[Feeds], var)
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)
+berenANOVA <- aov(beren3$value[Feeds] ~beren3$caregiver[Feeds])
+Days <- unique(beren3$age[Feeds])
+ndays <- length(Days)
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(7, 16), ylim=c(0, 20), type="n", xlab="time of day", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+Days
+ndays
+Data$Date <- dateID
+head(Data)
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+head(Data)
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+head(Data)
+head(beren3)
+Data$Date <- DateID
+Data$Date <- dateID
+head(Data)
+head(beren3)
+Days <- unique(beren3$age[Feeds])
+ndays <- length(Days)
+ndays
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(ndays)#
+names(Cols) <- Days
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)
+plot(1, 1, xlim=c(0, 500), ylim=c(0, 20), type="n", xlab="Time in Days", ylab="total milk (oz)")
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Date[Feeds[FeedsOnDay]]#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+# summarize the day count#
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="time of day", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")#
+# make a nap plot!#
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+# summarize the day count#
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="time of day", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+# summarize the day count#
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+plot(1, 1, xlim=c(0, 104), ylim=c(0, 20), type="n", xlab="", ylab="total milk (oz)")
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(0, 104), ylim=c(0, 20), type="n", xlab="", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+# summarize the day count#
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(0, 104), ylim=c(0, 20), type="n", xlab="Number of Days Milk was Consumed", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")#
+# make a nap plot!#
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(0, 1), ylim=c(0, 20), type="n", xlab="Number of Days Milk was Consumed", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(1, 300), ylim=c(0, 20), type="n", xlab="Number of Days Milk was Consumed", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))
+plot(1, 1, xlim=c(1, 104), ylim=c(0, 20), type="n", xlab="Number of Days Milk was Consumed", ylab="total milk (oz)")
+par(las=1, mar=c(5, 5, 1, 1), mgp=c(2, 0.5, 0), tck=-0.01)
+plot(as.numeric(names(totalFeed)), totalFeed, type= 'b', pch= 16, xlab= 'age in days', ylab= 'ounces of milk')
+# summarize the day count#
+Days <- unique(beren3$Date[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(7, 16), ylim=c(0, 20), type="n", xlab="time of day", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = "age in days")
+Days <- unique(beren3$Date[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(7, 16), ylim=c(0, 20), type="n", xlab="time of day", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}#
+#
+# add a legend to the plot#
+dayVec <- c(min(Days), Days[floor(0.25*ndays)], median(Days), Days[ceiling(0.75*ndays)], max(Days))#
+legend("top", legend=dayVec, pch=21, pt.bg=Cols[as.character(dayVec)], horiz = T, bty = "n", pt.cex=2, title = 'Dates')
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$Date <- DateID
+Data$Date <- dateID
+head(Data)
+head(beren3)
+plot(as.numeric(names(totalFeed)), totalFeed, type= 'b', pch= 16, xlab= 'age in days', ylab= 'ounces of milk')
+length(Data)
+unique(beren3$age[Feeds])
+length(Days)
+Feeds
+unique(beren3$Date[Feeds])
+beren7 <- beren3[order(beren3$Date)]
+beren7 <- beren2[order(beren2$Date)]
+beren7 <- beren2[order(beren2$date)]
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$Date <- dateID
+head(Data)
+beren2 <- Data
+beren7 <- beren2[order(beren2$date)]
+beren7 <- beren2[order(beren2$Date)]
+beren3 <- beren2[order(beren2$age)]
+beren3
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$Date <- dateID
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+head(Data)
+unique(beren3$age[Feeds])
+unique(beren3$Date[Feeds])
+Dates <- unique(beren3$Date[Feeds])
+nDates <- length(Dates)
+nDates
+Alpha <- 0.75
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)
+Cols <- Pal(nDates)
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Dates <- beren3$Date#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Dates <- beren3$Date#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Date <- dateID#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Dates#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Dates <- beren3$Date#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Date <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Dates#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Days <- unique(beren3$Date[Feeds])#
+nDates <- length(Days)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]
+Days <- unique(beren3$Time[Feeds])
+nDates <- length(Days)
+Alpha <- 0.75
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)
+Cols <- Pal(nDays)
+Cols <- Pal(nDates)
+names(Cols) <- Days
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")
+for (Day in Days)	{
+FeedsOnDay <- which(beren3$age[Feeds] == Day)
+Time <- beren3$Time
+Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])
+points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Days <- unique(beren3$Time[Feeds])#
+nDates <- length(Days)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Days <- unique(beren3$Time[Feeds])#
+nDates <- length(Days)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 200), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+plot(1,1, type='n', xlim=c(125, 700), ylim=c(7, 16, xlab='age(days)', ylab='total milk(oz)')#
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x))
+plot(1,1, type='n', xlim=c(125, 700), ylim=c(7, 16) xlab='age(days)', ylab='total milk(oz)')#
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x))
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x)
+points(beren3$Time[Feeds][x], )
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+beren3 <- Data
+Feeds <- which(Data$event == 'bottle')
+Days <- unique(beren3$Time[Feeds])
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)
+numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)
+rateFeeds <- totalFeed/numFeeds
+rateFeeds
+plot(as.numeric(names(rateFeeds)), type='n', xlim=c(125, 700), ylim=c(7, 16) xlab='Age in Days', ylab='Rate of Milk Consumption')
+plot(as.numeric(names(rateFeeds)), type='n', xlim=c(125, 700), ylim=c(7, 16), xlab='Age in Days', ylab='Rate of Milk Consumption')
+plot(as.numeric(names(rateFeeds)), type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption'
+plot(as.numeric(names(rateFeeds)), type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+beren3 <- Data#
+Feeds <- which(Data$event == 'bottle')#
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)#
+numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)#
+rateFeeds <- totalFeed/numFeeds#
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption(oz/day)')
+setwd(~/Downloads/Desktop Stuff/Evolution/Tasks/Task_02')
+setwd(~/Downloads/Desktop Stuff/Evolution/Tasks/Task_02)
+setwd(~Downloads/Desktop Stuff/Evolution/Tasks/Task_02)
+setwd(~/Desktop/Evolution/Tasks/Task_02)
+setwd('~/Desktop/Evolution/Tasks/Task_02')
+install.packages('learnPopGen')
+setwd('~/Desktop/Evolution/Tasks/Task_08)')
+setwd('~/Desktop/Evolution/Tasks/Task_08')
+citation()
+library('phytools')
+AnolisTree <- force.ultrametric(read.tree('https://jonsmitchell.com/data/anolis.tre'))
+tree <- force.ultrametric(read.tree('https://jonsmitchell.com/data/anolis.tre'))
+plot(tree, type='fan')
+Q1 <- plot(tree, type='fan')
+tree$tip.label
+Q1$tip.label
+tree$tip.label
+tree$edge.length
+data <- read.csv('https://jonsmitchell.com/data/svl.csv', stringAsFactors=F, row.names=1)
+data <- read.csv('https://jonsmitchell.com/data/svl.csv', stringsAsFactors=F, row.names=1)
+data
+data[,1]
+svl <- setNames(data$svl, rownames(data))
+svl
+Ancestors <- fastAnc(tree, svl, vars=TRUE, CI=TRUE)
+svl <- setNames(data$svl, rownames(data))
+Ancestors <- fastAnc(tree, svl, vars=TRUE, CI=TRUE)
+Ancestors
+tree <- read.tree('https://jonsmitchell.com/data/anolis.tre'))
+tree <- read.tree('https://jonsmitchell.com/data/anolis.tre')
+Ancestors <- fastAnc(tree, svl, vars=TRUE, CI=TRUE)
+tree$tip.label
+Ancestors <- fastAnc(data, svl, vars=TRUE, CI=TRUE)
+Ancestors <- fastAnc(tree, svl, vars=TRUE, CI=TRUE)
+svl <- setNames(data$svl, rownames(data))
+svl
+Ancestors <- fastAnc(tree, svl, vars=TRUE, CI=TRUE)
+Ancestors <- fastAce(tree, svl, vars=TRUE, CI=TRUE)
+Ancestors <- fastAnc(tree, svl, vars=TRUE, CI=TRUE)
+svl <- setNames(data$svl, rownames(data))
+svl
+svl[,1]
+svl[]
+data[]
+data
+data[,1]
+Ancestors <- fastAnc(tree, svl, vars=TRUE, CI=TRUE)
+plot(tree[[1]], type='fan')
+plot(tree[[2]], type='fan')
+plot(tree[2], type='fan')
+plot(tree, type='fan')
+tree$tip.label
+tree$edge.length
+Ancestors <- fastAnc(tree, svl, vars=TRUE, CI=TRUE)
+data <- read.csv('https://jonsmitchell.com/data/svl.csv', stringsAsFactors=F, row.names=1)
+data

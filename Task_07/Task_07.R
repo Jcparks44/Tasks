@@ -140,7 +140,6 @@ which(WillWork == TRUE)
 fit.bd(Capybara[[8]], rho = 0.2)
 # b = 21.7442, d = 13.8
 
-
 Tegu <- search_treebase("salvator", by='taxon', max_trees=2)
 WillWork <- sapply(Tegu, function(x) try(is.ultrametric(x)))
 pdf('r07-TeguPhylo.pdf', height =5, width=5)
