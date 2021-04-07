@@ -1,0 +1,325 @@
+cor(vartrait, varrate)
+vartrait <- var(traitsvector)
+vartrait
+varrate <- var(rates)
+varrate
+cor(vartrait, varrate)
+var.test(rates, traitsvector)
+cov(rates, traitsvector)
+trait1 <- traitsvector[1]
+trait1
+trait2 <- traitsvector[2]
+trait2
+traits[1]
+traits[2]
+cor.test(trait1, trait2)
+cor(trait1, trait2)
+cov(trait1, trait2)
+var.test(trait1, trait2)
+traits
+rates <- c()
+traits <- list()
+for (i in 1:100) {
+rates[i] <- runif(1)
+traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[i])
+}
+avgtrait <- sapply(traits, mean)
+avgtrait
+avgrate <- sapply(rates, mean)
+avgrate
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+plot(avgrate, avgtrait)
+sapply(traits, var)
+vartraits <- sapply(traits, var)
+varrates <- sapply(rates, var)
+varrates
+rates
+traits
+rates <- c()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[[i]] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[i])#
+}
+rates <- c()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[[i]] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[[i]])#
+}
+avgrate <- sapply(rates, mean)
+avgrate
+avgtrait <- sapply(traits, mean)
+avgtrait
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+plot(avgrate, avgtrait)
+varrates <- sapply(rates, var)
+vartraits <- sapply(traits, var)
+rates
+traits
+rates
+rates <- c()
+traits <- list()
+for (i in 1:100) {#
+	rates[i] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[[i]])#
+}
+avgtrait <- sapply(traits, mean)
+avgrate <- sapply(rates, mean)
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+plot(avgrate, avgtrait)
+vartraits <- sapply(traits, var)
+vartraits
+varrates <- sapply(rates, var)
+varrates
+varrates <- sapply(rates[[i]], var)
+vartraits
+cor(vartraits, varrates)
+vartraits
+varrates
+varrates <- sapply(rates[[i]], var)
+varrates
+rates[i]
+rates[[i]]
+rates
+traits
+avgtrait
+avgrate
+vartraits <- sapply(traits, var)
+vartraits
+varrates <- sapply(rates, var)
+varrates
+rates <- c()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[i] <- runif(100)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[[i]])#
+}
+avgtrait <- sapply(traits, mean)
+avgtrait
+avgrate <- sapply(rates, mean)
+avgrate
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+plot(avgrate, avgtrait)
+vartraits <- sapply(traits, var)
+varrates <- sapply(rates, var)
+vartraits
+varrates
+rates
+rates[[i]]
+rates[i]
+rates
+rates <- c()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[[i]] <- runif(100)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[[i]])#
+}
+rates <- c()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[i] <- runif(100)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[i])#
+}
+avgtrait <- sapply(traits, mean)
+avgtrait
+avgrate <- sapply(rates, mean)
+avgrate
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+vartraits <- sapply(traits, var)
+varrates <- sapply(rates, var)
+vartraits
+varrates
+cor(vartraits, varrates)
+rates[i]
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+vartraits <- sapply(traits, var)
+varrates <- sapply(rates, var)
+vartraits
+varrates
+traits
+rates[]
+rates
+rates[1:100]
+cor(vartraits, varrates)
+varrates
+rates <- c()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[i] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[i])#
+}
+avgtrait <- sapply(traits, mean)
+avgtrait
+avgrate <- sapply(rates, mean)
+avgrate
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+vartraits <- sapply(traits, var)
+varrates <- sapply(rates, var)
+cor(vartraits, varrates)
+vartraits
+varrates
+rates <- c()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[i] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[i])#
+}
+avgtrait <- sapply(traits, mean)
+avgrate <- sapply(rates, mean)
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+vartraits <- sapply(traits, var)
+varrates <- sapply(rates, var)
+cor(vartraits, varrates)
+vartraits
+varrates
+rates <- c()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[[i]] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[[i]])#
+}
+avgtrait <- sapply(traits, mean)
+avgtrait
+avgrate <- sapply(rates, mean)
+avgrate
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+vartraits <- sapply(traits, var)
+varrates <- sapply(rates, var)
+vartraits
+varrates
+traits
+rates
+rates <- c()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[i] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[i])#
+}
+avgtrait <- sapply(traits, mean)
+avgtrait
+avgrate <- sapply(rates, mean)
+avgrate
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+rates <- c()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[i] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[i])#
+}
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+avgtrait <- sapply(traits, mean)
+avgrate <- sapply(rates, mean)
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+vartraits <- sapply(traits, var)
+varrates <- sapply(rates, var)
+rates
+traits
+vartraits
+varrates
+rates <- list()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[[i]] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[i])#
+}
+rates <- list()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[[i]] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[[i]])#
+}
+avgtrait <- sapply(traits, mean)
+avgtrait
+avgrate <- sapply(rates, mean)
+avgrate
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+vartraits <- sapply(traits, var)
+varrates <- sapply(rates, var)
+rates
+vartraits
+varrates
+rates <- list()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[i] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[i])#
+}
+rates <- c()#
+traits <- list()#
+for (i in 1:100) {#
+	rates[i] <- runif(1)#
+	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[i])#
+}
+avgtrait <- sapply(traits, mean)
+avgtrait
+avgrate <- sapply(rates, mean)
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+vartraits <- sapply(traits, var)
+varrates <- sapply(rates, var)
+rates
+traits
+vartraits
+varrates
+trait1 <- traitsvector[1]
+trait1
+trait2 <- traitsvector[2]
+trait2
+traits[1]
+traits[2]
+var(trait1, trait2)
+trait1 <- traits[1]
+trait2 <- traits[2]
+var(trait1, trait2)
+vartrait1 <- sapply(trait1, var)
+vartrait2 <- sapply(trait2, var)
+cor(vartrait1, vartrait2)
+trait1 <- traits[1]
+trait1
+trait2
+trait1
+trait2
+traitmat <- cbind(traits[[1]], traits[[2]])
+traitmat
+var(traitmat)
+cor(traitmat[1], traitmat[2])
+cor(traitmat[,1], traitmat[,2])
+plot(traitmat[,1], traitmat[,2])
+rates
+traits
+vartraits
+varrates
+cor(traitmat[,1], traitmat[,2])
+vartraits
+rates
+cor(vartraits, rates)
+correlation <- cor(avgtrait, rates)
+print(correlation)
+correlation <- cor(avgtrait, avgrate)
+print(correlation)
+cor(traitmat[,1], traitmat[,2])
+var(traitmat)
+plot(traitmat[,1], traitmat[,2])
+cor(traitmat[,1], traitmat[,2])
+abline(lm(traitmat[,1]~traitmat[,2]))
+plot(traitmat[,1], traitmat[,2])#
+abline(lm(traitmat[,1]~traitmat[,2]))
+abline(lm(traitmat[,1]~traitmat[,2]), col='pink')
+plot(traitmat[,1], traitmat[,2])#
+abline(lm(traitmat[,1]~traitmat[,2]), col='pink')
+plot(avgrate, avgtrait)
+abline(lm(avgrate~avgtrait), col='purple')
