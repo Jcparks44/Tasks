@@ -15,10 +15,10 @@ Fitness1 <- Fitness
 # just mutants
 #Resistance1 <- Resistance1[which(Resistance1 > 1.0)]
 #Fitness1 <- Fitness1[which(Resistance1 > 1.0)]
-
+pdf('Graph1_FinalProject.pdf', height=5, width=5)
 Cols <- c("#e41a1c", "#377eb8", "#4daf4a")
 par(mar=c(4,5,1,1), mgp=c(2.5, 0.25, 0), las=1, tck=-0.01)
-plot(Resistance1, Fitness1, xlab="MIC", ylab="Relative fitness", main='Relative Fitness as a Function of Resistance', log='x', ylim=c(0, 1.5), pch=21, bg='gray70')
+plot(Resistance1, Fitness1, xlab="Fold-Increase MIC", ylab="Relative fitness", main='Relative Fitness as a Function of Resistance', log='x', ylim=c(0, 1.5), pch=21, bg='gray70')
 
 # locally smoothed regression
 x2 <- loess(Fitness1~Resistance1, span=1)
@@ -29,7 +29,7 @@ lines(Resistance1[order(Resistance1)], px2[order(Resistance1)], col=Cols[1], lty
 Cubic_x <- lm(Fitness1 ~ poly(Resistance1,2))
 pCubic <- predict(Cubic_x)
 lines(Resistance1[order(Resistance1)], pCubic[order(Resistance1)], col=Cols[2], lwd=2)
-
+dev.off()
 # linear regression
 x <- lm(Fitness1~Resistance1)
 abline(x, col=Cols[3], lty=3, lwd=2)

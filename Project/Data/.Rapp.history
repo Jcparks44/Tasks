@@ -661,68 +661,89 @@ setwd(~Downloads/Desktop Stuff/Evolution/Tasks/Task_02)
 setwd(~/Desktop/Evolution/Tasks/Task_02)
 setwd('~/Desktop/Evolution/Tasks/Task_02')
 install.packages('learnPopGen')
-setwd('~/Desktop/Evolution/Tasks/Task_09')
-library('phytools')
-trees <- list()#
-births <- c()#
-Fractions <- c()#
+setwd('~/Desktop/Evolution/Tasks/Project/Data')
+Data <- read.csv('~/Desktop/Evolution/Tasks/Project/Data/Final_Project_Updated.csv', #
+	stringsAsFactors=F)
+Fitness <- Data[,2]#
+Resistance <- Data[,1]#
 #
-for(i in 1:100) {#
-	births[i] <- runif(1)#
-	Fractions[i] <- runif(1)#
-	trees[[i]] <- pbtree(b = births[i], d = (births[i] * Fractions[i]), n = 100, nsim = 1)#
-}
-library('geiger')
-library('TreeTools')
-tips <- sapply(trees, NTip)
-logtips <- log(tips)
-diversification <- sapply(trees, bd.ms)#
-plot(diversification, logtips, xlab='net diversification', ylab='log of total number of tips')#
-abline(lm(diversification~logtips), col='red')#
-#My graph shows a strong positive correlation between diversification and number of tips, which is waht I would expect to see.  #
-cor(diversification, logtips)#
-#positive correlation according to R. cor=0.28
-speciation <- sapply(trees, bd.km)
-numtips <- c()#
-avgBL <- c()#
+# all data#
+Resistance1 <- Resistance#
+Fitness1 <- Fitness#
 #
-for ( i in 1:length(trees))	{#
-	# choose tree#
-	y <- trees[[i]]#
-	# find number of tips#
-	numtips[i] <- Ntip(y)#
-	# find average branch length#
-	avgBL[i] <- mean(y$edge.length)#
-}#
-plot(speciation, avgBL, xlab='speciation rate', ylab='average branch length')
-cor(speciation, avgBL)
-which.max(tips)
-bigTree <- trees[[66]]
-plot(bigTree)
-rates <- c()#
-traits <- list()#
-for (i in 1:100) {#
-	rates[i] <- runif(1)#
-	traits[[i]] <- fastBM(tree = bigTree, sig2 = rates[i])#
-}
-avgtrait <- sapply(traits, mean)#
-avgtrait#
-avgrate <- sapply(rates, mean)#
-avgrate#
-correlation <- cor(avgtrait, avgrate)#
-print(correlation)#
-plot(avgrate, avgtrait)#
-abline(lm(avgrate~avgtrait), col='purple')
-vartraits <- sapply(traits, var)#
-cor(vartraits, rates)
-trait1 <- traits[1]#
-trait1#
-trait2 <- traits[2]#
-trait2#
-traitmat <- cbind(traits[[1]], traits[[2]])#
-traitmat#
-var(traitmat)#
-cor(traitmat[,1], traitmat[,2])#
-#The correlation is near zero, so I wouldn't consider it signifcant. #
-plot(traitmat[,1], traitmat[,2])#
-abline(lm(traitmat[,1]~traitmat[,2]), col='pink')
+# just mutants#
+#Resistance1 <- Resistance1[which(Resistance1 > 1.0)]#
+#Fitness1 <- Fitness1[which(Resistance1 > 1.0)]#
+#
+Cols <- c("#e41a1c", "#377eb8", "#4daf4a")#
+par(mar=c(4,5,1,1), mgp=c(2.5, 0.25, 0), las=1, tck=-0.01)#
+plot(Resistance1, Fitness1, xlab="MIC", ylab="Relative fitness", main='Relative Fitness as a Function of Resistance', log='x', ylim=c(0, 1.5), pch=21, bg='gray70')
+x2 <- loess(Fitness1~Resistance1, span=1)#
+px2 <- predict(x2)#
+lines(Resistance1[order(Resistance1)], px2[order(Resistance1)], col=Cols[1], lty=2, lwd=2)
+Cubic_x <- lm(Fitness1 ~ poly(Resistance1,2))#
+pCubic <- predict(Cubic_x)#
+lines(Resistance1[order(Resistance1)], pCubic[order(Resistance1)], col=Cols[2], lwd=2)
+pdf('Graph1_FinalProject.pdf', height=5, width=5)#
+Cols <- c("#e41a1c", "#377eb8", "#4daf4a")#
+par(mar=c(4,5,1,1), mgp=c(2.5, 0.25, 0), las=1, tck=-0.01)#
+plot(Resistance1, Fitness1, xlab="MIC", ylab="Relative fitness", main='Relative Fitness as a Function of Resistance', log='x', ylim=c(0, 1.5), pch=21, bg='gray70')#
+#
+# locally smoothed regression#
+x2 <- loess(Fitness1~Resistance1, span=1)#
+px2 <- predict(x2)#
+lines(Resistance1[order(Resistance1)], px2[order(Resistance1)], col=Cols[1], lty=2, lwd=2)#
+#
+# polynomial regression#
+Cubic_x <- lm(Fitness1 ~ poly(Resistance1,2))#
+pCubic <- predict(Cubic_x)#
+lines(Resistance1[order(Resistance1)], pCubic[order(Resistance1)], col=Cols[2], lwd=2)#
+dev.off()
+pdf('Graph1_FinalProject.pdf', height=5, width=5)#
+Cols <- c("#e41a1c", "#377eb8", "#4daf4a")#
+par(mar=c(4,5,1,1), mgp=c(2.5, 0.25, 0), las=1, tck=-0.01)#
+plot(Resistance1, Fitness1, xlab="fold-increase MIC", ylab="Relative fitness", main='Relative Fitness as a Function of Resistance', log='x', ylim=c(0, 1.5), pch=21, bg='gray70')#
+#
+# locally smoothed regression#
+x2 <- loess(Fitness1~Resistance1, span=1)#
+px2 <- predict(x2)#
+lines(Resistance1[order(Resistance1)], px2[order(Resistance1)], col=Cols[1], lty=2, lwd=2)#
+#
+# polynomial regression#
+Cubic_x <- lm(Fitness1 ~ poly(Resistance1,2))#
+pCubic <- predict(Cubic_x)#
+lines(Resistance1[order(Resistance1)], pCubic[order(Resistance1)], col=Cols[2], lwd=2)#
+dev.off()
+pdf('Graph1_FinalProject.pdf', height=5, width=5)#
+Cols <- c("#e41a1c", "#377eb8", "#4daf4a")#
+par(mar=c(4,5,1,1), mgp=c(2.5, 0.25, 0), las=1, tck=-0.01)#
+plot(Resistance1, Fitness1, xlab="Fold-Increase MIC", ylab="Relative fitness", main='Relative Fitness as a Function of Resistance', log='x', ylim=c(0, 1.5), pch=21, bg='gray70')#
+#
+# locally smoothed regression#
+x2 <- loess(Fitness1~Resistance1, span=1)#
+px2 <- predict(x2)#
+lines(Resistance1[order(Resistance1)], px2[order(Resistance1)], col=Cols[1], lty=2, lwd=2)#
+#
+# polynomial regression#
+Cubic_x <- lm(Fitness1 ~ poly(Resistance1,2))#
+pCubic <- predict(Cubic_x)#
+lines(Resistance1[order(Resistance1)], pCubic[order(Resistance1)], col=Cols[2], lwd=2)#
+dev.off()
+Resistance1 <- Resistance1[which(Resistance1 > 1.0)]
+Fitness1 <- Fitness1[which(Resistance1 > 1.0)]
+plot(Resistance1, Fitness1, xlab="Fold-Increase MIC", ylab="Relative fitness", main='Relative Fitness as a Function of Resistance', log='x', ylim=c(0, 1.5), pch=21, bg='gray70')
+abline(lm(Resistance1~Fitness1))
+abline(lm(Fitness1~Resistance1))
+Resistance1 <- Resistance1[which(Resistance1 > 1.0)]
+Fitness1 <- Fitness1[which(Resistance1 > 1.0)]
+plot(Resistance1, Fitness1, xlab="Fold-Increase MIC", ylab="Relative fitness", main='Relative Fitness as a Function of Resistance', log='x', ylim=c(0, 1.5), pch=21, bg='gray70')
+lines(Resistance1[order(Resistance1)], px2[order(Resistance1)], col=Cols[1], lty=2, lwd=2)
+lines(Resistance1[order(Resistance1)], pCubic[order(Resistance1)], col=Cols[2], lwd=2)
+plot(Resistance1, Fitness1, xlab="Fold-Increase MIC", ylab="Relative fitness", main='Relative Fitness as a Function of Resistance', log='x', ylim=c(0, 1.5), pch=21, bg='gray70')
+lines(Resistance1[order(Resistance1)], px2[order(Resistance1)], col=Cols[1], lty=2, lwd=2)
+Resistance1 <- Resistance
+Fitness1 <- Fitness
+plot(Resistance1, Fitness1, xlab="Fold-Increase MIC", ylab="Relative fitness", main='Relative Fitness as a Function of Resistance', log='x', ylim=c(0, 1.5), pch=21, bg='gray70')
+lines(Resistance1[order(Resistance1)], px2[order(Resistance1)], col=Cols[1], lty=2, lwd=2)
+lines(Resistance1[order(Resistance1)], pCubic[order(Resistance1)], col=Cols[2], lwd=2)
+abline(x, col=Cols[3], lty=3, lwd=2)

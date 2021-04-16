@@ -1,0 +1,1324 @@
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+read.csv('~/Desktop/Evolution/Tasks/Task_10/Question3_Data'#
+	stringsAsFactors=F)
+read.csv('~/Desktop/Evolution/Tasks/Task_10/Question3_Data',#
+	stringsAsFactors=F)
+Data <- read.csv('~/Desktop/Evolution/Tasks/Task_10/Question3_Data.csv',#
+	stringsAsFactors=F)
+head(Data)
+Freq1_Trial1 <- Data[,2]
+Freq1_Trial2 <- Data[,5]
+Freq1_Trial3 <- Data[,8]
+Freq1_Trail1
+Freq1_Trial1
+Freq1_Trial2
+Freq1_Trial3
+Variance1 <- var(Freq1_Trial1)
+Variance2 <- var(Freq1_Trial2)
+Variance3 <- var(Freq1_Trial3)
+Variance1
+Variance2
+Variance3
+VarianceMatrix <- c(Variance1, Variance2, Variance3)
+Variance Matrix
+VarianceMatrix
+Trial <- c(1, 2, 3)
+barplot(VarianceMatix, names.arg=Trial,#
+	main='Variance of Frequency 1 in Each Trial',#
+	xlab='Trial Number',#
+	ylab='Variance in Frequencies',#
+	col='green')
+barplot(VarianceMatrix, names.arg=Trial,#
+	main='Variance of Frequency 1 in Each Trial',#
+	xlab='Trial Number',#
+	ylab='Variance in Frequencies',#
+	col='green')
+barplot(VarianceMatrix, names.arg=Trial,#
+	main='Variance of Frequency 1 in Each Trial',#
+	xlab='Trial Number',#
+	ylab='Variance in Frequencies',#
+	col='green')
+barplot(VarianceMatrix, names.arg=Trial,#
+	main='Variance of Frequency 1 in Each Trial',#
+	ylim= c(0, 1)#
+	xlab='Trial Number',#
+	ylab='Variance in Frequencies',#
+	col='green')
+barplot(VarianceMatrix, names.arg=Trial,#
+	main='Variance of Frequency 1 in Each Trial',#
+	ylim= c(0, 1),#
+	xlab='Trial Number',#
+	ylab='Variance in Frequencies',#
+	col='green')
+barplot(VarianceMatrix, names.arg=Trial,#
+	main='Variance of Frequency 1 in Each Trial',#
+	ylim= c(0, 0.5),#
+	xlab='Trial Number',#
+	ylab='Variance in Frequencies',#
+	col='green')
+pdf('Question3.pdf', height=8, width=8)#
+barplot(VarianceMatrix, names.arg=Trial,#
+	main='Variance of Frequency 1 in Each Trial',#
+	ylim= c(0, 0.5),#
+	xlab='Trial Number',#
+	ylab='Variance in Frequencies',#
+	col='green')#
+dev.off()
+pdf('Question2.pdf', height = 8, width = 8)#
+barplot(Data, names.arg=Difference,#
+main='How Close to Zero State 1 Gets When Transition Rate is Nonzero',#
+xlab='Difference in Diversification Rate',#
+ylab='Frequencies',#
+col=c('red', 'blue')#
+)#
+legend('topright', Frequencies, fill = Colors)#
+dev.off()
+barplot(Data, names.arg=Difference,#
+main='How Close to Zero State 1 Gets When Transition Rate is Nonzero',#
+xlab='Difference in Diversification Rate',#
+ylab='Frequencies',#
+col=c('red', 'blue')#
+)
+Frequencies <- c('State 0', 'State 1')#
+Colors <- c('red', 'blue')#
+Data <- matrix(c(0.82, 0.8, 0.96, 0.85, 0.63, 0.9, 0.926, 0.923, 0.959, 0.955, 0.945, 0.968, 0.977, 0.963, 0.978, 0.984, 0.973, 0.18, 0.2, 0.04, 0.14, 0.37, 0.088, 0.074, 0.077, 0.041, 0.045, 0.055, 0.032, 0.023, 0.037, 0.022, 0.016, 0.027), nrow = 2, ncol = 17, byrow=TRUE)#
+Data
+Difference <- c(0.05, 0.05, 0, 0, 0, 0.1, 0.1, 0.1, 0.2, 0.2, 0.2, 0.3, 0.3, 0.3, 0.45, 0.45, 0.45)
+barplot(Data, names.arg=Difference,#
+main='How Close to Zero State 1 Gets When Transition Rate is Nonzero',#
+xlab='Difference in Diversification Rate',#
+ylab='Frequencies',#
+col=c('red', 'blue')#
+)
+legend('topright', Frequencies, fill = Colors)
+pdf('Question2.pdf', height = 8, width = 8)#
+barplot(Data, names.arg=Difference,#
+main='How Close to Zero State 1 Gets When Transition Rate is Nonzero',#
+xlab='Difference in Diversification Rate',#
+ylab='Frequencies',#
+col=c('red', 'blue')#
+)#
+legend('topright', Frequencies, fill = Colors)#
+dev.off()
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.1#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.6	#
+extinction_0 <- 0.1#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.8	#
+extinction_0 <- 0.1#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 1	#
+extinction_0 <- 0.1#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 1	#
+extinction_0 <- 0#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+#relative frequency of state 0 and state 1:
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.1	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.6#
+extinction_1 <- 0.1	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.8#
+extinction_1 <- 0.1	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 1#
+extinction_1 <- 0.1	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 1#
+extinction_1 <- 0#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+read.csv('~/Desktop/Evolution/Tasks/Task_10/My_Own_Trend.csv',#
+	stringsAsFactors=F)
+Data <- read.csv('~/Desktop/Evolution/Tasks/Task_10/My_Own_Trend.csv',#
+	stringsAsFactors=F)
+head(Data)
+Freq_0 <- Data[,2]
+Freq_0
+NDR_0 <- Data[,1]
+plot(NDR_0, Freq_0)
+plot(NDR_0, Freq_0)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.5	#
+extinction_0 <- 0.1#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2	#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.5#
+extinction_1 <- 0.1	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+Data <- read.csv('~/Desktop/Evolution/Tasks/Task_10/My_Own_Trend.csv',#
+	stringsAsFactors=F)
+Freq_0 <- Data[,2]
+NDR_0 <- Data[,1]
+plot(NDR_0, Freq_0)
+plot(NDR_0, Freq_0)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.4	#
+extinction_0 <- 0.1#
+#
+speciation_1 <- 0.2#
+extinction_1 <- 0.15	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+stateTable <- table(simTree$tip.state)
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+transition_0to1 <- 0.1#
+transition_1to0 <- 0.1#
+#
+speciation_0 <- 0.2#
+extinction_0 <- 0.15#
+#
+speciation_1 <- 0.4#
+extinction_1 <- 0.1	#
+#
+maxN <- 1e3#
+maxT <- 50#
+#
+Pars <- c(speciation_0, speciation_1, extinction_0, extinction_1, transition_0to1, transition_1to0)#
+#
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+simTree <- tree.bisse(Pars, max.taxa = maxN, max.t = maxT)#
+str(simTree)#
+#?tree.bisse()#
+#
+stateTable <- table(simTree$tip.state)#
+#relative frequency of state 0 and state 1:#
+stateTable / sum(stateTable)
+Data <- read.csv('~/Desktop/Evolution/Tasks/Task_10/My_Own_Trend.csv',#
+	stringsAsFactors=F)#
+head(Data)#
+Freq_0 <- Data[,2]#
+Freq_0#
+NDR_0 <- Data[,1]#
+plot(NDR_0, Freq_0)
+Data <- read.csv('~/Desktop/Evolution/Tasks/Task_10/My_Own_Trend.csv',#
+	stringsAsFactors=F)#
+head(Data)#
+Freq_0 <- Data[,2]#
+Freq_0#
+NDR_0 <- Data[,1]#
+plot(NDR_0, Freq_0)
+abline(lm(NDR_0, Freq_0))
+abline(lm(NDR_0~Freq_0))
+abline(lm(Freq_0~NDR_0))
+abline(lm(Freq_0~NDR_0), col='blue', type=1)
+abline(lm(Freq_0~NDR_0), col='blue', type=2)
+abline(lm(Freq_0~NDR_0), col='blue', type='dashed')
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate State 1', ylab='Frequency of State 1', main='How Net Diversification Rate Changes Frequency')
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate State 1', ylab='Frequency of State 1', main='How Net Diversification Rate Influences Frequency')
+abline(lm(Freq_0~NDR_0), col='blue')
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate of State 1', ylab='Frequency of State 1', main='How Net Diversification Rate Influences Frequency')
+abline(lm(Freq_0~NDR_0), col='blue')
+x <- function(x), -x^2)
+Freq_1 <- Data[,3]
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate of State 1', ylab='Frequency of State 1', main='How Net Diversification Rate Influences Frequency')
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate of State 1', ylab='Frequency of State 1', main='How Net Diversification Rate Influences Frequency')
+abline(lm(Freq_0~NDR_0), col='blue')
+points(Freq_1, col='red')
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate of State 0', ylab='Frequency of State 0', main='How Net Diversification Rate Influences Frequency')
+abline(lm(Freq_0~NDR_0), col='blue')
+points(Freq_1, col='red')
+Freq_1
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate of State 0', ylab='Frequency of State 0', main='How Net Diversification Rate Influences Frequency')
+abline(lm(Freq_0~NDR_0), col='blue', lty='dashed')
+Freq_1 <- c(0.390, 0.647, 0.562, 0.448, 0.400, 0.425, 0.164, 0.172, 0.189, 0.125, 0.136, 0.118, 0.113, 0.101, 0.115, 0.082, 0.113, 0.096, 0.212, 0.194, 0.189, 0.246, 0.256, 0.242)
+points(Freq_1)
+points(Freq_1, col='red')
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate of State 0', ylab='Frequency of State 0', main='How Net Diversification Rate Influences Frequency')#
+abline(lm(Freq_0~NDR_0), col='blue', lty='dashed')#
+points(NDR_0, Freq_1, col='red')
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate of State 0', ylab='Frequency of State 0', main='How Net Diversification Rate Influences Frequency')#
+abline(lm(Freq_0~NDR_0), col='blue', lty='dashed')#
+points(NDR_0, Freq_1, col='red')
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate of State 0', ylab='Frequency of State 0', main='How Net Diversification Rate Influences Frequency')#
+abline(lm(Freq_0~NDR_0), col='blue', lty='dashed')
+Freq_1 <- Data[,7]
+NDR_1 <- Data[,5]
+plot(NDR_1, Freq_1, xlab='Net Diversification Rate of State 1', ylab='Frequency of State 1', main='How Net Diversification Rate Influences Frequency')
+plot(NDR_1, Freq_1, xlab='Net Diversification Rate of State 1', ylab='Frequency of State 1', main='How Net Diversification Rate Influences Frequency')
+abline(lm(Freq_1~NDR_1))
+abline(lm(Freq_1~NDR_1), col='blue')
+abline(lm(Freq_1~NDR_1), col='blue', lty='dashed')
+abline(lm(Freq_1~NDR_1), col='blue', lty='dashed')
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate of State 0', ylab='Frequency of State 0', main='How Net Diversification Rate Influences Frequency')
+abline(lm(Freq_0~NDR_0), col='blue', lty='dashed')
+plot(NDR_1, Freq_1, xlab='Net Diversification Rate of State 1', ylab='Frequency of State 1', main='How Net Diversification Rate Influences Frequency')
+abline(lm(Freq_1~NDR_1), col='blue', lty='dashed')
+pdf('OwnTrend1.pdf', height=8, width=8)#
+plot(NDR_0, Freq_0, xlab='Net Diversification Rate of State 0', ylab='Frequency of State 0', main='How Net Diversification Rate Influences Frequency')#
+abline(lm(Freq_0~NDR_0), col='blue', lty='dashed')#
+dev.off()
+pdf('OwnTrend2.pdf', height=8, width=8)#
+plot(NDR_1, Freq_1, xlab='Net Diversification Rate of State 1', ylab='Frequency of State 1', main='How Net Diversification Rate Influences Frequency')#
+abline(lm(Freq_1~NDR_1), col='blue', lty='dashed')#
+dev.off()
