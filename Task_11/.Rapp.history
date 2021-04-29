@@ -1,0 +1,563 @@
+Data$Date <- dateID
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+head(Data)
+unique(beren3$age[Feeds])
+unique(beren3$Date[Feeds])
+Dates <- unique(beren3$Date[Feeds])
+nDates <- length(Dates)
+nDates
+Alpha <- 0.75
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)
+Cols <- Pal(nDates)
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Dates <- beren3$Date#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Dates <- beren3$Date#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Date <- dateID#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Dates#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Dates <- beren3$Date#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Date <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Dates <- unique(beren3$Date[Feeds])#
+nDates <- length(Dates)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Dates#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+Days <- unique(beren3$age[Feeds])#
+ndays <- length(Days)#
+#
+# create a set of custom colors#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+# subset the custom colors#
+Cols <- Pal(ndays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+# make a blank plot#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+#
+# add data to the plot#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Times <- beren3$start_hour[Feeds[FeedsOnDay]] + (beren3$start_minute[Feeds[FeedsOnDay]] / 60)#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Times, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+head(Data)#
+Days <- unique(beren3$Date[Feeds])#
+nDates <- length(Days)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDays)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]
+Days <- unique(beren3$Time[Feeds])
+nDates <- length(Days)
+Alpha <- 0.75
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)
+Cols <- Pal(nDays)
+Cols <- Pal(nDates)
+names(Cols) <- Days
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")
+for (Day in Days)	{
+FeedsOnDay <- which(beren3$age[Feeds] == Day)
+Time <- beren3$Time
+Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])
+points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Days <- unique(beren3$Time[Feeds])#
+nDates <- length(Days)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 496), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$Time <- dateID - dateID[which(Data$event == 'birth')]#
+Days <- unique(beren3$Time[Feeds])#
+nDates <- length(Days)#
+Alpha <- 0.75#
+divCols <- c(rgb(158/255,1/255,66/255, Alpha),rgb(213/255,62/255,79/255, Alpha),rgb(244/255,109/255,67/255, Alpha),rgb(253/255,174/255,97/255, Alpha),rgb(254/255,224/255,139/255, Alpha),rgb(255/255,255/255,191/255, Alpha),rgb(230/255,245/255,152/255, Alpha),rgb(171/255,221/255,164/255, Alpha),rgb(102/255,194/255,165/255, Alpha),rgb(50/255,136/255,189/255, Alpha),rgb(94/255,79/255,162/255, Alpha))#
+Pal <- colorRampPalette(divCols, interpolate = "spline", alpha = T)#
+#
+Cols <- Pal(nDates)#
+names(Cols) <- Days#
+#
+par(mar=c(4,4,1,1), las=1, mfrow=c(1, 2), mgp=c(2, 0.5, 0), tck=-0.01, cex.axis=1, cex.lab=1.2)#
+#
+plot(1, 1, xlim=c(1, 200), ylim=c(0, 20), type="n", xlab="Age in Days", ylab="total milk (oz)")#
+for (Day in Days)	{#
+	FeedsOnDay <- which(beren3$age[Feeds] == Day)#
+	Time <- beren3$Time#
+	Amounts <- cumsum(beren3$value[Feeds[FeedsOnDay]])#
+	points(Time, Amounts, col=Cols[as.character(Day)], type="b", pch=16)#
+}
+plot(1,1, type='n', xlim=c(125, 700), ylim=c(7, 16, xlab='age(days)', ylab='total milk(oz)')#
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x))
+plot(1,1, type='n', xlim=c(125, 700), ylim=c(7, 16) xlab='age(days)', ylab='total milk(oz)')#
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x))
+x <- tapply(1:length(Days), beren3$Date[Feeds], function(x)
+points(beren3$Time[Feeds][x], )
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")
+Data$age <- dateID - dateID[which(Data$event == 'birth')]
+beren3 <- Data
+Feeds <- which(Data$event == 'bottle')
+Days <- unique(beren3$Time[Feeds])
+Naps <- which(beren2$event == "nap")#
+#
+startT <- beren2$start_hour[Naps] + ( beren2$start_minute[Naps] / 60 )#
+endT <- beren2$end_hour[Naps] + ( beren2$end_minute[Naps] / 60 )#
+napTs <- endT - startT#
+#
+plot(1,1,type="n", xlim=c(125, 700), ylim=c(7, 16), xlab="age (days)", ylab="nap time")#
+x <- tapply(1:length(Naps), beren2$age[Naps], function(x) segments(beren2$age[Naps][x], startT[x], beren2$age[Naps][x], endT[x]))
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)
+numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)
+rateFeeds <- totalFeed/numFeeds
+rateFeeds
+plot(as.numeric(names(rateFeeds)), type='n', xlim=c(125, 700), ylim=c(7, 16) xlab='Age in Days', ylab='Rate of Milk Consumption')
+plot(as.numeric(names(rateFeeds)), type='n', xlim=c(125, 700), ylim=c(7, 16), xlab='Age in Days', ylab='Rate of Milk Consumption')
+plot(as.numeric(names(rateFeeds)), type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption'
+plot(as.numeric(names(rateFeeds)), type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+dayID <- apply(Data, 1, function(x) paste (x[1:3], collapse='-'))#
+dateID <- sapply(dayID, as.Date, format = "%Y-%m-%d", origin = "2019-04-18")#
+Data$age <- dateID - dateID[which(Data$event == 'birth')]#
+beren3 <- Data#
+Feeds <- which(Data$event == 'bottle')#
+totalFeed <- tapply(beren3$value[Feeds], beren3$age[Feeds], sum)#
+numFeeds <- tapply(beren3$value[Feeds], beren3$age[Feeds], length)#
+rateFeeds <- totalFeed/numFeeds#
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption')
+plot(as.numeric(names(rateFeeds)), rateFeeds, type='b', pch=16, xlab= 'age in days', ylab= 'rate of milk consumption(oz/day)')
+setwd(~/Downloads/Desktop Stuff/Evolution/Tasks/Task_02')
+setwd(~/Downloads/Desktop Stuff/Evolution/Tasks/Task_02)
+setwd(~Downloads/Desktop Stuff/Evolution/Tasks/Task_02)
+setwd(~/Desktop/Evolution/Tasks/Task_02)
+setwd('~/Desktop/Evolution/Tasks/Task_02')
+install.packages('learnPopGen')
+library('ids')
+library(ids)
+install.packages('ids')
+Relabel <- adjective_animal(31, max_len=c(10,15))
+library('ids')
+Relabel <- adjective_animal(31, max_len=c(10,15))
+Relabel
+Relabel[27]
+setwd('~/Desktop/Evolution/Tasks/Task_11')
+rnorm(100, mean=5, var=4)
+?rnorm()
+rnorm(100, mean=5, sd =2)
+x <- rnorm(100, mean=5, sd =2)
+?rnorm()
+y <- (x *5) + 2 + (rnorm(100, 0:0.1 ))
+y
+x
+plot(x, y)
+plot(x, y)
+plot(x, y)
+abline(lm(x~y))
+abline(lm(y~x))
+abline(lm(y~x), type='dashed', col='red')
+abline(lm(y~x), type='2', col='red')
+abline(lm(y~x), type=2, col='red')
+coef(lm(y~x))
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[i] <- (x * z) + 2 + (rnorm(100, 0:0.1))#
+}
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[i] <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+}
+for (i in 1:100) {#
+	z <- runif(1)#
+	x[i] <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+}
+]
+x[i]
+x[[i]]
+for (i in 1:100) {#
+	z <- runif(1)#
+	x[i] <- (x * z) + 2 + (rnorm(100, 0:0.1))#
+}
+x[i]
+x[[i]]
+coef(lm(z~x))
+z <- c()
+x <- c()
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[i] <- (x * z) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[i] <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+for (i in 1:100) {#
+	z[i] <- runif(100)#
+	x[i] <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+z <- c()#
+x <- c()#
+for (i in 1:100) {#
+	z[i] <- runif(100)#
+	x[i] <- (x * z) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[i] <- (x * z) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+z <- c()#
+x <- rnorm(100, mean=5, sd=2)#
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[i] <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+z <- c()#
+x <- rnorm(100, mean=5, sd=2)#
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[[i]] <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+z <- c()#
+x <- rnorm(100, mean=5, sd=2)#
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[[i]] <- (x[[i]] * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+x
+x[[i]]
+x[i]
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[[i]] <- (x * z) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[i] <- (x * z) + 2 + (rnorm(1, 0:0.1))#
+	coef(lm(z~x))#
+}
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[i] <- (x * z[i]) + 2 + (rnorm(1, 0:0.1))#
+	coef(lm(z~x))#
+}
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	x[i] <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+z <- c()#
+x <- rnorm(100, mean=5, sd=2)#
+x#
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	y <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+z <- c()#
+x <- rnorm(100, mean=5, sd=2)#
+for (i in 1:100) {#
+	z[i] <- runif(100)#
+	y <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z~x))#
+}
+z <- c()#
+x <- rnorm(100, mean=5, sd=2)#
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	y <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z[i]~x))#
+}
+z[i]
+z[[i]]
+z
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	y <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z[1:100]~x))
+}
+z
+z <- c()#
+x <- rnorm(100, mean=5, sd=2)#
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	y <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	coef(lm(z[1:100]~y))#
+}
+z <- c()#
+x <- rnorm(100, mean=5, sd=2)#
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	y <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	l <- coef(lm(z[1:100]~y))#
+}
+l
+plot(y, z)
+plot(y, z)#
+abline(lm(y~z))
+plot(y, z)#
+abline(lm(z~y))
+z
+plot(c(y, z))
+plot(c(y, z), y)
+plot(c(y, z), z)
+plot(c(l, z))
+plot(z, l)
+plot(c(z, l))
+z <- c()#
+x <- rnorm(100, mean=5, sd=2)#
+for (i in 1:100) {#
+	z[i] <- runif(1)#
+	y <- (x * z[i]) + 2 + (rnorm(100, 0:0.1))#
+	l <- coef(lm(z[1:100]~y))#
+}
+l
+plot(c(z, l))
+plot(y, z)
+plot(c(z, -0.29))
+plot(c(z, -0.29))
+plot(c(z, -0.29))
+abline(lm(z~-0.29))
+abline(lm(c(z~-0.29)))
+l
+plot(z[1:100], y)
+plot(z[i], l)
+plot(c(z[i], l))
+plot(c(z, l))
+plot(c(z, -0.29))
+plot(c(z[i], -0.29))
+plot(c(z[i], -0.029))
+plot(c(z, -0.029))
+plot(z[1:100], y)
+abline(lm(y~z[1:100]))
+plot(z[1:100], y)#
+abline(lm(y~z[1:100]))
+abline(lm(z~-0.029))
+abline(lm(z~l))
+abline(lm(z[i]~l))
+z[i]
+l
+l$y
+plot(c(z, -0.029))
+plot(c(z, -0.029))
+install.packages('meme')
+?meme
+library('meme')
+?meme
+f <- system.file('meme.jpeg', package='meme')
+meme(f, 'I am once again asking', 'how to make a for() loop', font = 'Montserrat')
+f <- system.file('~/Desktop/Evolution/Tasks/Task_11/meme.jpeg', package='meme')
+meme(f, 'I am once again asking', 'how to make a for() loop', font = 'Montserrat')
+f <- system.file('meme.jpeg', package='meme')
+meme(f, 'I am once again asking', 'how to make a for() loop', font = 'Montserrat')
+f <- system.file('https://i.imgflip.com/3read8.jpg', package='meme')
+meme(f, 'I am once again asking', 'how to make a for() loop', font = 'Montserrat')
+f <- image.read('https://i.imgflip.com/3read8.jpg', package='meme')
+f <- image_read('https://i.imgflip.com/3read8.jpg', package='meme')
+mmplot(f) + mm_caption('I am once again asking', 'how to make a for() loop', font = 'Montserrat', col='white')
+f <- image_read('https://i.imgflip.com/3read8.jpg', package='meme')
+f <- file('https://i.imgflip.com/3read8.jpg', package='meme')
+f <- system.file('https://i.imgflip.com/3read8.jpg', package='meme')
+mmplot(f) + mm_caption('I am once again asking', 'how to make a for() loop', font = 'Montserrat', col='white')
+install.packages('magick')
+library('magick')
+f <- image_read('https://i.imgflip.com/3read8.jpg')
+mmplot(f) + mm_caption('I am once again asking', 'how to make a for() loop', font = 'Montserrat', col='white')
+f <- image_read('meme.jpg')
+get_templates('memecaptain')
+u <- 'https://i.imgflip.com/3read8.jpg'
+create_meme(u, "I am once again asking", "for help making a for() loop", font='montserrat')
+meme(u, "I am once again asking", "for help making a for() loop", font='montserrat')
+meme(u, "I am once again asking", "for help making a for() loop", font='montserrat', col='white', size=1.5)
+for help making a for() loop", font='montserrat', col='white', size=1.5)
+meme(u, lower="I am once again asking for help making a for() loop", font='montserrat', col='white', size=1.5)
+meme(u, lower="I am once again asking for help making a for() loop", font='montserrat', col='white')
+meme(u, "I am once again asking for help making a for() loop", font='montserrat', col='white')
+u + aes(lower = "I am once again asking for help making a for() loop", font='montserrat', col='white')
+mem(lower = "I am once again asking for help making a for() loop", font='montserrat', col='white')
+meme(lower = "I am once again asking for help making a for() loop", font='montserrat', col='white')
+meme(u, lower = "I am once again asking for help making a for() loop", font='montserrat', col='white')
+meme(u, lower = "I am once again asking for help making a for() loop", font='montserrat', col='white', size=2)
+meme(u, lower = "I am once again asking for help making a for() loop", font='montserrat', col='white', cex=2)
+?meme
+meme(u, lower = "I am once again asking for help making a for() loop", font='montserrat', col='white', size=3 )
+meme(u, lower = "I am once again asking for help making a for() loop", font='montserrat', col='white')
+meme(u, "I am once again asking for help making a for() loop", font='montserrat', col='white')
+meme(u, "I am once again asking for help making a for() loop", font='montserrat', color='white')
+meme(u, "I am once again asking for help making a for() loop", font='montserrat', color='white')
+meme(u, lower="I am once again asking for help making a for() loop", font="montserrat", color="white")
+meme(u, lower="I am once again asking for help making a for() loop", font="montserrat", color="white", size="2")
+warnings()
+meme(u, upper="I am once again asking for help making a for() loop", font="arial", color="white", size="2")
+meme(u, lowerr="I am once again asking for help making a for() loop", color="white", size="2")
+meme(u, lower="I am once again asking for help making a for() loop", color="white", size="2")
+meme(u, upper="I am once again asking" lower= "for help making a for() loop", color="white", size="2")
+meme(u, upper="I am once again asking", lower= "for help making a for() loop", color="white", size="2")
+meme(u, lower= "I am once again asking" "for help making a for() loop", color="white", size="2")
+meme(u, lower= "I am once again asking", "for help making a for() loop", color="white", size="2")
+meme(u, lower= "I am once again asking", lower="for help making a for() loop", color="white", size="2")
+meme(u, lower= "I am once again asking#
+for help making a for() loop", color="white", size="2")
+meme(u, lower= "I am once again asking#
+for help making a for() loop", color="white", size="2", font = "Helvetica)
+meme(u, lower= "I am once again asking#
+for help making a for() loop", color="white", size="2", font = "Helvetica")
+meme(u, lower= "I am once again asking for help making a for() loop", color="white", size="2", font = "Helvetica")
+meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="2", font = "Helvetica")
+meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1", font = "Helvetica")
+meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5", font = "Helvetica")
+meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5", font = "Montserrat")
+meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5", font = "Calibri")
+meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5", font = "Arial")
+meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5", font = "Cambria")
+meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5", font = "Avenir")
+meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5", font = "Avenir Next")
+meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5")
+my_meme <- meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5")
+meme_save(my_meme, width=7, height = 7)
+meme_save(my_meme, file='~/Desktop/Evolution/Tasks/Task_11', width=7, height = 7)
+pdf('My_Meme.pdf', height = 7, width = 7)#
+my_meme <- meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5")#
+dev.off()
+jpg('My_Meme.jpg', height = 7, width = 7)#
+my_meme <- meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5")#
+dev.off()
+jpeg('My_Meme.jpg', height = 7, width = 7)#
+my_meme <- meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5")#
+dev.off()
+jpeg('My_Meme.jpg', height = 7, width = 7)#
+my_meme <- meme(u, lower= "I am once again asking #
+for help making a for() loop", color="white", size="1.5")#
+dev.off()
